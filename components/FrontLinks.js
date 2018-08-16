@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const FrontLink = (props) => (
     <div className={"col-md-4"}>
-      <Link href="/">
+      <Link as={props.title} href="/">
         <a className={"frontLink"} href={"/"+ props.title }>
           <img src={"/static/img/" + props.title + ".svg"}/>
           <h2>{props.title}</h2>
