@@ -1,0 +1,26 @@
+{
+  "name": "dotpro",
+  "version": "1.0.0",
+  "description": "jere.pro react frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juhannuspukki/dotpro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juhannuspukki/dotpro/issues"
+  },
+  "homepage": "https://github.com/Juhannuspukki/dotpro#readme",
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
