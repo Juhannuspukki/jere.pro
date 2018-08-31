@@ -1,0 +1,13 @@
+.navBar {
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  z-index: 1130;
+  .arrow {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    margin: $size-s;
+  }
+}

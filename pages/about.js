@@ -1,9 +1,9 @@
 import Header from '../components/Header'
 
 const Index = () => (
-    <div>
-      <Header />
-    </div>
+  <div>
+    <Header />
+  </div>
 )
 
 export default Index

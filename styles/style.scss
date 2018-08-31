@@ -1,5 +1,9 @@
 @import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'constants';
 @import 'front';
+@import 'navbar';
+@import 'projects';
+@import 'experience';
 
 @font-face {
   font-family: "sf";
@@ -40,7 +44,7 @@ h1 {
 h2 {
   font-family: "sf", sans-serif;
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -51,9 +55,8 @@ a {
   color: #fff;
 }
 
-.navBar {
-  position: fixed;
-  height: 50px;
-  width: 100%;
-  background-color: #000000;
+p {
+  font-family: "sf", sans-serif;
+  text-decoration: none;
+  color: #fff;
 }
