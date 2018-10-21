@@ -1,5 +1,6 @@
 .projectContainer {
   padding-top: $size-xl;
+  padding-bottom: $size-xl;
   .projectIcon {
     display: block;
     max-height: $size-l;
@@ -17,6 +18,18 @@
       font-size: $size-sm;
       &:hover {
         color: $colorTeal;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .projectContainer {
+    .projectList {
+      display: block;
+      a {
+        margin: auto;
+        text-align: center
       }
     }
   }

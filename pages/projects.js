@@ -10,7 +10,6 @@ const Index = (props) => (
                     title={project.title}
                     image={project.image}
                     projectList={project.projectList}
-
               />
       ))}
     </div>
@@ -24,13 +23,65 @@ Index.getInitialProps = async function() {
         title: "UI/UX design",
         image: "uidesign",
         projectList:
-            ["jere.pro", "tamperedebatesociety.fi", "Bachelor's thesis"]
-      },
+          [
+            {
+              name: "jere.pro",
+              link: "/dotpro"
+            },
+            {
+              name: "tamperedebatesociety.fi",
+              link:"/tds"
+            },
+            {
+              name: "Bachelor's thesis",
+              link: "https://jere.pro"
+            }
+          ]
+        },
       {
         title: "Frontend",
         image: "frontend",
         projectList:
-            ["neuroeventlabs.com", "tamperedebatesociety.fi", "muistola.fi"]
+          [
+            {
+              name: "neuroeventlabs.com",
+              link: "/nel"
+            },
+            {
+              name: "tamperedebatesociety.fi",
+              link: "/tds"
+            },
+            {
+              name: "muistola.fi",
+              link: "/muistola"
+            }
+          ]
+      },
+      {
+        title: "Backend",
+        image: "backend",
+        projectList:
+          [
+            {
+              name: "@LogosTheBot on Telegram",
+              link: "/logos"
+            },
+          ]
+      },
+      {
+        title: "Embedded",
+        image: "embedded",
+        projectList:
+          [
+            {
+              name: "4D QR code",
+              link: "/qr"
+            },
+            {
+              name: "FFT audio LED",
+              link: "/led"
+            },
+          ]
       }
     ]
 
