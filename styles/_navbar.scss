@@ -1,6 +1,8 @@
 .navBar {
   position: fixed;
-  background-color: #000000;
+  background-color: $colorTransparentBlack;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   width: 100%;
   z-index: 1130;
   .arrow {

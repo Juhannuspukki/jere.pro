@@ -27,6 +27,7 @@
   .projectContainer {
     .projectList {
       display: block;
+      margin-bottom: $size-ml;
       a {
         margin: auto;
         text-align: center

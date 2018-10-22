@@ -10,50 +10,11 @@
 }
 
 .fullPageContainer {
+  display: block;
   height: 100%;
-  .dotPro, .container {
+  .dotPro {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-  }
-  .container {
-    max-width: 75vw;
-    .linkButton {
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      img {
-        height: 150px;
-        max-width: 150px;
-      }
-      h2 {
-        margin-top: $size-sm;
-        font-size: $size-m;
-        font-weight: bold;
-        text-transform: capitalize;
-      }
-    }
-  }
-  .arrow {
-    position: absolute;
-    width: 10vw;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-bottom: $size-s;
-  }
-}
-
-
-@media (max-width: 991px) {
-  .lower {
-    top: 100%;
-    height: auto;
-    .container {
-      transform: none;
-      .linkButton {
-        margin: $size-l 0;
-      }
-    }
   }
 }

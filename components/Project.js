@@ -10,7 +10,7 @@ const Project = (props) => (
     <div className={"col-md-6 projectList"}>
       <div>
       {props.projectList.map((project) => (
-          <Link href={`/project?title=${project.name}`} key={project}>
+          <Link prefetch as={`/projects/${project.link}`} href={`/post?title=${project.name}&description=${project.description}&image=${project.link}&external=${project.external}`} key={project}>
             <a>{project.name}</a>
           </Link>
       ))}

@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Header = () => (
   <div className={"navBar"}>
-    <Link href={"/#links"}>
+    <Link href={"/main-menu"}>
       <a className={"navBar"}>
         <img className={"arrow"} src={"/static/img/arrowLeft.svg"}/>
       </a>

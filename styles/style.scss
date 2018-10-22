@@ -1,9 +1,12 @@
 @import 'node_modules/bootstrap/scss/bootstrap-grid';
 @import 'constants';
 @import 'front';
+@import 'main-menu';
 @import 'navbar';
 @import 'projects';
 @import 'experience';
+@import 'about';
+@import 'post';
 
 @font-face {
   font-family: "sf";

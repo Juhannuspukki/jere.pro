@@ -1,0 +1,28 @@
+.post {
+  position: relative;
+  top: $size-ml;
+  .container {
+    max-width: 512px;
+    .hero {
+      max-width: 100%;
+      border-radius: $size-xs;
+      filter: grayscale(100%);
+    }
+    .postExternalLink {
+      font-weight: bold;
+      text-align: center;
+      display: block;
+      margin: $size-sm;
+      &:hover {
+        color: $colorTeal;
+      }
+    }
+    h1 {
+      font-size: $size-sm;
+      margin: $size-m 0;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}

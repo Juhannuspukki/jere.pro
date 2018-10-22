@@ -1,0 +1,12 @@
+.about {
+  position: relative;
+  top: $size-ml;
+  .container {
+    max-width: 512px;
+    .parsta {
+      max-width: 100%;
+      filter: grayscale(100%);
+      border-radius: $size-xs;
+    }
+  }
+}
