@@ -28,5 +28,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.0.0"
+  }
 }

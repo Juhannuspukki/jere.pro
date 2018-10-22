@@ -11,5 +11,10 @@
     transform: translateX(-50%);
     width: 30px;
     margin: $size-s 0;
+    &:hover {
+      path {
+        fill: $colorTeal;
+      }
+    }
   }
 }

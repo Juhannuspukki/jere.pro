@@ -1,16 +1,19 @@
 import Header from '../components/Header'
 import Project from '../components/Project'
+import UiDesign from '../svg/projects/uidesign.svg'
+import Backend from '../svg/projects/backend.svg'
+import Frontend from '../svg/projects/frontend.svg'
+import Embedded from '../svg/projects/embedded.svg'
+
 
 const Index = (props) => (
   <div>
     <Header />
     <div className={"container projectContainer"}>
       {props.projects.map((project) => (
-              <Project key={project.title}
-                    title={project.title}
-                    image={project.image}
-                    projectList={project.projectList}
-              />
+              <Project key={project.title} title={project.title} projectList={project.projectList}>
+                {project.image}
+              </Project>
       ))}
     </div>
   </div>
@@ -21,15 +24,15 @@ Index.getInitialProps = async function() {
     [
       {
         title: "UI/UX design",
-        image: "uidesign",
+        image: <UiDesign className={"vectorLink"}/>,
         projectList:
           [
             {
               name: "jere.pro",
               link: "dotpro",
               external: "https://jere.pro",
-              description: "I decided that I need a website of my own. It took years to decide what technologies to use" +
-              "but I finally decided to try Next.js that has received a lot of praise recently. I also invested heavily" +
+              description: "I decided that I need a website of my own. It took years to decide what technologies to use " +
+              "but I finally decided to try Next.js that has received a lot of praise recently. I also invested heavily " +
               "on adaptive design, making sure the site looks great on all devices."
             },
             {
@@ -54,7 +57,7 @@ Index.getInitialProps = async function() {
         },
       {
         title: "Frontend",
-        image: "frontend",
+        image: <Frontend className={"vectorLink"}/>,
         projectList:
           [
             {
@@ -87,7 +90,7 @@ Index.getInitialProps = async function() {
       },
       {
         title: "Backend",
-        image: "backend",
+        image: <Backend className={"vectorLink"}/>,
         projectList:
           [
             {
@@ -104,7 +107,7 @@ Index.getInitialProps = async function() {
       },
       {
         title: "Embedded",
-        image: "embedded",
+        image: <Embedded className={"vectorLink"}/>,
         projectList:
           [
             {
@@ -115,7 +118,7 @@ Index.getInitialProps = async function() {
               "However, this is one succeeded exceptionally well. The assignment was to design a product from a bunch" +
               "of LEDs controlled by a microcontroller. I came up with the idea of a quick-read code (2-dimensional barcode) " +
               "This particular code changes every few milliseconds. Modern smartphone cameras capture up to 960 " +
-              "frames per second. Hence the name: 2 spatial dimensions + the fourth (temporal) dimension."
+              "frames per second. Hence the name: 2 spatial dimensions and the fourth (temporal) dimension."
             },
             {
               name: "FFT controlled LED",

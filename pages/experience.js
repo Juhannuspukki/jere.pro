@@ -1,13 +1,18 @@
 import Header from '../components/Header'
+import ExtraSmallTimeLine from '../svg/experience/timeline-xs.svg'
+import SmallTimeLine from '../svg/experience/timeline-s.svg'
+import MediumTimeLine from '../svg/experience/timeline-m.svg'
+import LargeTimeLine from '../svg/experience/timeline-l.svg'
+
 
 const Index = () => (
   <div>
     <Header />
     <div className={"timeLineContainer"}>
-      <img className={"smallTimeLine"} src={"/static/img/timeline-s.svg"}/>
-      <img className={"largeTimeLine"} src={"/static/img/timeline-l.svg"}/>
-      <img className={"mediumTimeLine"} src={"/static/img/timeline-m.svg"}/>
-      <img className={"extraSmallTimeLine"} src={"/static/img/timeline-xs.svg"}/>
+      <ExtraSmallTimeLine className={"extraSmallTimeLine"}/>
+      <SmallTimeLine className={"smallTimeLine"}/>
+      <MediumTimeLine className={"mediumTimeLine"}/>
+      <LargeTimeLine className={"largeTimeLine"}/>
     </div>
   </div>
 )

@@ -1,10 +1,11 @@
 import Link from 'next/link'
 
+
 const Project = (props) => (
   <div className={"row"}>
     <div className={"col-md-2"} />
-    <div className={"col-md-4"}>
-      <img className={"projectIcon"} src={"/static/img/" + props.image + ".svg"}/>
+    <div className={"col-md-4 projectLinkContainer"}>
+      {props.children}
       <h2 className={"projectTitle"}>{props.title}</h2>
     </div>
     <div className={"col-md-6 projectList"}>

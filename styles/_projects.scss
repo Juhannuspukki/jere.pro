@@ -1,12 +1,6 @@
 .projectContainer {
   padding-top: $size-xl;
   padding-bottom: $size-xl;
-  .projectIcon {
-    display: block;
-    max-height: $size-l;
-    max-width: $size-l;
-    margin: $size-ml auto $size-sm auto;
-  }
   .projectTitle {
     margin-bottom: 50px;
   }
@@ -17,6 +11,24 @@
       display: block;
       font-size: $size-sm;
       &:hover {
+        color: $colorTeal;
+      }
+    }
+  }
+  .projectLinkContainer {
+    .vectorLink {
+      display: block;
+      max-height: $size-l;
+      max-width: $size-l;
+      margin: $size-ml auto $size-sm auto;
+    }
+    &:hover {
+      .vectorLink {
+        path, circle {
+          fill: $colorTeal;
+        }
+      }
+      h2 {
         color: $colorTeal;
       }
     }

@@ -1,10 +1,12 @@
 import Link from 'next/link'
+import Arrow from '../svg/arrow-left.svg'
+
 
 const Header = () => (
   <div className={"navBar"}>
     <Link href={"/main-menu"}>
       <a className={"navBar"}>
-        <img className={"arrow"} src={"/static/img/arrowLeft.svg"}/>
+        <Arrow className={"arrow"}/>
       </a>
     </Link>
   </div>
