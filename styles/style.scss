@@ -8,20 +8,6 @@
 @import 'about';
 @import 'post';
 
-@font-face {
-  font-family: "sf";
-  src: url("/static/fonts/DP-Bold.otf");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sf";
-  src: url("/static/fonts/DP-Regular.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   position: absolute;
   top: 0;
@@ -36,30 +22,28 @@ body {
 }
 
 h1 {
-  font-family: "sf", sans-serif;
+  font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 20vw;
   text-align: center;
   font-weight: bold;
   margin: 0;
 }
 
-
 h2 {
-  font-family: "sf", sans-serif;
+  font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-align: center;
   font-weight: bold;
   margin: 0;
 }
 
-
 a {
-  font-family: "sf", sans-serif;
+  font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-decoration: none;
   color: #fff;
 }
 
 p {
-  font-family: "sf", sans-serif;
+  font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-decoration: none;
   color: #fff;
 }

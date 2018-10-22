@@ -36,16 +36,6 @@ Index.getInitialProps = async function() {
               "on adaptive design, making sure the site looks great on all devices."
             },
             {
-              name: "tamperedebatesociety.fi",
-              link:"tds",
-              external: "https://tamperedebatesociety.fi",
-              description: "I have been part of the debate society for a few years now. Eventually there were talks " +
-              "about making a new website. The debate society had previously had at least 3, all of which were abandoned. " +
-              "First, there was talk about Wordpress but I managed to convince them to trust my static site solution " +
-              "instead. Due to the lack of UI designers, I also designed the site myself. All of us are very pleased " +
-              "with the result. As a bonus, I installed the Netlify CMS to allow non-coders to update the site as well."
-            },
-            {
               name: "Bachelor's thesis",
               link: "thesis",
               external: "unavailable",
