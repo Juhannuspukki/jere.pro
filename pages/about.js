@@ -10,7 +10,7 @@ const Index = () => (
     <NavBar/>
     <div className={"about"}>
       <div className={"container"}>
-        <img className={"parsta"} src={"/static/img/me.jpeg"}/>
+        <img className={"parsta"} src={require('../static/img/me.jpeg')}/>
         <h1>Jere Laine</h1>
         <a className={"phone"} href={"tel:+358458664303"}>+358 45 866 4303</a>
         <div className={"linkLogoContainer"}>
