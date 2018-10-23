@@ -7,6 +7,7 @@
   z-index: 1130;
   .arrow {
     position: relative;
+    cursor: pointer;
     left: 50%;
     transform: translateX(-50%);
     width: 30px;
@@ -16,5 +17,11 @@
         fill: $colorTeal;
       }
     }
+  }
+}
+
+@media (max-width: 511px) {
+  .navBar {
+    display: none;
   }
 }

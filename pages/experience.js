@@ -1,4 +1,5 @@
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import ExtraSmallTimeLine from '../svg/experience/timeline-xs.svg'
 import SmallTimeLine from '../svg/experience/timeline-s.svg'
 import MediumTimeLine from '../svg/experience/timeline-m.svg'
@@ -14,6 +15,7 @@ const Index = () => (
       <MediumTimeLine className={"mediumTimeLine"}/>
       <LargeTimeLine className={"largeTimeLine"}/>
     </div>
+    <Footer/>
   </div>
 )
 

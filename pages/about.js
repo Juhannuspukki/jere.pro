@@ -1,4 +1,5 @@
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import Telegram from '../svg/about/tg.svg'
 import GitHub from '../svg/about/git.svg'
 import LinkedIn from '../svg/about/in.svg'
@@ -28,6 +29,7 @@ const Index = () => (
           </p>
       </div>
     </div>
+    <Footer/>
   </div>
 )
 

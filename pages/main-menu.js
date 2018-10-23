@@ -1,4 +1,5 @@
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import FrontLink from '../components/FrontLinks'
 import Project from '../svg/projects.svg'
 import Experience from '../svg/experience.svg'
@@ -15,6 +16,7 @@ const Index = () => (
         <FrontLink title={"experience"}><Experience className={"vectorLink"}/></FrontLink>
       </div>
     </div>
+    <Footer/>
   </div>
 )
 
