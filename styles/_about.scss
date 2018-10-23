@@ -2,11 +2,68 @@
   position: relative;
   top: $size-ml;
   .container {
-    max-width: 512px;
+    max-width: 768px;
     .parsta {
       max-width: 100%;
-      filter: grayscale(100%);
       border-radius: $size-xs;
+      filter: grayscale(100%);
+    }
+    h1 {
+      text-align: center;
+      margin: $size-m auto;
+      font-size: $size-l;
+    }
+    p {
+      text-align: justify;
+      margin: $size-m auto;
+    }
+    .phone {
+      text-align: center;
+      display: block;
+      font-weight: bold;
+      font-size: $size-sm;
+      margin-bottom: $size-m;
+      &:hover {
+        color: $colorTeal;
+      }
+    }
+    .linkLogoContainer {
+      display: block;
+      margin: auto;
+      text-align: center;
+      .link {
+        display: inline;
+        .linkLogo {
+          display: inline-block;
+          margin: auto $size-m;
+          height: $size-m;
+          &:hover {
+            path:last-of-type {
+              fill: $colorTeal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    .container {
+      h1 {
+        font-size: $size-ml;
+      }
+    }
+  }
+}
+
+@media (max-width: 383px) {
+  .about {
+    .container {
+      h1 {
+        font-size: $size-m;
+      }
     }
   }
 }

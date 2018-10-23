@@ -1,12 +1,23 @@
-import Header from '../components/Header'
+import NavBar from '../components/NavBar'
+import Telegram from '../svg/about/tg.svg'
+import GitHub from '../svg/about/git.svg'
+import LinkedIn from '../svg/about/in.svg'
+
 
 const Index = () => (
   <div>
-    <Header />
+    <NavBar/>
     <div className={"about"}>
       <div className={"container"}>
-        <img className={"parsta"} src={"/static/img/hero.jpeg"}/>
-          <p>
+        <img className={"parsta"} src={"/static/img/me.jpeg"}/>
+        <h1>Jere Laine</h1>
+        <a className={"phone"} href={"tel:+358458664303"}>+358 45 866 4303</a>
+        <div className={"linkLogoContainer"}>
+          <a className={"link"} href={"https://t.me/juhannuspukki"}><Telegram className={"linkLogo"}/></a>
+          <a className={"link"} href={"https://www.linkedin.com/in/jjlaine/"}><LinkedIn className={"linkLogo"}/></a>
+          <a className={"link"} href={"https://github.com/Juhannuspukki"}><GitHub className={"linkLogo"}/></a>
+        </div>
+        <p>
             I’m a 22-year-old Apple fanboy from Hervanta. Introverted, but I believe I have become more ambiverted
             over the years. I have quite many hobbies, including aquariums, debating, cooking, motion graphics,
             still graphics, coding apps in Swift, bots in Python and websites in, well, many languages. I occasionally

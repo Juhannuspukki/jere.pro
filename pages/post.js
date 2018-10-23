@@ -1,12 +1,13 @@
+import NavBar from '../components/NavBar'
 import {withRouter} from 'next/router'
-import Header from '../components/Header'
+
 
 const Index = withRouter((props) => (
   <div>
-    <Header />
+    <NavBar />
     <div className={"post"}>
       <div className={"container"}>
-        <img className={"hero"} src={"/static/img/posts/" + props.router.query.image + ".jpeg"}/>
+        <img className={"hero"} src={"/static/img/" + props.router.query.image + ".jpeg"}/>
         <h1>{props.router.query.title}</h1>
         <p>
           {props.router.query.description}

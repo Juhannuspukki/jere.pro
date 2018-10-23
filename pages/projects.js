@@ -1,4 +1,4 @@
-import Header from '../components/Header'
+import NavBar from '../components/NavBar'
 import Project from '../components/Project'
 import UiDesign from '../svg/projects/uidesign.svg'
 import Backend from '../svg/projects/backend.svg'
@@ -8,7 +8,7 @@ import Embedded from '../svg/projects/embedded.svg'
 
 const Index = (props) => (
   <div>
-    <Header />
+    <NavBar/>
     <div className={"container projectContainer"}>
       {props.projects.map((project) => (
               <Project key={project.title} title={project.title} projectList={project.projectList}>

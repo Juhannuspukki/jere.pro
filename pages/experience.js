@@ -1,4 +1,4 @@
-import Header from '../components/Header'
+import NavBar from '../components/NavBar'
 import ExtraSmallTimeLine from '../svg/experience/timeline-xs.svg'
 import SmallTimeLine from '../svg/experience/timeline-s.svg'
 import MediumTimeLine from '../svg/experience/timeline-m.svg'
@@ -7,7 +7,7 @@ import LargeTimeLine from '../svg/experience/timeline-l.svg'
 
 const Index = () => (
   <div>
-    <Header />
+    <NavBar/>
     <div className={"timeLineContainer"}>
       <ExtraSmallTimeLine className={"extraSmallTimeLine"}/>
       <SmallTimeLine className={"smallTimeLine"}/>
