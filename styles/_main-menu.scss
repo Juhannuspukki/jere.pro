@@ -9,8 +9,10 @@
     justify-content: center;
     .frontLink {
       .vectorLink {
+        display: block;
         height: 150px;
         max-width: 150px;
+        margin: auto;
       }
       &:hover {
         .vectorLink {

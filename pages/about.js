@@ -13,9 +13,9 @@ const Index = () => (
         <h1>Jere Laine</h1>
         <a className={"phone"} href={"tel:+358458664303"}>+358 45 866 4303</a>
         <div className={"linkLogoContainer"}>
-          <a className={"link"} href={"https://t.me/juhannuspukki"}><Telegram className={"linkLogo"}/></a>
-          <a className={"link"} href={"https://www.linkedin.com/in/jjlaine/"}><LinkedIn className={"linkLogo"}/></a>
-          <a className={"link"} href={"https://github.com/Juhannuspukki"}><GitHub className={"linkLogo"}/></a>
+          <a className={"link"} href={"https://t.me/juhannuspukki"} target="_blank"><Telegram className={"linkLogo"}/></a>
+          <a className={"link"} href={"https://www.linkedin.com/in/jjlaine/"} target="_blank"><LinkedIn className={"linkLogo"}/></a>
+          <a className={"link"} href={"https://github.com/Juhannuspukki"} target="_blank"><GitHub className={"linkLogo"}/></a>
         </div>
         <p>
             I’m a 22-year-old Apple fanboy from Hervanta. Introverted, but I believe I have become more ambiverted
