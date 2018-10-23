@@ -1,4 +1,5 @@
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import {withRouter} from 'next/router'
 
 
@@ -17,6 +18,7 @@ const Index = withRouter((props) => (
         }
       </div>
     </div>
+    <Footer/>
   </div>
 ))
 

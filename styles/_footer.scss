@@ -1,0 +1,37 @@
+.footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background-color: $colorTransparentBlack;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  width: 100%;
+  z-index: 1130;
+  padding-bottom: $size-s;
+  .footerLinkContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .footerLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .footerLinkVector {
+        width: 100%;
+        cursor: pointer;
+        margin: $size-s;
+        &:hover {
+          path {
+            fill: $colorTeal;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 511px) {
+  .footer {
+    display: block;
+  }
+}

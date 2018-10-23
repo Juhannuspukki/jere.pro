@@ -1,4 +1,5 @@
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import Project from '../components/Project'
 import UiDesign from '../svg/projects/uidesign.svg'
 import Backend from '../svg/projects/backend.svg'
@@ -16,6 +17,7 @@ const Index = (props) => (
               </Project>
       ))}
     </div>
+    <Footer/>
   </div>
 )
 
