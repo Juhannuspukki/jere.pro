@@ -8,7 +8,7 @@ import Embedded from '../svg/projects/embedded.svg'
 
 
 const Index = (props) => (
-  <div>
+  <div className={"test"}>
     <NavBar/>
     <div className={"container projectContainer"}>
       {props.projects.map((project) => (
@@ -39,7 +39,7 @@ Index.getInitialProps = async function() {
             },
             {
               name: "Bachelor's thesis",
-              link: "thesis",
+              link: "bsc",
               external: "unavailable",
               description: "During my time at Neuro Event Labs Oy I had the opportunity to design their fleet " +
               "management system. The design process is documented on my Bachelor's thesis. I was able to produce a " +

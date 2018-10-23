@@ -1,6 +1,5 @@
 .projectContainer {
-  padding-top: $size-xl;
-  padding-bottom: $size-xl;
+  margin: $size-xl auto;
   .projectTitle {
     margin-bottom: 50px;
   }
@@ -21,7 +20,7 @@
       max-height: $size-l;
       max-width: $size-l;
       margin: $size-ml auto $size-sm auto;
-    }
+    } /*
     &:hover {
       .vectorLink {
         path, circle {
@@ -31,7 +30,7 @@
       h2 {
         color: $colorTeal;
       }
-    }
+    } */
   }
 }
 
