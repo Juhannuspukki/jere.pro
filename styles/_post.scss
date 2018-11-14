@@ -4,7 +4,8 @@
   .container {
     max-width: 768px;
     .hero {
-      max-width: 100%;
+      width: 100%;
+      min-height: 409px;
       border-radius: $size-xs;
       filter: grayscale(100%);
     }

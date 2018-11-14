@@ -3,14 +3,14 @@ import Footer from '../components/Footer'
 import Telegram from '../svg/about/tg.svg'
 import GitHub from '../svg/about/git.svg'
 import LinkedIn from '../svg/about/in.svg'
-
+import Me from '../static/img/me.jpeg'
 
 const Index = () => (
   <div>
     <NavBar/>
     <div className={"about"}>
       <div className={"container"}>
-        <img className={"parsta"} src={require('../static/img/me.jpeg')}/>
+        <img className={"parsta"} src={Me}/>
         <h1>Jere Laine</h1>
         <a className={"phone"} href={"tel:+358458664303"}>+358 45 866 4303</a>
         <div className={"linkLogoContainer"}>
