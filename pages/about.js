@@ -4,9 +4,14 @@ import Telegram from '../svg/about/tg.svg'
 import GitHub from '../svg/about/git.svg'
 import LinkedIn from '../svg/about/in.svg'
 import Me from '../static/img/me.jpeg'
+import Head from 'next/head'
 
 const Index = () => (
   <div>
+    <Head>
+      <title>jere.pro - About me</title>
+      <meta property="og:title" content="jere.pro - About me" />
+    </Head>
     <NavBar/>
     <div className={"about"}>
       <div className={"container"}>

@@ -4,10 +4,14 @@ import FrontLink from '../components/FrontLinks'
 import Project from '../svg/projects.svg'
 import Experience from '../svg/experience.svg'
 import About from '../svg/about.svg'
-
+import Head from 'next/head'
 
 const Index = () => (
   <div className={"test"}>
+    <Head>
+      <title>jere.pro - Main menu</title>
+      <meta property="og:title" content="jere.pro - Main menu" />
+    </Head>
     <NavBar/>
     <div className={"container mainMenuContainer"}>
       <div className={"row"}>
