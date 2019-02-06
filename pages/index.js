@@ -7,6 +7,9 @@ const Index = () => (
     <Head>
       <title>jere.pro</title>
       <meta property="og:title" content="jere.pro" />
+      <meta property="og:description" content="Yo, my name is Jere, and I design stuff." />
+      <meta name="description" content="Yo, my name is Jere, and I design stuff." />
+      <meta property="og:url" content="https://jere.pro"/>
     </Head>
     <Link prefetch href={"/main-menu"}>
       <a className={"fullPageContainer"}>
