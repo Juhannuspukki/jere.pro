@@ -7,7 +7,7 @@
   backdrop-filter: saturate(180%) blur(20px);
   width: 100%;
   z-index: 1130;
-  padding-bottom: $size-s;
+  padding-bottom: $size-s; /* iPhone home slider padding */
   .footerLinkContainer {
     display: flex;
     align-items: center;

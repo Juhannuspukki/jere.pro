@@ -37,7 +37,7 @@
         display: inline;
         .linkLogo {
           display: inline-block;
-          margin: auto $size-m;
+          margin: auto $size-sm;
           height: $size-m;
           &:hover {
             path:last-of-type {

@@ -1,8 +1,8 @@
 import Arrow from '../svg/arrow-left.svg'
-import Phone from '../svg/phone.svg'
 import Sms from '../svg/sms.svg'
 import Telegram from '../svg/about/tg.svg'
 import Router from 'next/router'
+import Mail from '../svg/about/mail.svg'
 
 const Footer = () => (
   <div className={"footer"}>
@@ -18,7 +18,7 @@ const Footer = () => (
           <a href={"sms:+358458664303"} className={"footerLink"}><Sms className={"footerLinkVector"}/></a>
         </div>
         <div className={"col-3 footerLinkContainer"}>
-          <a href={"tel:+358458664303"} className={"footerLink"}><Phone className={"footerLinkVector"}/></a>
+          <a href={"mailto:jere@jere.pro"} className={"footerLink"}><Mail className={"footerLinkVector"}/></a>
         </div>
       </div>
     </div>

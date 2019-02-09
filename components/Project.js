@@ -11,7 +11,7 @@ const Project = (props) => (
     <div className={"col-md-6 projectList"}>
       <div>
       {props.projectList.map((project) => (
-          <Link prefetch as={`/projects/${project.link}`} href={`/post?title=${project.name}&description=${project.description}&image=${project.link}&external=${project.external}`} key={project.name}>
+          <Link prefetch as={`/projects/${project.link}`} href={`/post?title=${project.name}&description=${project.description}&image=${project.link}&external=${project.external}&github=${project.github}`} key={project.name}>
             <a>{project.name}</a>
           </Link>
       ))}

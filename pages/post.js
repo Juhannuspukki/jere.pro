@@ -17,9 +17,18 @@ const Index = withRouter((props) => (
         <p>
           {props.router.query.description}
         </p>
-        {(props.router.query.external === "unavailable") ? <div /> :
-          <a className={"postExternalLink"} href={props.router.query.external} target="_blank">Go to project →</a>
-        }
+        <div className={"row"}>
+          <div className={"col-sm-6"}>
+            {(props.router.query.external === "unavailable") ? <div /> :
+              <a className={"postExternalLink"} href={props.router.query.external} target="_blank">Go to project →</a>
+            }
+          </div>
+          <div className={"col-sm-6"}>
+            {(props.router.query.github === "unavailable") ? <div /> :
+              <a className={"postExternalLink"} href={props.router.query.github} target="_blank">View on GitHub →</a>
+            }
+          </div>
+        </div>
       </div>
     </div>
     <Footer/>

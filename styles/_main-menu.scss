@@ -37,7 +37,8 @@
 
 @media (max-width: 991px) {
   .mainMenuContainer {
-    margin: $size-xl auto;
+    margin: auto;
+    padding: $size-xl 0;
     transform: none;
     top: 0;
     height: auto;
