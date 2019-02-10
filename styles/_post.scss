@@ -1,0 +1,27 @@
+.post {
+  position: relative;
+  top: $size-ml;
+  padding-bottom: $size-xl;
+  .container {
+    max-width: 768px;
+    .hero {
+      width: 100%;
+      min-height: 100%;
+      border-radius: $size-xs;
+      filter: grayscale(100%);
+    }
+    .postExternalLink {
+      font-weight: bold;
+      text-align: center;
+      display: block;
+      margin: $size-sm;
+    }
+    h1 {
+      font-size: $size-sm;
+      margin: $size-m 0;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}

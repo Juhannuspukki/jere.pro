@@ -1,0 +1,68 @@
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+a, p {
+  color: #000
+}
+
+.vectorLink > path,
+.vectorLink > circle,
+.arrow > path,
+.linkLogo > path,
+.footerLinkVector > path {
+  fill: #000;
+}
+
+.navBar, .footer {
+  background-color: #ffffffcc;
+}
+
+.largeTimeLine path,
+.smallTimeLine path,
+.mediumTimeLine path,
+.extraSmallTimeLine path {
+  fill: #000;
+}
+
+.largeTimeLine > path,
+.largeTimeLine > ellipse,
+.mediumTimeLine > g:last-of-type > path,
+.mediumTimeLine > g > ellipse,
+.smallTimeLine > g:last-of-type > path,
+.smallTimeLine > g > ellipse,
+.extraSmallTimeLine > g:last-of-type > path,
+.extraSmallTimeLine > g > ellipse {
+  stroke: #000;
+  fill: none;
+}
+
+.mediumTimeLine > path,
+.smallTimeLine > path,
+.extraSmallTimeLine > path {
+  stroke: #000;
+}
+
+.projectList a:hover {
+  color: #E350B9;
+}
+
+.postExternalLink:hover {
+  color: #E350B9;
+}
+
+.frontLink:hover path,
+.frontLink:hover circle,
+.frontLink:hover h2 {
+  fill: #E350B9;
+  color: #E350B9;
+}
+
+.phone:hover,
+.linkLogo:hover path,
+.arrow:hover path,
+.footerLinkVector:hover path {
+  color: #E350B9;
+  fill: #E350B9;
+}

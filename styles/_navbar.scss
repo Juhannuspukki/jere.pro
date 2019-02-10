@@ -1,0 +1,21 @@
+.navBar {
+  position: fixed;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  width: 100%;
+  z-index: 1130;
+  .arrow {
+    position: relative;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    margin: $size-s 0;
+  }
+}
+
+@media (max-width: 511px) {
+  .navBar {
+    display: none;
+  }
+}

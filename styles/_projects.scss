@@ -1,0 +1,45 @@
+.projectContainer {
+  padding: $size-xl 15px;
+  .projectTitle {
+    margin-bottom: 50px;
+  }
+  .projectList {
+    display: flex;
+    align-items: center;
+    a {
+      display: block;
+      font-size: $size-sm;
+    }
+  }
+  .projectLinkContainer {
+    .vectorLink {
+      display: block;
+      max-height: $size-l;
+      max-width: $size-l;
+      margin: $size-ml auto $size-sm auto;
+    } /*
+    &:hover {
+      .vectorLink {
+        path, circle {
+          fill: $colorTeal;
+        }
+      }
+      h2 {
+        color: $colorTeal;
+      }
+    } */
+  }
+}
+
+@media (max-width: 767px) {
+  .projectContainer {
+    .projectList {
+      display: block;
+      margin-bottom: $size-ml;
+      a {
+        margin: auto;
+        text-align: center
+      }
+    }
+  }
+}

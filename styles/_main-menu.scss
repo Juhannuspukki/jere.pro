@@ -1,0 +1,42 @@
+.mainMenuContainer {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 75vw;
+  .linkButton {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    .frontLink {
+      .vectorLink {
+        display: block;
+        height: 150px;
+        max-width: 150px;
+        margin: auto;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    h2 {
+      margin-top: $size-sm;
+      font-size: $size-m;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+}
+
+
+@media (max-width: 991px) {
+  .mainMenuContainer {
+    margin: auto;
+    padding: $size-xl 0;
+    transform: none;
+    top: 0;
+    height: auto;
+    .linkButton {
+      margin: $size-l 0;
+    }
+  }
+}
