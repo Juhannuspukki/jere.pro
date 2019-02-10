@@ -1,6 +1,5 @@
 .navBar {
   position: fixed;
-  background-color: $colorTransparentBlack;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   width: 100%;
@@ -12,11 +11,6 @@
     transform: translateX(-50%);
     width: 30px;
     margin: $size-s 0;
-    &:hover {
-      path {
-        fill: $colorTeal;
-      }
-    }
   }
 }
 

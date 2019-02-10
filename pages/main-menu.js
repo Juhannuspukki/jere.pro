@@ -12,8 +12,7 @@ const Index = () => (
       <title>jere.pro - Main menu</title>
       <meta property="og:title" content="jere.pro - Main menu" />
     </Head>
-    <NavBar/>
-    <div className={"container mainMenuContainer"}>
+    <div className={"container mainMenuContainer animated"}>
       <div className={"row"}>
         <FrontLink title={"about"}><About className={"vectorLink"}/></FrontLink>
         <FrontLink title={"projects"}><Project className={"vectorLink"}/></FrontLink>

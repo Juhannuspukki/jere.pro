@@ -1,0 +1,40 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+a, p {
+  color: #fff
+}
+
+.navBar, .footer {
+  background-color: #000000cc;
+}
+
+.projectList a:hover {
+  color: #50E3C2;
+}
+
+.postExternalLink:hover {
+  color: #50E3C2;
+}
+
+.frontLink:hover path,
+.frontLink:hover circle,
+.frontLink:hover h2 {
+  fill: #50E3C2;
+  color: #50E3C2;
+}
+
+.phone:hover {
+  color: #50E3C2;
+}
+
+.phone:hover,
+.linkLogo:hover path,
+.arrow:hover path,
+.footerLinkVector:hover path {
+  color: #50E3C2;
+  fill: #50E3C2;
+}
+

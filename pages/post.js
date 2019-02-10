@@ -11,7 +11,7 @@ const Index = withRouter((props) => (
     </Head>
     <NavBar />
     <div className={"post"}>
-      <div className={"container"}>
+      <div className={"container animated"}>
         <img className={"hero"} src={require("../static/img/" + props.router.query.image + ".jpeg")}/>
         <h1>{props.router.query.title}</h1>
         <p>

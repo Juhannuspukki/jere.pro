@@ -13,7 +13,7 @@ const Index = () => (
       <meta property="og:title" content="jere.pro - Experience" />
     </Head>
     <NavBar/>
-    <div className={"timeLineContainer"}>
+    <div className={"timeLineContainer animated"}>
       <ExtraSmallTimeLine className={"extraSmallTimeLine"}/>
       <SmallTimeLine className={"smallTimeLine"}/>
       <MediumTimeLine className={"mediumTimeLine"}/>

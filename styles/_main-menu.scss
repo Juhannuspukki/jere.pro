@@ -15,14 +15,7 @@
         margin: auto;
       }
       &:hover {
-        .vectorLink {
-          path, circle {
-            fill: $colorTeal;
-          }
-        }
-        h2 {
-          color: $colorTeal;
-        }
+        text-decoration: none;
       }
     }
     h2 {

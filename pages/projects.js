@@ -11,7 +11,7 @@ const Index = (props) => (
       <meta property="og:title" content="jere.pro - Projects" />
     </Head>
     <NavBar/>
-    <div className={"container projectContainer"}>
+    <div className={"container projectContainer animated"}>
       {ProjectObject.projects.map((project) => (
         <Project key={project.title} title={project.title} projectList={project.projectList}>
           {project.image}

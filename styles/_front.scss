@@ -13,8 +13,25 @@
   display: block;
   height: 100%;
   .dotPro {
+    opacity: 0;
+    animation-name: fadeOutOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 2s;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeOutOpacity {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

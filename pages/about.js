@@ -14,7 +14,7 @@ const Index = () => (
       <meta property="og:title" content="jere.pro - About me" />
     </Head>
     <NavBar/>
-    <div className={"about"}>
+    <div className={"about animated"}>
       <div className={"container"}>
         <img className={"parsta"} src={Me}/>
         <h1>Jere Laine</h1>

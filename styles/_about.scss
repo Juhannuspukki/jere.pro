@@ -25,9 +25,6 @@
       font-weight: bold;
       font-size: $size-sm;
       margin-bottom: $size-m;
-      &:hover {
-        color: $colorTeal;
-      }
     }
     .linkLogoContainer {
       display: block;
@@ -39,11 +36,6 @@
           display: inline-block;
           margin: auto $size-sm;
           height: $size-m;
-          &:hover {
-            path:last-of-type {
-              fill: $colorTeal;
-            }
-          }
         }
       }
     }

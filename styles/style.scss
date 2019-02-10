@@ -18,8 +18,6 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
-  color: #fff;
 }
 
 h1 {
@@ -40,11 +38,26 @@ h2 {
 a {
   font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-decoration: none;
-  color: #fff;
 }
 
 p {
   font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-decoration: none;
-  color: #fff;
+}
+
+.animated {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

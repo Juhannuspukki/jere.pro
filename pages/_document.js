@@ -6,10 +6,14 @@ export default class MyDocument extends Document {
       <html>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
         <link rel="stylesheet" href="/_next/static/style.css"/>
+        {(Date.now() % 2 === 0) ? <link rel="stylesheet" href="static/white.css"/> : <link rel="stylesheet" href="static/black.css"/> }
+  
+        <meta property="og:image" content="/static/img/ogimg.png"/>
+        <meta name="application-name" content="jere.pro"/>
   
         <link rel="shortcut icon" href="/static/favicon.ico" />
-  
         <link rel="apple-touch-icon-precomposed" sizes="57x57"
               href="/static/img/favicons/apple-touch-icon-57x57.png"/>
         <link rel="apple-touch-icon-precomposed" sizes="114x114"
@@ -31,9 +35,6 @@ export default class MyDocument extends Document {
         <link rel="icon" type="image/png" href="/static/img/favicons/favicon-32x32.png" sizes="32x32"/>
         <link rel="icon" type="image/png" href="/static/img/favicons/favicon-16x16.png" sizes="16x16"/>
         <link rel="icon" type="image/png" href="/static/img/favicons/favicon-128.png" sizes="128x128"/>
-        
-        <meta property="og:image" content="/static/img/ogimg.png"/>
-        <meta name="application-name" content="jere.pro"/>
       </Head>
       <body>
       <Main/>

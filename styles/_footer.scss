@@ -20,11 +20,6 @@
         width: 100%;
         cursor: pointer;
         margin: $size-s;
-        &:hover {
-          path {
-            fill: $colorTeal;
-          }
-        }
       }
     }
   }
