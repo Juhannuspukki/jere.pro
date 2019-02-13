@@ -1,2 +1,2 @@
-# dotpro
-jere.pro react frontend
+# jere.pro
+jere.pro nextjs SPA
