@@ -5,6 +5,7 @@ import SmallTimeLine from '../svg/experience/timeline-s.svg'
 import MediumTimeLine from '../svg/experience/timeline-m.svg'
 import LargeTimeLine from '../svg/experience/timeline-l.svg'
 import Head from 'next/head'
+import React from 'react'
 
 const Index = () => (
   <div>

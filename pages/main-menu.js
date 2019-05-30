@@ -1,10 +1,10 @@
-import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import FrontLink from '../components/FrontLinks'
 import Project from '../svg/projects.svg'
 import Experience from '../svg/experience.svg'
 import About from '../svg/about.svg'
 import Head from 'next/head'
+import React from 'react'
 
 const Index = () => (
   <div className={"test"}>

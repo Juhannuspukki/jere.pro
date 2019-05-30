@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Project from '../components/Project'
 import ProjectObject from '../components/ProjectObject'
 import Head from 'next/head'
+import React from 'react'
 
 const Index = (props) => (
   <div className={"test"}>

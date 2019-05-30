@@ -6,6 +6,7 @@ import Mail from '../svg/about/mail.svg'
 import LinkedIn from '../svg/about/in.svg'
 import Me from '../static/img/me.jpeg'
 import Head from 'next/head'
+import React from 'react'
 
 const Index = () => (
   <div>

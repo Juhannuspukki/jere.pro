@@ -1,4 +1,5 @@
 import Document, {Head, Main, NextScript} from 'next/document'
+import React from 'react'
 
 export default class MyDocument extends Document {
   render() {
@@ -6,13 +7,13 @@ export default class MyDocument extends Document {
       <html>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
+
         <link rel="stylesheet" href="/_next/static/style.css"/>
         {(Date.now() % 2 === 0) ? <link rel="stylesheet" href="static/white.css"/> : <link rel="stylesheet" href="static/black.css"/> }
-  
+
         <meta property="og:image" content="/static/img/ogimg.png"/>
         <meta name="application-name" content="jere.pro"/>
-  
+
         <link rel="shortcut icon" href="/static/favicon.ico" />
         <link rel="apple-touch-icon-precomposed" sizes="57x57"
               href="/static/img/favicons/apple-touch-icon-57x57.png"/>

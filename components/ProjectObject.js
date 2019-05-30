@@ -2,6 +2,8 @@ import UiDesign from '../svg/projects/uidesign.svg'
 import Backend from '../svg/projects/backend.svg'
 import Frontend from '../svg/projects/frontend.svg'
 import Embedded from '../svg/projects/embedded.svg'
+import React from 'react'
+
 
 const data =
   {

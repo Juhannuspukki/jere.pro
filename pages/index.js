@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import "../styles/style.scss"
 import Head from 'next/head'
 import { withRouter } from 'next/router'
@@ -12,7 +11,7 @@ class Index extends React.Component {
   }
   render () {
     const { router } = this.props;
-    
+
     return (
       <div className={"test"}>
         <Head>

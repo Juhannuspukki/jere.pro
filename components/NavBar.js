@@ -1,5 +1,6 @@
 import Arrow from '../svg/arrow-left.svg'
 import Router from 'next/router'
+import React from 'react'
 
 
 const NavBar = () => (

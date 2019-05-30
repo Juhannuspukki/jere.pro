@@ -2,6 +2,7 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import {withRouter} from 'next/router'
 import Head from 'next/head'
+import React from 'react'
 
 const Index = withRouter((props) => (
   <div>

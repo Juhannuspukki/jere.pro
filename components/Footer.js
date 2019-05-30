@@ -3,6 +3,8 @@ import Sms from '../svg/sms.svg'
 import Telegram from '../svg/about/tg.svg'
 import Router from 'next/router'
 import Mail from '../svg/about/mail.svg'
+import React from 'react'
+
 
 const Footer = () => (
   <div className={"footer"}>
