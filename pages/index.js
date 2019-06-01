@@ -1,4 +1,3 @@
-import "../styles/style.scss"
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 import React from 'react'
