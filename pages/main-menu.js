@@ -14,7 +14,7 @@ const Index = () => (
       <meta property="og:title" content="jere.pro - Main menu" />
     </Head>
     <div className={"container mainMenuContainer animated"}>
-      <div className={"row"}>
+      <div className={"row no-gutters"}>
         <FrontLink title={"about"}><About className={"vectorLink"}/></FrontLink>
         <FrontLink title={"projects"}><Project className={"vectorLink"}/></FrontLink>
         <FrontLink title={"experience"}><Experience className={"vectorLink"}/></FrontLink>

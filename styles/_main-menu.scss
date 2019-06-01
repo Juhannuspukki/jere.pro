@@ -4,7 +4,6 @@
   transform: translateY(-50%);
   max-width: 75vw;
   .linkButton {
-    display: flex;
     align-content: center;
     justify-content: center;
     .frontLink {
@@ -30,7 +29,6 @@
 @media (max-width: 1200px) {
   .mainMenuContainer {
     max-width: 768px;
-    min-height: auto;
     .linkButton {
       margin: 10vh 0;
     }
@@ -41,7 +39,6 @@
   .mainMenuContainer {
     top: 0;
     transform: none;
-    margin: auto;
     padding: $size-xl 0;
     .linkButton {
       margin: 6vh 0;
