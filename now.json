@@ -4,6 +4,6 @@
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "routes": [
     { "src": "_next/static/", "headers": { "cache-control": "immutable,max-age=31536000" }},
-    { "src": "/projects/(?<image>[^/]+)$", "dest": "/post?title=$title&description=$description&image=$image&external=$external&github=$github" }
+    { "src": "/projects/(?<link>[^/]+)$", "dest": "/post?link=$link" }
   ]
 }

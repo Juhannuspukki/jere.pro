@@ -1,11 +1,12 @@
 import Arrow from '../svg/arrow-left.svg'
-import Router from 'next/router'
 import React from 'react'
+import Link from "next/link";
 
-
-const NavBar = () => (
+const NavBar = (props) => (
   <div className={"navBar"}>
-    <div onClick={() => Router.back()}><Arrow className={"arrow"}/></div>
+    <Link prefetch href={props.url}>
+      <a><Arrow className={"arrow"}/></a>
+    </Link>
   </div>
 )
 

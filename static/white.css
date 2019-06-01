@@ -7,8 +7,8 @@ a, p {
   color: #000
 }
 
-.vectorLink > path,
-.vectorLink > circle,
+.vectorLink path,
+.vectorLink circle,
 .arrow > path,
 .linkLogo > path,
 .footerLinkVector > path {

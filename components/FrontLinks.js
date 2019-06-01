@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const FrontLink = (props) => (
-  <div className={"col-lg-4 linkButton"}>
+  <div className={"col-xl-3 col-md-6 linkButton"}>
     <Link prefetch as={props.title} href={"/"+ props.title}>
       <a className={"frontLink"}>
         {props.children}
@@ -11,6 +11,6 @@ const FrontLink = (props) => (
         </a>
     </Link>
   </div>
-)
+);
 
 export default FrontLink

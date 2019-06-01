@@ -27,16 +27,24 @@
   }
 }
 
-
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .mainMenuContainer {
+    max-width: 768px;
+    min-height: auto;
+    .linkButton {
+      margin: 10vh 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .mainMenuContainer {
+    top: 0;
+    transform: none;
     margin: auto;
     padding: $size-xl 0;
-    transform: none;
-    top: 0;
-    height: auto;
     .linkButton {
-      margin: $size-l 0;
+      margin: 6vh 0;
     }
   }
 }

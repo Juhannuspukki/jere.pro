@@ -1,40 +1,55 @@
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
 import {withRouter} from 'next/router'
 import Head from 'next/head'
 import React from 'react'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
+import ProjectObject from '../components/ProjectObject'
 
-const Index = withRouter((props) => (
-  <div>
-    <Head>
-      <title>jere.pro - Projects - {props.router.query.title}</title>
-      <meta property="og:title" content={"jere.pro - Projects - " + props.router.query.title} />
-    </Head>
-    <NavBar />
-    <div className={"post"}>
-      <div className={"container animated"}>
-        <img className={"hero"} src={require("../static/img/" + props.router.query.image + ".jpeg")}/>
-        <h1>{props.router.query.title}</h1>
-        <p>
-          {props.router.query.description}
-        </p>
-        <div className={"row"}>
-          <div className={"col-sm-6"}>
-            {(props.router.query.external === "unavailable") ? <div /> :
-              <a className={"postExternalLink"} href={props.router.query.external} target="_blank">Go to project →</a>
-            }
-          </div>
-          <div className={"col-sm-6"}>
-            {(props.router.query.github === "unavailable") ? <div /> :
-              <a className={"postExternalLink"} href={props.router.query.github} target="_blank">View on GitHub →</a>
-            }
+
+class Post extends React.Component {
+  constructor(props) {
+    super(props);
+    const {router} = this.props;
+    const findProject = projectList => projectList.find(project => project.link === router.query.link);
+    const stack = ProjectObject.projects.find(stackLevel => findProject(stackLevel.projectList));
+    this.state = findProject(stack.projectList);
+  }
+
+  render () {
+    const {name, link, external, github, description} = this.state;
+    return (
+      <div>
+        <Head>
+          <title>jere.pro - Projects - {name}</title>
+          <meta property="og:title" content={"jere.pro - Projects - " + name} />
+        </Head>
+        <NavBar url={"/projects"}/>
+        <div className={"post"}>
+          <div className={"container animated"}>
+            <img className={"hero"} src={require("../static/img/" + link + ".jpeg")}/>
+            <h1>{name}</h1>
+            <p>
+              {description}
+            </p>
+            <div className={"row"}>
+              <div className={"col-sm-6"}>
+                {(external === "unavailable") ? <div /> :
+                  <a className={"postExternalLink"} href={external} target="_blank">See in action →</a>
+                }
+              </div>
+              <div className={"col-sm-6"}>
+                {(github === "unavailable") ? <div /> :
+                  <a className={"postExternalLink"} href={github} target="_blank">View on GitHub →</a>
+                }
+              </div>
+            </div>
           </div>
         </div>
+        <Footer url={"/projects"}/>
       </div>
-    </div>
-    <Footer/>
-  </div>
-))
+    )
+  }
+}
 
-export default Index
+export default withRouter(Post)
 

@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        {(Date.now() % 2 === 0) ? <link rel="stylesheet" href="static/white.css"/> : <link rel="stylesheet" href="static/black.css"/> }
+        {(Date.now() % 2 === 0) ? <link rel="stylesheet" href="/static/white.css"/> : <link rel="stylesheet" href="/static/black.css"/> }
 
         <meta property="og:image" content="/static/img/ogimg.png"/>
         <meta name="application-name" content="jere.pro"/>

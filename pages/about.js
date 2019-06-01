@@ -14,7 +14,7 @@ const Index = () => (
       <title>jere.pro - About me</title>
       <meta property="og:title" content="jere.pro - About me" />
     </Head>
-    <NavBar/>
+    <NavBar url={"/main-menu"}/>
     <div className={"about animated"}>
       <div className={"container"}>
         <img className={"parsta"} src={Me}/>
@@ -27,7 +27,7 @@ const Index = () => (
           <a className={"link"} href={"https://github.com/Juhannuspukki"} target="_blank"><GitHub className={"linkLogo"}/></a>
         </div>
         <p>
-          I’m a 22-year-old Apple fanboy from Hervanta. Introverted, but I believe I have become more ambiverted
+          I’m a 23-year-old Apple fanboy from Hervanta. Introverted, but I believe I have become more ambiverted
           over the years. I have quite many hobbies, including aquariums, debating, cooking, motion graphics,
           still graphics, coding apps in Swift, bots in Python and websites in, well, many languages. I occasionally
           try some embedded project as well. I like coding because it allows me to create anything I can imagine
@@ -37,7 +37,7 @@ const Index = () => (
         </p>
       </div>
     </div>
-    <Footer/>
+    <Footer url={"/main-menu"}/>
   </div>
 )
 

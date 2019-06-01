@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 
 
-const Project = (props) => (
+const StackLevel = (props) => (
   <div className={"row"}>
     <div className={"col-md-2"} />
     <div className={"col-md-4 projectLinkContainer"}>
@@ -12,7 +12,7 @@ const Project = (props) => (
     <div className={"col-md-6 projectList"}>
       <div>
       {props.projectList.map((project) => (
-          <Link prefetch as={`/projects/${project.link}`} href={`/post?title=${project.name}&description=${project.description}&image=${project.link}&external=${project.external}&github=${project.github}`} key={project.name}>
+          <Link prefetch as={`/projects/${project.link}`} href={`/post?link=${project.link}`} key={project.link}>
             <a>{project.name}</a>
           </Link>
       ))}
@@ -21,4 +21,4 @@ const Project = (props) => (
   </div>
 )
 
-export default Project
+export default StackLevel

@@ -26,7 +26,7 @@ const data =
               {
                 name: "Bachelor's thesis",
                 link: "bsc",
-                external: "unavailable",
+                external: "https://dspace.cc.tut.fi/dpub/handle/123456789/27191",
                 github: "unavailable",
                 description: "During my time at Neuro Event Labs Oy I had the opportunity to design their fleet " +
                 "management system. The design process is documented on my Bachelor's thesis. I was able to produce a " +
