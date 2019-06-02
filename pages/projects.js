@@ -1,7 +1,7 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import StackLevel from '../components/StackLevel'
-import ProjectObject from '../components/ProjectObject'
+import ProjectObject from '../data/ProjectObject'
 import Head from 'next/head'
 import React from 'react'
 
@@ -14,7 +14,7 @@ const Index = (props) => (
     <NavBar url={"/main-menu"}/>
     <div className={"container projectContainer animated"}>
       {ProjectObject.projects.map((project) => (
-        <StackLevel key={project.title} title={project.title} projectList={project.projectList}>
+        <StackLevel key={project.title} title={project.title} link={project.link} projectList={project.projectList}>
           {project.image}
         </StackLevel>
       ))}

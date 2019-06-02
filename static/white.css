@@ -66,3 +66,11 @@ a, p {
   color: #E350B9;
   fill: #E350B9;
 }
+
+.graphGrid > line {
+  stroke: #000 !important;
+}
+
+.vx-axis text {
+  fill: #000 !important;
+}

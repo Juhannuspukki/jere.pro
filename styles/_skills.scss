@@ -1,0 +1,48 @@
+.skills {
+  padding: $size-m 0 $size-xl 0;
+  .container {
+    max-width: 768px;
+    h1 {
+      font-size: $size-l;
+      margin: $size-m 0;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: $size-ml;
+    }
+    .projectList {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      a {
+        text-align: center;
+        display: block;
+        font-size: $size-sm;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .skills {
+    .container {
+      h1 {
+        font-size: $size-ml;
+      }
+      .graphContainer {
+        margin-bottom: $size-ml;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .skills {
+    .container {
+      h1 {
+        font-size: $size-m;
+      }
+    }
+  }
+}

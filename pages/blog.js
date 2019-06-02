@@ -1,8 +1,9 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import BlogObject from '../components/BlogObject'
+import BlogObject from '../data/BlogObject'
 import Head from 'next/head'
 import React from 'react'
+
 
 const Index = (props) => (
   <div className={"test"}>
@@ -16,6 +17,6 @@ const Index = (props) => (
     </div>
     <Footer url={"/main-menu"}/>
   </div>
-)
+);
 
 export default Index

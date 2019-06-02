@@ -11,6 +11,17 @@ const data =
       [
         {
           title: "UI/UX design",
+          link: "design",
+          skills: [
+            [80,65, "Affinity", '../static/graphsymbols/affinity.svg'],
+            [90,80, "Sketch", '../static/graphsymbols/sketch.svg'],
+            [50,65, "AutoCad", '../static/graphsymbols/autocad.svg'],
+            [20,10, "SolidWorks", '../static/graphsymbols/solidworks.svg'],
+          ],
+          description: "User interface (UI) design is the art of designing computer systems that do not cause " +
+            "excessive frustration to the user. User experience (UX) research is the skill of figuring out which " +
+            "UI elements cause frustration and how. It generally involves interviews, questionnaires and observation " +
+            "of users in their natural habitat.",
           image: <UiDesign className={"vectorLink"}/>,
           projectList:
             [
@@ -18,7 +29,7 @@ const data =
                 name: "jere.pro",
                 link: "dotpro-design",
                 external: "https://jere.pro",
-                github: "https://github.com/Juhannuspukki/dotpro",
+                github: "https://github.com/Juhannuspukki/jere.pro",
                 description: "Before starting my own website project, I used Affinity Designer to draw UI sketches. " +
                   "It turned out to be a good decision, since arranging components on a website is a lot easier in " +
                   "Affinity than HTML."
@@ -45,6 +56,21 @@ const data =
         },
         {
           title: "Frontend",
+          link: "frontend",
+          skills: [
+            [95,70, "React.js", '../static/graphsymbols/react.svg'],
+            [95, 55, "Next.js", '../static/graphsymbols/nextjs.svg'],
+            [80,95, "CSS", '../static/graphsymbols/css3.svg'],
+            [60, 60, "JavaScript", '../static/graphsymbols/javascript.svg'],
+            [95, 95, "HTML5", '../static/graphsymbols/html.svg'],
+            [95,80, "Sass", '../static/graphsymbols/sass.svg'],
+            [70,30, "Webpack", '../static/graphsymbols/webpack.svg'],
+            [20,10, "Angular", '../static/graphsymbols/angular.svg'],
+            [90,0, "Vue.js", '../static/graphsymbols/vuejs.svg'],
+          ],
+          description: "Frontend development is the art of programming user interfaces designed by a UI designer. " +
+          "Unlike backend, frontend is a piece of software that runs on the end user's device. For example, this " +
+          "website runs entirely on your web browser making it a frontend web app.",
           image: <Frontend className={"vectorLink"}/>,
           projectList:
             [
@@ -52,7 +78,7 @@ const data =
                 name: "jere.pro",
                 link: "dotpro",
                 external: "https://jere.pro",
-                github: "https://github.com/Juhannuspukki/dotpro",
+                github: "https://github.com/Juhannuspukki/jere.pro",
                 description: "I decided that I need a website of my own. It took way too long to decide what technologies " +
                 "to use but I finally decided to try Next.js that has received a lot of praise recently. " +
                 "The result is a very fast PWA."
@@ -61,7 +87,7 @@ const data =
                 name: "pollex.club",
                 link: "pollex",
                 external: "https://pollex.club",
-                github: "https://github.com/Juhannuspukki/pollex-web-18",
+                github: "https://github.com/Juhannuspukki/pollex-web",
                 description: "Pollex.club was the first website I created after neuroeventlabs.com. Its design is " +
                 "slightly dated, but it runs on the same victor-hugo generator as all of my newer static site projects. " +
                 "During this project I also learned to use AWS, for it was originally hosted there."
@@ -90,7 +116,7 @@ const data =
                 name: "course-o-meter.com",
                 link: "course-o-meter",
                 external: "https://course-o-meter.com",
-                github: "unavailable",
+                github: "https://github.com/Juhannuspukki/project-daydream",
                 description: "After a particularly annoying university course I created the Course-o-Meter, a project " +
                 "that compares university courses against each other. A must-have tool for planning your studies! " +
                 "The app is a static React.js export that is hosted on Netlify."
@@ -117,6 +143,22 @@ const data =
         },
         {
           title: "Backend",
+          link: "backend",
+          skills: [
+            [70,90, "Python", '../static/graphsymbols/python.svg'],
+            [95,30, "Docker", '../static/graphsymbols/docker.svg'],
+            [95,15, "Swift", '../static/graphsymbols/swift.svg'],
+            [0,0, "Java", '../static/graphsymbols/java.svg'],
+            [70,40, "PostgreSQL", '../static/graphsymbols/postgresql.svg'],
+            [75,25, "Node.js", '../static/graphsymbols/nodejs.svg'],
+            [90,0, "GraphQL", '../static/graphsymbols/graphql.svg'],
+
+          ],
+          description: "Backend servers are used to store data and perform complex operations for it. A backend can " +
+          "be thought as a black box with stuff going in, to which operations are performed and as a result " +
+          "stuff comes out. Backend code is what determines what exactly is allowed to go in and what operations are " +
+          "performed on it. Average user never accesses backends directly, since they only deal with machine " +
+          "language. Instead, users use a frontend which communicates with the backend.",
           image: <Backend className={"vectorLink"}/>,
           projectList:
             [
@@ -131,10 +173,25 @@ const data =
                 "nysse-locator services, a minesweeper game, information about the school's menus, weather forecasts and " +
                 "so on and so forth."
               },
+              {
+                name: "@CourseRobot on Telegram",
+                link: "courserobot",
+                external: "http://t.me/courserobot",
+                github: "https://github.com/Juhannuspukki/project-daydream-telegram",
+                description: "CourseRobot is Python-made Telegram bot that brings the functionality of Course-O-Meter " +
+                  "directly to Telegram."
+              },
             ]
         },
         {
           title: "Embedded",
+          link: "embedded",
+          skills: [
+            [40,70, "C", '../static/graphsymbols/c.svg'],
+            [10,50, "C++", '../static/graphsymbols/c++.svg'],
+          ],
+          description: "Embedded systems are devices that combine both hardware and software. Probably the most " +
+          "famous example of this are Arduino boards.",
           image: <Embedded className={"vectorLink"}/>,
           projectList:
             [
@@ -142,7 +199,7 @@ const data =
                 name: "4D QR code",
                 link: "qr",
                 external: "unavailable",
-                github: "unavailable",
+                github: "https://github.com/Juhannuspukki/led-matrix",
                 description: "I have not listed many school projects here because in the end everyone has to complete them. " +
                 "However, this is one succeeded exceptionally well. The assignment was to design a product from a bunch" +
                 "of LEDs controlled by a microcontroller. I came up with the idea of a quick-read code (2-dimensional barcode) " +
@@ -153,7 +210,7 @@ const data =
                 name: "FFT controlled LED",
                 link: "led",
                 external: "unavailable",
-                github: "unavailable",
+                github: "https://github.com/Juhannuspukki/arduino-fft",
                 description: "I used a Teensy 3.2 board (almost like an Arduino, but not quite) to make a device that " +
                 "uses FFT to analyze music. The resulting information is then used to control a RGB LED in real time."
               },

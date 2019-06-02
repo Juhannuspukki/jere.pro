@@ -3,10 +3,10 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import ProjectObject from '../components/ProjectObject'
+import ProjectObject from '../data/ProjectObject'
 
 
-class Post extends React.Component {
+class Project extends React.Component {
   constructor(props) {
     super(props);
     const {router} = this.props;
@@ -51,5 +51,5 @@ class Post extends React.Component {
   }
 }
 
-export default withRouter(Post)
+export default withRouter(Project)
 
