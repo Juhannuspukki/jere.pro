@@ -23,6 +23,6 @@ const StackLevel = (props) => (
       </div>
     </div>
   </div>
-)
+);
 
 export default StackLevel

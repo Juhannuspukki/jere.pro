@@ -1,9 +1,37 @@
+import React from 'react'
+
 import UiDesign from '../svg/projects/uidesign.svg'
 import Backend from '../svg/projects/backend.svg'
 import Frontend from '../svg/projects/frontend.svg'
 import Embedded from '../svg/projects/embedded.svg'
-import React from 'react'
 
+import Affinity from '../static/graphsymbols/affinity.svg'
+import Sketch from '../static/graphsymbols/sketch.svg'
+import AutoCad from '../static/graphsymbols/autocad.svg'
+import SolidWorks from '../static/graphsymbols/solidworks.svg'
+
+import Reactjs from '../static/graphsymbols/react.svg'
+import Nextjs from '../static/graphsymbols/nextjs.svg'
+import HTML5 from '../static/graphsymbols/html.svg'
+import JavaScript from '../static/graphsymbols/javascript.svg'
+import Css3 from '../static/graphsymbols/css3.svg'
+import Sass from '../static/graphsymbols/sass.svg'
+import Webpack from '../static/graphsymbols/webpack.svg'
+import Angular from '../static/graphsymbols/angular.svg'
+import Vuejs from '../static/graphsymbols/vuejs.svg'
+
+import Python from '../static/graphsymbols/python.svg'
+import Docker from '../static/graphsymbols/docker.svg'
+import Swift from '../static/graphsymbols/swift.svg'
+import Java from '../static/graphsymbols/java.svg'
+import PostgreSQL from '../static/graphsymbols/postgresql.svg'
+import Nodejs from '../static/graphsymbols/nodejs.svg'
+import GraphQL from '../static/graphsymbols/graphql.svg'
+import Php from '../static/graphsymbols/php.svg'
+import AWS from '../static/graphsymbols/aws.svg'
+
+import C from '../static/graphsymbols/c.svg'
+import CPlusPlus from '../static/graphsymbols/c++.svg'
 
 const data =
   {
@@ -13,15 +41,16 @@ const data =
           title: "UI/UX design",
           link: "design",
           skills: [
-            [80,65, "Affinity", '../static/graphsymbols/affinity.svg'],
-            [90,80, "Sketch", '../static/graphsymbols/sketch.svg'],
-            [50,65, "AutoCad", '../static/graphsymbols/autocad.svg'],
-            [20,10, "SolidWorks", '../static/graphsymbols/solidworks.svg'],
+            [80,65, "Affinity", <Affinity/>],
+            [90,80, "Sketch", <Sketch/>],
+            [50,65, "AutoCad", <AutoCad/>],
+            [20,10, "SolidWorks", <SolidWorks/>],
           ],
           description: "User interface (UI) design is the art of designing computer systems that do not cause " +
             "excessive frustration to the user. User experience (UX) research is the skill of figuring out which " +
             "UI elements cause frustration and how. It generally involves interviews, questionnaires and observation " +
-            "of users in their natural habitat.",
+            "of users in their natural habitat. I currently study human-technology interaction in Tampere " +
+            "University of Technology.",
           image: <UiDesign className={"vectorLink"}/>,
           projectList:
             [
@@ -58,19 +87,20 @@ const data =
           title: "Frontend",
           link: "frontend",
           skills: [
-            [95,70, "React.js", '../static/graphsymbols/react.svg'],
-            [95, 55, "Next.js", '../static/graphsymbols/nextjs.svg'],
-            [80,95, "CSS", '../static/graphsymbols/css3.svg'],
-            [60, 60, "JavaScript", '../static/graphsymbols/javascript.svg'],
-            [95, 95, "HTML5", '../static/graphsymbols/html.svg'],
-            [95,80, "Sass", '../static/graphsymbols/sass.svg'],
-            [70,30, "Webpack", '../static/graphsymbols/webpack.svg'],
-            [20,10, "Angular", '../static/graphsymbols/angular.svg'],
-            [90,0, "Vue.js", '../static/graphsymbols/vuejs.svg'],
+            [95,70, "React.js", <Reactjs/>],
+            [95, 55, "Next.js", <Nextjs/>],
+            [80,95, "CSS", <Css3/>],
+            [60, 60, "JavaScript", <JavaScript/>],
+            [95, 95, "HTML5", <HTML5/>],
+            [95,80, "Sass", <Sass/>],
+            [40,30, "Webpack", <Webpack/>],
+            [20,10, "Angular", <Angular/>],
+            [90,0, "Vue.js", <Vuejs/>],
           ],
           description: "Frontend development is the art of programming user interfaces designed by a UI designer. " +
           "Unlike backend, frontend is a piece of software that runs on the end user's device. For example, this " +
-          "website runs entirely on your web browser making it a frontend web app.",
+          "website runs entirely on your web browser making it a frontend web app. I consider myself to be a " +
+          "frontend developer first and foremost, and I have undertaken many frontend projects.",
           image: <Frontend className={"vectorLink"}/>,
           projectList:
             [
@@ -145,20 +175,22 @@ const data =
           title: "Backend",
           link: "backend",
           skills: [
-            [70,90, "Python", '../static/graphsymbols/python.svg'],
-            [95,30, "Docker", '../static/graphsymbols/docker.svg'],
-            [95,15, "Swift", '../static/graphsymbols/swift.svg'],
-            [0,0, "Java", '../static/graphsymbols/java.svg'],
-            [70,40, "PostgreSQL", '../static/graphsymbols/postgresql.svg'],
-            [75,25, "Node.js", '../static/graphsymbols/nodejs.svg'],
-            [90,0, "GraphQL", '../static/graphsymbols/graphql.svg'],
-
+            [70,90, "Python", <Python/>],
+            [95,30, "Docker", <Docker/>],
+            [95,15, "Swift", <Swift/>],
+            [0,0, "Java", <Java/>],
+            [10,0, "Php", <Php/>],
+            [70,40, "PostgreSQL", <PostgreSQL/>],
+            [75,25, "Node.js", <Nodejs/>],
+            [80,0, "GraphQL", <GraphQL/>],
+            [40,25, "AWS", <AWS/>],
           ],
-          description: "Backend servers are used to store data and perform complex operations for it. A backend can " +
+          description: "Backend servers are used to store content and perform complex operations for it. A backend can " +
           "be thought as a black box with stuff going in, to which operations are performed and as a result " +
           "stuff comes out. Backend code is what determines what exactly is allowed to go in and what operations are " +
           "performed on it. Average user never accesses backends directly, since they only deal with machine " +
-          "language. Instead, users use a frontend which communicates with the backend.",
+          "language. Instead, users use a frontend which communicates with the backend. I have developed several Python " +
+          "backends for Telegram bots.",
           image: <Backend className={"vectorLink"}/>,
           projectList:
             [
@@ -187,11 +219,12 @@ const data =
           title: "Embedded",
           link: "embedded",
           skills: [
-            [40,70, "C", '../static/graphsymbols/c.svg'],
-            [10,50, "C++", '../static/graphsymbols/c++.svg'],
+            [40,70, "C", <C/>],
+            [10,50, "C++", <CPlusPlus/>],
           ],
           description: "Embedded systems are devices that combine both hardware and software. Probably the most " +
-          "famous example of this are Arduino boards.",
+          "famous example of this are Arduino boards. Playing with Arduino's is fun, but my interests have steered me " +
+          "towards the higher-level languages.",
           image: <Embedded className={"vectorLink"}/>,
           projectList:
             [
@@ -217,6 +250,6 @@ const data =
             ]
         }
       ]
-  }
+  };
 
 export default data

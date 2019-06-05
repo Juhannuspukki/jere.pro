@@ -1,10 +1,23 @@
 .skills {
-  padding: $size-m 0 $size-xl 0;
+  padding: $size-ml 0 $size-xl 0;
   .container {
     max-width: 768px;
+    .graphContainer {
+      min-height: 404px;
+      .graphSVG line,
+      .vx-axis text,
+      .graphIcon path,
+      .graphIcon circle {
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-duration: 0.5s;
+      }
+    }
     h1 {
-      font-size: $size-l;
-      margin: $size-m 0;
+      font-size: $size-sm;
+      margin: $size-s 0 $size-m 0;
     }
     p {
       text-align: justify;
@@ -19,29 +32,6 @@
         text-align: center;
         display: block;
         font-size: $size-sm;
-      }
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .skills {
-    .container {
-      h1 {
-        font-size: $size-ml;
-      }
-      .graphContainer {
-        margin-bottom: $size-ml;
-      }
-    }
-  }
-}
-
-@media (max-width: 320px) {
-  .skills {
-    .container {
-      h1 {
-        font-size: $size-m;
       }
     }
   }

@@ -9,7 +9,7 @@ import { Grid } from '@vx/grid';
 
 class Chart extends React.Component {
   handleMouseOver = (event, datum) => {
-    const coords = localPoint(event.target.ownerSVGElement, event);
+    const coords = localPoint(event.target.ownerSVGElement.ownerSVGElement, event);
     this.props.showTooltip({
       tooltipLeft: coords.x,
       tooltipTop: coords.y,
@@ -33,7 +33,7 @@ class Chart extends React.Component {
     const margin = {
       top: 10,
       left: 60,
-      right: 20,
+      right: 60,
       bottom: 50
     };
 
@@ -46,7 +46,7 @@ class Chart extends React.Component {
     const xMax = width - margin.left - margin.right;
     const yMax = height - margin.top - margin.bottom;
 
-    // And then scale the graph by our data
+    // And then scale the graph by our content
     const xScale = scaleLinear({
       domain: [0, 100],
       range: [0, xMax],
@@ -62,7 +62,7 @@ class Chart extends React.Component {
     return (
       // note React.Fragment is only available in >= react@16.2
       <React.Fragment>
-        <svg width={width} height={height}>
+        <svg width={width} height={height} className="graphSVG">
           <Grid
             className="graphGrid"
             top={margin.top}
@@ -80,18 +80,25 @@ class Chart extends React.Component {
             const cx = xScale(x(point));
             const cy = yScale(y(point));
 
+            const Icon = point[3];
+
+            console.log(Icon);
+
             return (
-              <Group key={`bar-${i}`}>
-                <image href={point[3]}
-                       key={`point-${point.x}-${i}`}
-                       className="TechIcon"
-                       width={50}
-                       height={50}
-                       x={cx+35}
-                       y={cy-15}
-                       onMouseOver={e => this.handleMouseOver(e, point[2])}
-                       onMouseOut={hideTooltip}
-                />
+              <Group key={`bar-${i}`}
+                     onMouseOver={e => this.handleMouseOver(e, point[2])}
+                     onMouseOut={hideTooltip}
+              >
+                {React.cloneElement(Icon,
+                  {
+                    key: `point-${point.x}-${i}`,
+                    className: "graphIcon",
+                    x: cx+35,
+                    y: cy-15,
+                    width: 50,
+                    height: 50,
+                  })
+                }
               </Group>
             );
           })}
@@ -103,8 +110,9 @@ class Chart extends React.Component {
               hideAxisLine={true}
               hideTicks={true}
               hideZero={true}
-              numTicks={5}
-              label="Skill level"
+              numTicks={0}
+              label="Skill level →"
+              labelOffset={8}
               labelProps={{
                 fill: '#fff',
                 textAnchor: 'middle',
@@ -129,8 +137,9 @@ class Chart extends React.Component {
               top={yMax}
               left={margin.left}
               scale={xScale}
-              numTicks={5}
-              label="Enjoyability of technology"
+              numTicks={0}
+              labelOffset={0}
+              label="Interest in technology →"
               labelProps={{
                 fill: '#fff',
                 textAnchor: 'middle',

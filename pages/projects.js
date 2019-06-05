@@ -1,7 +1,7 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import StackLevel from '../components/StackLevel'
-import ProjectObject from '../data/ProjectObject'
+import ProjectObject from '../content/ProjectContent'
 import Head from 'next/head'
 import React from 'react'
 

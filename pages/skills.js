@@ -3,10 +3,9 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import ProjectObject from '../data/ProjectObject'
+import ProjectObject from '../content/ProjectContent'
 import Graph from "../components/SkillGraph";
 import {ParentSize} from "@vx/responsive";
-import Link from "next/link";
 
 
 class Post extends React.Component {
@@ -17,7 +16,7 @@ class Post extends React.Component {
   }
 
   render() {
-    const {title, skills, description, projectList} = this.state;
+    const {title, skills, description} = this.state;
     return (
       <div>
         <Head>
@@ -27,13 +26,7 @@ class Post extends React.Component {
         <NavBar url={"/projects"}/>
         <div className={"skills animated"}>
           <div className={"container"}>
-            <h1>{title}</h1>
-            <p>
-              {description}
-            </p>
-            <div className="row">
-              <div className="col-md-7 graphContainer">
-                <h2>Skills</h2>
+              <div className="graphContainer">
                 <ParentSize>
                   {parent => (
                     <Graph
@@ -48,19 +41,10 @@ class Post extends React.Component {
                   )}
                 </ParentSize>
               </div>
-              <div className="col-md-5">
-                <h2>Projects</h2>
-                <div className="projectList">
-                  <div>
-                {projectList.map((project) => (
-                  <Link prefetch as={`/projects/${project.link}`} href={`/project?link=${project.link}`} key={project.link}>
-                    <a>{project.name}</a>
-                  </Link>
-                ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h1>{title}</h1>
+            <p>
+              {description}
+            </p>
           </div>
         </div>
         <Footer url={"/projects"}/>

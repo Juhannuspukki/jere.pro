@@ -11,7 +11,9 @@ a, p {
 .vectorLink circle,
 .arrow > path,
 .linkLogo > path,
-.footerLinkVector > path {
+.footerLinkVector > path,
+.graphIcon path,
+.graphIcon circle {
   fill: #000;
 }
 

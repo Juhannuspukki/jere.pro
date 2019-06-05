@@ -1,6 +1,6 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import BlogObject from '../data/BlogObject'
+import BlogObject from '../content/BlogObject'
 import Head from 'next/head'
 import React from 'react'
 

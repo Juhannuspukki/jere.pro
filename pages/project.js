@@ -3,7 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import ProjectObject from '../data/ProjectObject'
+import ProjectObject from '../content/ProjectContent'
 
 
 class Project extends React.Component {
