@@ -7,5 +7,12 @@ module.exports = withOptimizedImages(withSass({
     inlineImageLimit: 1000000,
     mozjpeg: {
       quality: 80,
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader'
+    });
+    return config
   }
 }));

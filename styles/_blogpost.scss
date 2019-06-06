@@ -1,4 +1,4 @@
-.post {
+.blogPost {
   position: relative;
   top: $size-ml;
   padding-bottom: $size-xl;
@@ -10,18 +10,17 @@
       border-radius: $size-xs;
       filter: grayscale(100%);
     }
-    .postExternalLink {
-      font-weight: bold;
-      text-align: center;
-      display: block;
-      margin: $size-sm;
-    }
     h1 {
       font-size: $size-sm;
-      margin: $size-m 0;
+      margin: $size-m 0 $size-s 0;
     }
     p {
       text-align: left;
+    }
+    .publishDate {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: $size-m;
     }
   }
 }

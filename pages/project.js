@@ -3,20 +3,23 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import ProjectObject from '../content/ProjectContent'
 
 
 class Project extends React.Component {
-  constructor(props) {
-    super(props);
-    const {router} = this.props;
-    const findProject = projectList => projectList.find(project => project.link === router.query.link);
-    const stack = ProjectObject.projects.find(stackLevel => findProject(stackLevel.projectList));
-    this.state = findProject(stack.projectList);
+  static async getInitialProps({ query }) {
+    const findProject = projectList => projectList.find(project => project.link === query.link);
+
+    const post = await import(`../content/ProjectContent`);
+
+    const document = post.default.projects.find(stackLevel => findProject(stackLevel.projectList));
+    const data = findProject(document.projectList);
+    return {
+      ...data,
+    };
   }
 
   render () {
-    const {name, link, external, github, description} = this.state;
+    const {name, link, external, github, description} = this.props;
     return (
       <div>
         <Head>

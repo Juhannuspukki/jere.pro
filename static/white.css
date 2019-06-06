@@ -54,6 +54,11 @@ a, p {
   color: #E350B9;
 }
 
+.blogLink:hover p,
+.blogLink:hover h2 {
+  color: #E350B9;
+}
+
 .frontLink:hover path,
 .frontLink:hover circle,
 .frontLink:hover h2 {

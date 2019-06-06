@@ -82,8 +82,6 @@ class Chart extends React.Component {
 
             const Icon = point[3];
 
-            console.log(Icon);
-
             return (
               <Group key={`bar-${i}`}
                      onMouseOver={e => this.handleMouseOver(e, point[2])}

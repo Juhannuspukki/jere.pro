@@ -3,20 +3,20 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import ProjectObject from '../content/ProjectContent'
 import Graph from "../components/SkillGraph";
 import {ParentSize} from "@vx/responsive";
 
-
 class Post extends React.Component {
-  constructor(props) {
-    super(props);
-    const {router} = this.props;
-    this.state = ProjectObject.projects.find(stackLevel => stackLevel.link === router.query.link);
+  static async getInitialProps({ query }) {
+    const post = await import(`../content/ProjectContent.js`);
+    const document = post.default.projects.find(stackLevel => stackLevel.link === query.link);
+    return {
+      ...document
+    };
   }
 
   render() {
-    const {title, skills, description} = this.state;
+    const {title, skills, description} = this.props;
     return (
       <div>
         <Head>

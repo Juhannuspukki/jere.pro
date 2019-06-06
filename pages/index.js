@@ -8,6 +8,7 @@ class Index extends React.Component {
     router.prefetch('/main-menu');
     setTimeout(() => router.push('/main-menu'), 2000)
   }
+
   render () {
     const { router } = this.props;
 
