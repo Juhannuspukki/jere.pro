@@ -1,4 +1,3 @@
-import {withRouter} from 'next/router'
 import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
@@ -10,7 +9,7 @@ class Project extends React.Component {
     const findProject = projectList => projectList.find(project => project.link === query.link);
 
     const post = await import(`../content/ProjectContent`);
-
+  
     const document = post.default.projects.find(stackLevel => findProject(stackLevel.projectList));
     const data = findProject(document.projectList);
     return {
@@ -54,5 +53,5 @@ class Project extends React.Component {
   }
 }
 
-export default withRouter(Project)
+export default Project
 

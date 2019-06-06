@@ -4,7 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import Footer from "../components/Footer";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
-export default class extends React.Component {
+
+class BlogPost extends React.Component {
   static async getInitialProps({ query }) {
     const post = await import(`../content/blog/${query.id}.md`);
     const document = matter(post.default);
@@ -14,12 +15,13 @@ export default class extends React.Component {
       readingTime,
     };
   }
+  
   render() {
     return (
       <div className={"test"}>
         <Head>
-          <title>jere.pro - Blog</title>
-          <meta property="og:title" content="jere.pro - Blog" />
+          <title>jere.pro - {this.props.data.title}</title>
+          <meta property="og:title" content={"jere.pro - Blog - " + this.props.title} />
         </Head>
         <NavBar url={"/blog"}/>
         <div className={"blogPost"}>
@@ -35,3 +37,5 @@ export default class extends React.Component {
     )
   }
 }
+
+export default BlogPost
