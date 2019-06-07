@@ -21,7 +21,8 @@ class BlogPost extends React.Component {
       <div className={"test"}>
         <Head>
           <title>jere.pro - {this.props.data.title}</title>
-          <meta property="og:title" content={"jere.pro - Blog - " + this.props.title} />
+          <meta property="og:title" content={"jere.pro - Blog - " + this.props.data.title} />
+          <meta property="og:description" content={`Read my blog bost "${this.props.data.title}" on jere.pro`} />
         </Head>
         <NavBar url={"/blog"}/>
         <div className={"blogPost"}>
