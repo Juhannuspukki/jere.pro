@@ -54,5 +54,5 @@ place to live in: The right to privacy is the very reason for these places being
 
 Summa summarum: If an adult has read the aforementioned warnings and still thinks that privacy is meaningless, it's
 his/her decision. As long as he/she does not handle other's sensitive information carelessly, no one has any right to
-force him/her to do otherwise. On the other hand, there are absolutely no reasons whatsoever for anyone to demand
-abolishing privacy. The consequences of that are simply frightening to think about.
+force him/her to do otherwise. On the other hand, there is absolutely no reason whatsoever for anyone to demand
+abolishing privacy. The consequences of that would be simply frightening to think about.
