@@ -3,21 +3,20 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import Graph from "../components/SkillGraph";
+import ProjectContent from '../content/ProjectContent'
 import {ParentSize} from "@vx/responsive";
+import {withRouter} from 'next/router'
 
 
 class Post extends React.Component {
-  static async getInitialProps({ query }) {
-    console.log(query);
-    const post = await import(`../content/ProjectContent`);
-    const document = post.default.projects.find(stackLevel => stackLevel.link === query.link);
-    return {
-      ...document
-    };
+  constructor(props) {
+    super(props);
+    const {router} = this.props;
+    this.state = ProjectContent.projects.find(stackLevel => stackLevel.link === router.query.link);
   }
 
   render() {
-    const {title, skills, description} = this.props;
+    const {title, skills, description} = this.state;
     return (
       <div>
         <Head>
@@ -54,5 +53,5 @@ class Post extends React.Component {
   }
 }
 
-export default Post
+export default withRouter(Post)
 
