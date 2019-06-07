@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const BlogPreview = (props) => (
-  <Link prefetch as={`/blog/${props.slug}`} href={{ pathname: '/blogpost', query: { id: props.slug } }} key={props.slug}>
+  <Link prefetch as={`/blog/${props.slug}`} href={`/blogpost?link=${props.slug}`} key={props.slug}>
     <div className={"row blogLink"}>
       <div className={"col-sm-4 blogPreviewImageContainer"}>
         <img className={"blogPreviewImage"} src={require("../static/img/blog/" + props.data.thumbnail + ".jpg")}/>
@@ -20,4 +20,4 @@ const BlogPreview = (props) => (
 </Link>
 );
 
-export default BlogPreview
+export default BlogPreview;

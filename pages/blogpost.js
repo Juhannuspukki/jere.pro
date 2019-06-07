@@ -7,7 +7,7 @@ import NavBar from "../components/NavBar";
 
 class BlogPost extends React.Component {
   static async getInitialProps({ query }) {
-    const post = await import(`../content/blog/${query.id}.md`);
+    const post = require(`../content/blog/${query.link}.md`);
     const document = matter(post.default);
     const readingTime = Math.round((document.content.trim().split(/\s+/).length)/220);
     return {
@@ -15,7 +15,7 @@ class BlogPost extends React.Component {
       readingTime,
     };
   }
-  
+
   render() {
     return (
       <div className={"test"}>
