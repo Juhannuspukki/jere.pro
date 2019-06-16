@@ -30,7 +30,10 @@ export default class extends React.Component {
       return data;
     })(require.context('../content/blog', true, /\.md$/));
 
-    posts = posts.sort(post => post.document.data.date.value);
+    // Sort posts, newest first
+    posts = posts.sort(
+      (a, b) => new Date(a.document.data.date) - new Date(b.document.data.date)
+    ).reverse();
 
     return {
       posts
