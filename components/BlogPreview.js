@@ -6,7 +6,7 @@ const BlogPreview = (props) => (
   <Link prefetch as={`/blog/${props.slug}`} href={`/blogpost?link=${props.slug}`} key={props.slug}>
     <div className={"row blogLink"}>
       <div className={"col-sm-4 blogPreviewImageContainer"}>
-        <img className={"blogPreviewImage"} src={require("../static/img/blog/" + props.data.thumbnail + ".jpg")}/>
+        <img className={"blogPreviewImage"} src={require("../static/img/blog/" + props.data.image + ".jpg?resize&size=226")}/>
       </div>
       <div className={"col-sm-8 blogPreviewDescriptionContainer"}>
         <div>

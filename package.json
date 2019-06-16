@@ -47,6 +47,8 @@
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.0",
-    "raw-loader": "^3.0.0"
+    "jimp": "^0.6.4",
+    "raw-loader": "^3.0.0",
+    "responsive-loader": "^1.2.0"
   }
 }
