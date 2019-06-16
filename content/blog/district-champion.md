@@ -1,8 +1,6 @@
 ---
 title: The district champion problem
 image: district-champion
-thumbnail: district-champion-thumbnail
-thumbnail2: ../static/img/blog/district-champion-thumbnail.jpg
 date: 2019-06-06
 ---
 I grew up in a small village with a small school in southern Finland. When I was at school, we didn’t have a qualified

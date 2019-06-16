@@ -1,7 +1,6 @@
 ---
 title: On the subject of privacy
 image: privacy
-thumbnail: privacy-thumbnail
 date: 2019-01-30
 ---
 Many of my relatives and friends have told me that in their opinion, it does not matter if someone reads their emails.
