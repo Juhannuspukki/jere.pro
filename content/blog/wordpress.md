@@ -3,7 +3,7 @@ title: Why I don't make WordPress websites
 image: crowd
 date: 2019-06-16
 ---
-Every now and then people ask me if I'm available for a small website project. People wonder when I refuse
+Every now and then people ask me if I'm available for a small website project. People wonder why I refuse
 after they tell me that the site has been/will be implemented with WordPress. This question comes up so often that I
 decided to write this post to shed some light on the subject.
 
