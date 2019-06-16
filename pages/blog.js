@@ -8,7 +8,7 @@ import BlogPreview from '../components/BlogPreview'
 export default class extends React.Component {
   static async getInitialProps() {
     // Get posts from folder
-    const posts = (ctx => {
+    let posts = (ctx => {
       const keys = ctx.keys();
       const values = keys.map(ctx);
       const data = keys.map((key, index) => {
@@ -29,6 +29,9 @@ export default class extends React.Component {
       });
       return data;
     })(require.context('../content/blog', true, /\.md$/));
+
+    posts = posts.sort(post => post.document.data.date.value);
+
     return {
       posts
     };
