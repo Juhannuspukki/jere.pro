@@ -3,36 +3,21 @@ import { Group } from '@vx/group';
 import { GlyphDot } from '@vx/glyph';
 import { LinePath } from '@vx/shape';
 import { AxisLeft, AxisRight} from '@vx/axis';
-import { scaleTime } from '@vx/scale';
-import { curveMonotoneX } from '@vx/curve';
+import { scaleTime, scaleLinear } from '@vx/scale';
+import { curveMonotoneY, curveMonotoneX } from '@vx/curve';
+import { Text } from '@vx/text';
 import { timeParse, timeFormat } from 'd3-time-format';
-import { Annotation, ConnectorLine,  Note } from 'react-annotation'
-
 
 const format = timeFormat('%b %Y');
 const formatDate = date => format(date);
 
 // accessors
-const date = d => d.date;
+const date = d => d;
 
 // scales
-const yScaleLeft = scaleTime({
-  domain: [
-    new Date("2012-05-01"),
-    Date.now(),
-  ]
+const yScale = scaleLinear({
+  domain: [0, 300]
 });
-
-const yScaleRight = scaleTime({
-  domain: [
-    new Date("2017-01-01"),
-    Date.now(),
-  ]
-});
-
-// positions
-const yLeft = d => yScaleLeft(date(d));
-const yRight = d => yScaleRight(date(d));
 
 // colors
 const primary = '#fff';
@@ -41,66 +26,106 @@ const contrast = '#000';
 export default ({ width, height, margin, data }) => {
   // bounds
   const yMax = height - margin.top - margin.bottom;
-
-  const xConstWorking = width/2 - margin.left + 15;
-  const xConstEducation = width/2 -margin.right -15;
-
+  const xRight = width/2 - margin.left + 15;
+  const xLeft = width/2 - margin.right - 15;
+  const calculateTextWidth = width/2 - 60 < 325 ? width/2 - 60 : 325;
+  // positions
+  const y = d => yScale(d.yPosition);
+  const x = d => d.xPosition === "left" ? xLeft : xRight;
+  const xText = d => d.xPosition === "left" ? xLeft - 25 : xRight + 25;
   // update scale range to match bounds
-  yScaleLeft.range([yMax, 0]);
-  yScaleRight.range([yMax, 0]);
+  yScale.range([yMax, 0]);
 
   const mapDots = (dataPoints, source) => dataPoints.map((d, i) => {
-    const y = source === "education" ? yLeft : yRight;
-    const startDot = y(d.workingPeriod[0]);
-    const endDot = y(d.workingPeriod[1]);
-    const xConst = source === "education" ? xConstEducation : xConstWorking;
-    const maxWidth = source === "education" ? -25 : 25;
-    const distance = source === "education" ? -10 : 10;
+    const yPosition = y(d);
+    const xPosition = x(d);
+    const xTextPosition = xText(d);
+
+    if (d.title === "Connector") {
+      return;
+    }
+
     return (
       <g key={`line-point-${source}-${i}`}>
-        <GlyphDot cx={xConst} cy={startDot} r={6} stroke={primary} strokeWidth={5} />
-        <GlyphDot cx={xConst} cy={startDot} r={5} fill={contrast} />
-        <GlyphDot cx={xConst} cy={endDot} r={6} stroke={primary} strokeWidth={5} />
-        <GlyphDot cx={xConst} cy={endDot} r={5} fill={contrast} />
-        <Annotation
-          x={xConst + distance}
-          y={(startDot+endDot)/2}
-          dy={-20}
-          dx={maxWidth}
-          color={"#fff"}
-          title={d.title + formatDate(d.workingPeriod[0].date) }
-          label={d.description}
+        <GlyphDot cx={xPosition} cy={yPosition} r={6} stroke={primary} strokeWidth={5} />
+        <GlyphDot cx={xPosition} cy={yPosition} r={5} fill={contrast} />
+        <Text
+          x={xTextPosition}
+          y={yPosition - 25}
+          width={calculateTextWidth}
+          verticalAnchor="end"
+          textAnchor={d.xPosition === "left" ? "end" : "start"}
+          style={
+            {
+              fill: '#fff',
+              fontSize: 16,
+              fontFamily: "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif"
+            }
+          }
         >
-          <ConnectorLine/>
-          <Note
-            lineType={"vertical"}
-            bgPadding={{"top":15,"left":10,"right":10,"bottom":10}}
-            padding={15}
-            titleColor={"#fff"}
-            align={"middle"}
-            wrapSplitter={(/(.{20}[^\s]*)/gm)}
-          />
-        </Annotation>
+          {`${formatDate(d.timeFrame[0].date)} - ${formatDate(d.timeFrame[1].date)}`}
+        </Text>
+        <Text
+          x={xTextPosition}
+          y={yPosition}
+          width={calculateTextWidth}
+          verticalAnchor="middle"
+          textAnchor={d.xPosition === "left" ? "end" : "start"}
+          style={
+            {
+            fill: '#fff',
+            fontSize: 20,
+            fontWeight: 700,
+            fontFamily: "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif"
+            }
+          }
+        >
+          {d.title}
+        </Text>
+        <Text
+          x={xTextPosition}
+          y={yPosition + 25}
+          width={calculateTextWidth}
+          verticalAnchor="start"
+          textAnchor={d.xPosition === "left" ? "end" : "start"}
+          lineHeight={20}
+          style={
+              {
+                fill: '#fff',
+                fontSize: 16,
+                fontFamily: "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif"
+              }
+            }
+        >
+          {d.description}
+        </Text>
       </g>
     )
   });
 
-  const mapLines = (dataPoints, source) => dataPoints.map((d, i) => {
-    const xConst = source === "education" ? xConstEducation : xConstWorking;
-    const y = source === "education" ? yLeft : yRight;
+  const mapLines = (dataPoints, source) => {
+    let initialValue = [];
+    dataPoints = dataPoints.reduce(
+      (accumulator, currentValue) => {
+        accumulator.push(
+          {yPosition: currentValue.yPosition, xPosition: currentValue.xPosition}
+        );
+
+        return accumulator;
+      },
+      initialValue);
     return (
       <LinePath
-
-        key={`line-${source}-${i}`}
-        data={d.workingPeriod}
-        x={xConst}
+        key={`line-${source}`}
+        data={dataPoints}
+        x={x}
         y={y}
         stroke={primary}
         strokeWidth={5}
-        curve={curveMonotoneX}
+        curve={curveMonotoneY}
       />
     );
-  });
+  };
 
   return (
     <svg width={width} height={height+100}>
@@ -109,9 +134,11 @@ export default ({ width, height, margin, data }) => {
         left={margin.left}
       >
 
-        {mapLines(data.working, "working")}
+        {mapLines(data.work, "work")}
+        {mapDots(data.work, "work")}
+        {mapLines(data.private, "private")}
+        {mapDots(data.private, "private")}
         {mapLines(data.education, "education")}
-        {mapDots(data.working, "working")}
         {mapDots(data.education, "education")}
 
       </Group>
@@ -119,42 +146,6 @@ export default ({ width, height, margin, data }) => {
         top={margin.top+100}
         left={margin.left}
       >
-        <AxisLeft
-          top={margin.top}
-          left={0}
-          hideAxisLine={true}
-          hideTicks={true}
-          hideZero={true}
-          scale={yScaleLeft}
-          stroke="#fff"
-          tickStroke="#fff"
-          tickFormat={formatDate}
-          tickLabelProps={(value, index) => ({
-            fill: '#fff',
-            fontSize: 16,
-            textAnchor: 'end',
-            dy: '0.33em',
-            fontFamily: "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif"
-          })}
-        />
-        <AxisRight
-          top={margin.top}
-          left={width-margin.right*2}
-          hideAxisLine={true}
-          hideTicks={true}
-          hideZero={true}
-          scale={yScaleRight}
-          stroke="#fff"
-          tickStroke="#fff"
-          tickFormat={formatDate}
-          tickLabelProps={(value, index) => ({
-            fill: '#fff',
-            fontSize: 16,
-            textAnchor: 'start',
-            dy: '0.33em',
-            fontFamily: "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif"
-          })}
-        />
       </Group>
     </svg>
   );

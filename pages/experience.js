@@ -8,7 +8,7 @@ import ExperienceContent from "../content/ExperienceContent"
 
 const Index = () => {
   const margin = {
-    top: 10, left: 80, right: 80, bottom: 50
+    top: 10, left: 80, right: 80, bottom: 0
   };
   return (
     <div>
@@ -18,13 +18,12 @@ const Index = () => {
       </Head>
       <NavBar url={"/main-menu"}/>
       <div className={"timeLineContainer animated"}>
-        <div className={"container"}>
           <ParentSize>
             {parent => (
               <ExperienceGraph
                 data={ExperienceContent}
                 width={parent.width}
-                height={1500}
+                height={1080}
                 parentTop={parent.top}
                 parentLeft={parent.left}
                 parentRef={parent.ref}
@@ -33,7 +32,6 @@ const Index = () => {
               />
             )}
           </ParentSize>
-        </div>
       </div>
       <Footer url={"/main-menu"}/>
     </div>
