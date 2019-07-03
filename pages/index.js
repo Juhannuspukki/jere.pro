@@ -17,8 +17,8 @@ class Index extends React.Component {
         <Head>
           <title>jere.pro</title>
           <meta property="og:title" content="jere.pro" />
-          <meta property="og:description" content="Yo, my name is Jere, and I design stuff." />
-          <meta name="description" content="Yo, my name is Jere, and I design stuff." />
+          <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Sometimes I also develop stuff. Such as this website, for example. It's cool, check it out." />
+          <meta name="description" content="Yo, my name is Jere, and I design stuff. Sometimes I also develop stuff. Such as this website, for example. It's cool, check it out." />
           <meta property="og:url" content="https://jere.pro"/>
         </Head>
           <a className={"fullPageContainer"}>

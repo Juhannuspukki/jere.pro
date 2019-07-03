@@ -1,27 +1,41 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import ExtraSmallTimeLine from '../svg/experience/timeline-xs.svg'
-import SmallTimeLine from '../svg/experience/timeline-s.svg'
-import MediumTimeLine from '../svg/experience/timeline-m.svg'
-import LargeTimeLine from '../svg/experience/timeline-l.svg'
+import ExperienceGraph from '../components/ExperienceGraph'
 import Head from 'next/head'
 import React from 'react'
+import {ParentSize} from "@vx/responsive";
+import ExperienceContent from "../content/ExperienceContent"
 
-const Index = () => (
-  <div>
-    <Head>
-      <title>jere.pro - Experience</title>
-      <meta property="og:title" content="jere.pro - Experience" />
-    </Head>
-    <NavBar url={"/main-menu"}/>
-    <div className={"timeLineContainer animated"}>
-      <ExtraSmallTimeLine className={"extraSmallTimeLine"}/>
-      <SmallTimeLine className={"smallTimeLine"}/>
-      <MediumTimeLine className={"mediumTimeLine"}/>
-      <LargeTimeLine className={"largeTimeLine"}/>
+const Index = () => {
+  const margin = {
+    top: 10, left: 10, right: 10, bottom: 0
+  };
+  return (
+    <div>
+      <Head>
+        <title>jere.pro - Experience</title>
+        <meta property="og:title" content="jere.pro - Experience"/>
+      </Head>
+      <NavBar url={"/main-menu"}/>
+      <div className={"timeLineContainer animated"}>
+          <ParentSize>
+            {parent => (
+              <ExperienceGraph
+                data={ExperienceContent}
+                width={parent.width}
+                height={parent.width > 576 ? 1080: 2060}
+                parentTop={parent.top}
+                parentLeft={parent.left}
+                parentRef={parent.ref}
+                resizeParent={parent.resize}
+                margin={margin}
+              />
+            )}
+          </ParentSize>
+      </div>
+      <Footer url={"/main-menu"}/>
     </div>
-    <Footer url={"/main-menu"}/>
-  </div>
-)
+  )
+}
 
 export default Index

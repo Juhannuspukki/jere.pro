@@ -9,6 +9,7 @@ import Affinity from '../svg/graphsymbols/affinity.svg'
 import Sketch from '../svg/graphsymbols/sketch.svg'
 import AutoCad from '../svg/graphsymbols/autocad.svg'
 import SolidWorks from '../svg/graphsymbols/solidworks.svg'
+import Hotjar from '../svg/graphsymbols/hotjar.svg'
 
 import Reactjs from '../svg/graphsymbols/react.svg'
 import Nextjs from '../svg/graphsymbols/nextjs.svg'
@@ -45,6 +46,7 @@ const data =
             [90,80, "Sketch", <Sketch/>],
             [50,65, "AutoCad", <AutoCad/>],
             [20,10, "SolidWorks", <SolidWorks/>],
+            [80,50, "Hotjar", <Hotjar/>],
           ],
           description: "User interface (UI) design is the art of designing computer systems that do not cause " +
             "excessive frustration to the user. User experience (UX) research is the skill of figuring out which " +
@@ -111,7 +113,7 @@ const data =
                 github: "https://github.com/Juhannuspukki/jere.pro",
                 description: "I decided that I need a website of my own. It took way too long to decide what technologies " +
                 "to use but I finally decided to try Next.js that has received a lot of praise recently. " +
-                "The result is a very fast PWA."
+                "The result is the very fast SPA you see before you. Behold!"
               },
               {
                 name: "pollex.club",
@@ -121,6 +123,15 @@ const data =
                 description: "Pollex.club was the first website I created after neuroeventlabs.com. Its design is " +
                 "slightly dated, but it runs on the same victor-hugo generator as all of my newer static site projects. " +
                 "During this project I also learned to use AWS, for it was originally hosted there."
+              },
+              {
+                name: "koodarinpalkka.fi",
+                link: "koodarinpalkka",
+                external: "https://koodarinpalkka.fi",
+                github: "unavailable",
+                description: "In early 2019 Sysart contacted me. They wanted to increase their salary transparency and " +
+                  "I designed and implemented a React application that lets anyone to see what they would earn at " +
+                  "Sysart. Try it!"
               },
               {
                 name: "neuroeventlabs.com",
@@ -136,9 +147,9 @@ const data =
                 link: "tds",
                 external: "https://tamperedebatesociety.fi",
                 github: "https://github.com/Juhannuspukki/tampere-debate-society-web",
-                description: "I have been part of the debate society for a few years now. Eventually, there were talks " +
-                "about making a new website. The debate society had previously had at least 3, all of which were abandoned. " +
-                "First, there was talk about Wordpress but I managed to convince them to trust my static site solution " +
+                description: "I have been part of the debate society for three years now. Eventually, there were talks " +
+                "about making a new website. The debate society had previously had at least three, all of which were abandoned. " +
+                "First, there was talk about WordPress but I managed to convince them to trust my static site solution " +
                 "instead. Due to the lack of UI designers, I also designed the site myself. All of us are very pleased " +
                 "with the result. As a bonus, I installed the Netlify CMS to allow non-coders to update the site as well."
               },
@@ -148,8 +159,8 @@ const data =
                 external: "https://course-o-meter.com",
                 github: "https://github.com/Juhannuspukki/project-daydream",
                 description: "After a particularly annoying university course I created the Course-o-Meter, a project " +
-                "that compares university courses against each other. A must-have tool for planning your studies! " +
-                "The app is a static React.js export that is hosted on Netlify."
+                  "that compares university courses against each other. A must-have tool for planning your studies! " +
+                  "The app is a static create-react-app that is hosted on Netlify."
               },
               {
                 name: "avaruuskerho.fi",
@@ -157,8 +168,8 @@ const data =
                 external: "https://avaruuskerho.fi",
                 github: "https://github.com/castortut/castor-web",
                 description: "I serve on the board of Tampereen teekkarien avaruusteknillinen kerho Castor ry in 2019. " +
-                "During that time, it was my duty to create a new website for the club. It is a static site based on the " +
-                "Netlify victor-hugo project and also features the Netlify CMS to allow easy content editing."
+                  "During that time, it was my duty to create a new website for the club. It is a static site based on the " +
+                  "Netlify victor-hugo project and also features the Netlify CMS to allow easy content editing."
               },
               {
                 name: "muistola.fi",
@@ -186,11 +197,11 @@ const data =
             [40,25, "AWS", <AWS/>],
           ],
           description: "Backend servers are used to store content and perform complex operations for it. A backend can " +
-          "be thought as a black box with stuff going in, to which operations are performed and as a result " +
-          "stuff comes out. Backend code is what determines what exactly is allowed to go in and what operations are " +
-          "performed on it. Average user never accesses backends directly, since they only deal with machine " +
-          "language. Instead, users use a frontend which communicates with the backend. I have developed several Python " +
-          "backends for Telegram bots.",
+            "be thought as a black box with stuff going in, to which operations are performed and as a result " +
+            "stuff comes out. Backend code is what determines what exactly is allowed to go in and what operations are " +
+            "performed on it. Average user never accesses backends directly, since they only deal with machine " +
+            "language. Instead, users use a frontend which communicates with the backend. I have developed several Python " +
+            "backends for Telegram bots.",
           image: <Backend className={"vectorLink"}/>,
           projectList:
             [
@@ -200,10 +211,10 @@ const data =
                 external: "http://t.me/logosthebot",
                 github: "https://github.com/Juhannuspukki/LogosTheBot",
                 description: "Logos was my first software project. After learning Python for the very first time I " +
-                "figured that I had to do something to keep up the knowledge. I started the development of a bot. " +
-                "During all these years I have added several features to the bot, such as wayfinding services," +
-                "nysse-locator services, a minesweeper game, information about the school's menus, weather forecasts and " +
-                "so on and so forth."
+                  "figured that I had to do something to keep up the knowledge. I started the development of a bot. " +
+                  "During all these years I have added several features to the bot, such as wayfinding services," +
+                  "nysse-locator services, a minesweeper game, information about the school's menus, weather forecasts and " +
+                  "so on and so forth."
               },
               {
                 name: "@CourseRobot on Telegram",
@@ -211,7 +222,8 @@ const data =
                 external: "http://t.me/courserobot",
                 github: "https://github.com/Juhannuspukki/project-daydream-telegram",
                 description: "CourseRobot is Python-made Telegram bot that brings the functionality of Course-O-Meter " +
-                  "directly to Telegram."
+                  "directly to Telegram. It is also my first project using Docker. The app can be accessed from " +
+                  "any chat due to it being an inline bot."
               },
             ]
         },
@@ -223,8 +235,8 @@ const data =
             [10,50, "C++", <CPlusPlus/>],
           ],
           description: "Embedded systems are devices that combine both hardware and software. Probably the most " +
-          "famous example of this are Arduino boards. Playing with Arduino's is fun, but my interests have steered me " +
-          "towards the higher-level languages.",
+            "famous example of this are Arduino boards. Playing with Arduino's is fun, but my interests have steered me " +
+            "towards the higher-level languages.",
           image: <Embedded className={"vectorLink"}/>,
           projectList:
             [
@@ -234,10 +246,10 @@ const data =
                 external: "unavailable",
                 github: "https://github.com/Juhannuspukki/led-matrix",
                 description: "I have not listed many school projects here because in the end everyone has to complete them. " +
-                "However, this is one succeeded exceptionally well. The assignment was to design a product from a bunch" +
-                "of LEDs controlled by a microcontroller. I came up with the idea of a quick-read code (2-dimensional barcode) " +
-                "This particular code changes every few milliseconds. Modern smartphone cameras capture up to 960 " +
-                "frames per second. Hence the name: 2 spatial dimensions and the fourth (temporal) dimension."
+                  "However, this is one succeeded exceptionally well. The assignment was to design a product from a bunch" +
+                  "of LEDs controlled by a microcontroller. I came up with the idea of a quick-read code (2-dimensional barcode) " +
+                  "This particular code changes every few milliseconds. Modern smartphone cameras capture up to 960 " +
+                  "frames per second. Hence the name: 2 spatial dimensions and the fourth (temporal) dimension."
               },
               {
                 name: "FFT controlled LED",
@@ -245,7 +257,8 @@ const data =
                 external: "unavailable",
                 github: "https://github.com/Juhannuspukki/arduino-fft",
                 description: "I used a Teensy 3.2 board (almost like an Arduino, but not quite) to make a device that " +
-                "uses FFT to analyze music. The resulting information is then used to control a RGB LED in real time."
+                  "uses FFT to analyze music. The resulting information is then used to control a RGB LED in real time. " +
+                  "Yeah, I know the video doesn't look like much without the audio track. Sorry."
               },
             ]
         }
