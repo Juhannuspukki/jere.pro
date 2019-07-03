@@ -21,7 +21,7 @@ const Index = () => (
     <NavBar url={"/main-menu"}/>
     <div className={"about animated"}>
       <div className={"container"}>
-        <img className={"parsta"} src={Me}/>
+        <img className={"parsta"} src={Me} alt={"me in San Francisco"}/>
         <h1>Jere Laine</h1>
         <a className={"phone"} href={"tel:+358458664303"}>+358 45 866 4303</a>
         <div className={"linkLogoContainer"}>

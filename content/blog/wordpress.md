@@ -1,6 +1,6 @@
 ---
 title: Why I don't make WordPress websites
-image: crowd
+image: fence
 date: 2019-06-16
 ---
 Every now and then people ask me if I'm available for a small website project. People wonder why I refuse

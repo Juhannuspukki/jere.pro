@@ -36,6 +36,7 @@ class Project extends React.Component {
                    playsInline={true}
                    controls={false}
                    className={"hero"}
+                   aria-hidden={"true"}
                    poster={require("../static/img/projects/" + link + ".jpg")}
             >
               <source src={"../static/img/projects/" + link + ".mp4"} type="video/mp4"/>
