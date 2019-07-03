@@ -27,7 +27,11 @@ class BlogPost extends React.Component {
         <NavBar url={"/blog"}/>
         <div className={"blogPost"}>
           <div className={"container animated"}>
-            <img className={"hero"} src={require("../static/img/blog/" + this.props.data.image + ".jpg?inline?resize&size=100")} height="100%"/>
+            <img className={"hero"}
+                 src={require("../static/img/blog/" + this.props.data.image + ".jpg?inline?resize&size=100")}
+                 alt={this.props.data.image}
+                 height="100%"
+            />
             <h1>{this.props.data.title}</h1>
             <p className={"publishDate"}>Published on {new Date(this.props.data.date).toDateString()}, {this.props.readingTime} min read</p>
             <ReactMarkdown source={this.props.content} />
