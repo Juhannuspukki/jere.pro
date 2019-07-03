@@ -8,6 +8,10 @@ import Me from '../static/img/me.jpeg'
 import Head from 'next/head'
 import React from 'react'
 
+const msPerYear = 365*24*60*60*1000;
+const dateOfBirth = new Date("1996-03-15");
+const myAge = Math.floor((Date.now() - dateOfBirth)/msPerYear);
+
 const Index = () => (
   <div>
     <Head>
@@ -27,7 +31,7 @@ const Index = () => (
           <a className={"link"} href={"https://github.com/Juhannuspukki"} target="_blank"><GitHub className={"linkLogo"}/></a>
         </div>
         <p>
-          I’m a 23-year-old Apple fanboy from Hervanta. Introverted, but I believe I have become more ambiverted
+          I’m a {myAge}-year-old Apple fanboy from Hervanta. Introverted, but I believe I have become more ambiverted
           over the years. I have quite many hobbies, including aquariums, debating, cooking, motion graphics,
           still graphics, coding apps in Swift, bots in Python and websites in, well, many languages. I occasionally
           try some embedded project as well. I like coding because it allows me to create anything I can imagine

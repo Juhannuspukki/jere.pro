@@ -21,31 +21,6 @@ a, p {
   background-color: #ffffffcc;
 }
 
-.largeTimeLine path,
-.smallTimeLine path,
-.mediumTimeLine path,
-.extraSmallTimeLine path {
-  fill: #000;
-}
-
-.largeTimeLine > path,
-.largeTimeLine > ellipse,
-.mediumTimeLine > g:last-of-type > path,
-.mediumTimeLine > g > ellipse,
-.smallTimeLine > g:last-of-type > path,
-.smallTimeLine > g > ellipse,
-.extraSmallTimeLine > g:last-of-type > path,
-.extraSmallTimeLine > g > ellipse {
-  stroke: #000;
-  fill: none;
-}
-
-.mediumTimeLine > path,
-.smallTimeLine > path,
-.extraSmallTimeLine > path {
-  stroke: #000;
-}
-
 .projectList a:hover {
   color: #E350B9;
 }
@@ -74,10 +49,17 @@ a, p {
   fill: #E350B9;
 }
 
-.graphGrid > line {
-  stroke: #000 !important;
+.graphGrid > line,
+.experienceGraph path,
+.experienceGraph .outerCircle {
+  stroke: #000;
 }
 
-.vx-axis text {
-  fill: #000 !important;
+.vx-axis text,
+.experienceGraph .textContainer text tspan {
+  fill: #000;
+}
+
+.experienceGraph .innerCircle {
+  fill: #fff;
 }

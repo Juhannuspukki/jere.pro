@@ -7,6 +7,7 @@ import NavBar from "../components/NavBar";
 
 class BlogPost extends React.Component {
   static async getInitialProps({ query }) {
+    // note to future self: if you try to import instead of require, this breaks in production
     const post = require(`../content/blog/${query.link}.md`);
     const document = matter(post.default);
     const readingTime = Math.round((document.content.trim().split(/\s+/).length)/220);

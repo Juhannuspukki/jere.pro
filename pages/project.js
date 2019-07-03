@@ -9,7 +9,7 @@ class Project extends React.Component {
     const findProject = projectList => projectList.find(project => project.link === query.link);
 
     const post = await import(`../content/ProjectContent`);
-  
+
     const document = post.default.projects.find(stackLevel => findProject(stackLevel.projectList));
     const data = findProject(document.projectList);
     return {
@@ -24,26 +24,37 @@ class Project extends React.Component {
         <Head>
           <title>jere.pro - Projects - {name}</title>
           <meta property="og:title" content={"jere.pro - Projects - " + name} />
+          <meta property="description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
+          <meta property="og:description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
         </Head>
         <NavBar url={"/projects"}/>
         <div className={"post"}>
           <div className={"container animated"}>
-            <img className={"hero"} src={require("../static/img/" + link + ".jpeg")}/>
+            <video loop={true}
+                   autoPlay={true}
+                   muted={true}
+                   playsInline={true}
+                   controls={false}
+                   className={"hero"}
+                   poster={require("../static/img/projects/" + link + ".jpg")}
+            >
+              <source src={"../static/img/projects/" + link + ".mp4"} type="video/mp4"/>
+            </video>
             <h1>{name}</h1>
             <p>
               {description}
             </p>
             <div className={"row"}>
-              <div className={"col-sm-6"}>
-                {(external === "unavailable") ? <div /> :
+              {external !== "unavailable" &&
+                <div className={"col-sm-6"}>
                   <a className={"postExternalLink"} href={external} target="_blank">See in action →</a>
-                }
-              </div>
-              <div className={"col-sm-6"}>
-                {(github === "unavailable") ? <div /> :
+                </div>
+              }
+              {github !== "unavailable" &&
+                <div className={"col-sm-6"}>
                   <a className={"postExternalLink"} href={github} target="_blank">View on GitHub →</a>
-                }
-              </div>
+                </div>
+              }
             </div>
           </div>
         </div>
