@@ -1,9 +1,9 @@
-.timeLineContainer {
-  padding-top: $size-l;
-  .container {
-  }
-  .annotation-note-label,
-  .annotation-note-title {
-    font-family: SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
+.experienceGraph path,
+.experienceGraph text,
+.experienceGraph circle {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
 }

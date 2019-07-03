@@ -8,7 +8,7 @@ import ExperienceContent from "../content/ExperienceContent"
 
 const Index = () => {
   const margin = {
-    top: 10, left: 80, right: 80, bottom: 0
+    top: 10, left: 10, right: 10, bottom: 0
   };
   return (
     <div>
@@ -23,7 +23,7 @@ const Index = () => {
               <ExperienceGraph
                 data={ExperienceContent}
                 width={parent.width}
-                height={1080}
+                height={parent.width > 576 ? 1080: 2060}
                 parentTop={parent.top}
                 parentLeft={parent.left}
                 parentRef={parent.ref}
