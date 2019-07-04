@@ -1,7 +1,5 @@
 .blogPost {
-  position: relative;
-  top: $size-ml;
-  padding-bottom: $size-xl;
+  padding: $size-l 0;
   .container {
     max-width: 768px;
     .hero {
@@ -22,5 +20,12 @@
       text-align: center;
       margin-bottom: $size-m;
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .blogPost {
+    padding-top: $size-s;
+    padding-bottom: $size-xl;
   }
 }

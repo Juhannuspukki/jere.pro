@@ -1,3 +1,7 @@
+.timeLineContainer {
+  padding-top: $size-l
+}
+
 .experienceGraph path,
 .experienceGraph text,
 .experienceGraph circle {
@@ -6,4 +10,10 @@
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-duration: 0.5s;
+}
+
+@media (max-width: 575px) {
+  .timeLineContainer {
+    padding-top: $size-ml;
+  }
 }

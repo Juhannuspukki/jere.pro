@@ -16,8 +16,9 @@ const Index = () => {
         <title>jere.pro - Experience</title>
         <meta property="og:title" content="jere.pro - Experience"/>
       </Head>
-      <NavBar url={"/main-menu"}/>
+      <NavBar url={"/"}/>
       <div className={"timeLineContainer animated"}>
+        <h1>Experience</h1>
           <ParentSize>
             {parent => (
               <ExperienceGraph
@@ -33,7 +34,7 @@ const Index = () => {
             )}
           </ParentSize>
       </div>
-      <Footer url={"/main-menu"}/>
+      <Footer url={"/"}/>
     </div>
   )
 }

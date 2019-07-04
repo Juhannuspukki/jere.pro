@@ -47,12 +47,12 @@ class Project extends React.Component {
             </p>
             <div className={"row"}>
               {external !== "unavailable" &&
-                <div className={"col-sm-6"}>
+                <div className={"col-6"}>
                   <a className={"postExternalLink"} href={external} target="_blank">See in action →</a>
                 </div>
               }
               {github !== "unavailable" &&
-                <div className={"col-sm-6"}>
+                <div className={"col-6"}>
                   <a className={"postExternalLink"} href={github} target="_blank">View on GitHub →</a>
                 </div>
               }

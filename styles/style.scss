@@ -1,7 +1,6 @@
 @import 'node_modules/bootstrap/scss/bootstrap-grid';
 @import 'constants';
-@import 'front';
-@import 'main-menu';
+@import 'index';
 @import 'navbar';
 @import 'projects';
 @import 'experience';
@@ -25,7 +24,7 @@ body {
 
 h1 {
   font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 20vw;
+  font-size: calc(32px + 4vw);
   text-align: center;
   font-weight: bold;
   margin: 0;
@@ -56,6 +55,7 @@ p, ol {
   animation-duration: 0.5s;
 }
 
+
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
@@ -64,3 +64,4 @@ p, ol {
     opacity: 1;
   }
 }
+

@@ -1,7 +1,5 @@
 .post {
-  position: relative;
-  top: $size-ml;
-  padding-bottom: $size-xl;
+  padding: $size-l 0;
   .container {
     max-width: 768px;
     .hero {
@@ -14,7 +12,7 @@
       font-weight: bold;
       text-align: center;
       display: block;
-      margin: $size-sm;
+      margin: $size-sm 0;
     }
     h1 {
       font-size: $size-sm;
@@ -23,5 +21,12 @@
     p {
       text-align: left;
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .post {
+    padding-top: $size-s;
+    padding-bottom: $size-xl;
   }
 }

@@ -18,7 +18,7 @@ const Index = () => (
       <title>jere.pro - About me</title>
       <meta property="og:title" content="jere.pro - About me" />
     </Head>
-    <NavBar url={"/main-menu"}/>
+    <NavBar url={"/"}/>
     <div className={"about animated"}>
       <div className={"container"}>
         <img className={"parsta"} src={Me} alt={"me in San Francisco"}/>
@@ -41,7 +41,7 @@ const Index = () => (
         </p>
       </div>
     </div>
-    <Footer url={"/main-menu"}/>
+    <Footer url={"/"}/>
   </div>
 )
 

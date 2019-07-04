@@ -5,7 +5,7 @@ import Link from "next/link";
 const NavBar = (props) => (
   <div className={"navBar"}>
     <Link prefetch href={props.url}>
-      <a><Arrow className={"arrow"}/></a>
+      <a><Arrow className={"arrow"} aria-label={"Previous page"}/></a>
     </Link>
   </div>
 )

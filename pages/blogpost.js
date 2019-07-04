@@ -19,7 +19,7 @@ class BlogPost extends React.Component {
 
   render() {
     return (
-      <div className={"test"}>
+      <div>
         <Head>
           <title>jere.pro - {this.props.data.title}</title>
           <meta property="og:title" content={"jere.pro - Blog - " + this.props.data.title} />
