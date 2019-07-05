@@ -32,8 +32,8 @@ class Chart extends React.Component {
     const height = 400;
     const margin = {
       top: 10,
-      left: 60,
-      right: 60,
+      left: 40,
+      right: 40,
       bottom: 50
     };
 

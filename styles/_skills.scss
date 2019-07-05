@@ -36,3 +36,10 @@
     }
   }
 }
+
+@media (max-width: 575px) {
+  .skills {
+    padding-top: $size-s;
+    padding-bottom: $size-xl;
+  }
+}
