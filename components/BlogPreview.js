@@ -7,7 +7,7 @@ const BlogPreview = (props) => (
     <a className={"frontLink"}>
       <div className={"row blogLink"}>
         <div className={"col-sm-4 blogPreviewImageContainer"}>
-          <img className={"blogPreviewImage"} src={require("../static/img/blog/" + props.data.image + ".jpg?resize&size=226?inline")} alt={props.data.image}/>
+          <img className={"blogPreviewImage"} src={require(`../static/img/blog/${props.data.image}.jpg?inline?resize&size=100`)} alt={props.data.image}/>
         </div>
         <div className={"col-sm-8 blogPreviewDescriptionContainer"}>
           <div>

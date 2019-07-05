@@ -22,14 +22,15 @@ class BlogPost extends React.Component {
       <div>
         <Head>
           <title>jere.pro - {this.props.data.title}</title>
-          <meta property="og:title" content={"jere.pro - Blog - " + this.props.data.title} />
-          <meta property="og:description" content={`Read my blog bost "${this.props.data.title}" on jere.pro`} />
+          <meta property="og:title" content={`jere.pro - Blog - ${this.props.data.title}`} />
+          <meta property="og:description" content={`Read my blog post "${this.props.data.title}" on jere.pro`} />
+          <meta property="og:image" content={`../static/img/blog/${this.props.data.image}.jpg?resize&size=100`}/>
         </Head>
         <NavBar url={"/blog"}/>
         <div className={"blogPost"}>
           <div className={"container animated"}>
             <img className={"hero"}
-                 src={require("../static/img/blog/" + this.props.data.image + ".jpg?inline?resize&size=100")}
+                 src={require(`../static/img/blog/${this.props.data.image}.jpg?inline?resize&size=100`)}
                  alt={this.props.data.image}
                  height="100%"
             />
