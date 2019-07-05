@@ -18,21 +18,17 @@
     margin: 0;
     width: 100%;
     height: 100%;
-    z-index: -10;
-    opacity: 0;
-    animation-name: fadeOutBox;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-duration: 3s;
+    opacity: 1;
     .dotPro {
       opacity: 0;
       animation-name: fadeOutOpacity;
       animation-iteration-count: 1;
       animation-timing-function: linear;
-      animation-duration: 2s;
+      animation-duration: 6s;
       position: relative;
       top: 50%;
-      transform: translateY(-50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -69,24 +65,29 @@
 }
 
 @media (max-width: 1200px) {
-  .mainMenuContainer {
-    h1 {
-      margin-bottom: $size-m
-    }
-    max-width: 576px;
-    .linkButton {
-      margin: 5vh 0;
+  .indexContainer {
+    .mainMenuContainer {
+      h1 {
+        margin-bottom: $size-m
+      }
+      max-width: 576px;
+      .linkButton {
+        margin: 5vh 0;
+      }
     }
   }
 }
 
 @media (max-width: 767px) {
-  .mainMenuContainer {
-    top: 0;
-    transform: none;
-    padding: $size-xl 0;
-    .linkButton {
-      margin: 4vh 0;
+  .indexContainer {
+    .mainMenuContainer {
+      top: 0;
+      transform: none;
+      padding: $size-xl 0;
+
+      .linkButton {
+        margin: 4vh 0;
+      }
     }
   }
 }
@@ -110,22 +111,6 @@
   }
   100% {
     opacity: 0;
-
-  }
-}
-
-@keyframes fadeOutBox {
-  0% {
-    opacity: 1;
-    z-index: 10;
-  }
-  70% {
-    opacity: 1;
-    z-index: 10;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
 
   }
 }

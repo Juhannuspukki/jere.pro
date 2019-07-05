@@ -49,6 +49,7 @@
     "react-annotation": "^2.1.6",
     "react-dom": "^16.8.6",
     "react-markdown": "^4.0.8",
+    "react-spring": "^8.0.27",
     "webpack": "^4.32.0"
   },
   "devDependencies": {
