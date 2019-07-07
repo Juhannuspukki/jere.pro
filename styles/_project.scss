@@ -2,6 +2,7 @@
   padding: $size-l 0;
   .container {
     max-width: 768px;
+    text-align: center;
     .hero {
       width: 100%;
       min-height: 100%;
@@ -10,17 +11,21 @@
     }
     .postExternalLink {
       font-weight: bold;
-      text-align: center;
       display: block;
-      margin: $size-sm 0;
+      margin: $size-m 0;
     }
     h1 {
       font-size: $size-sm;
-      margin: $size-m 0;
+      margin: $size-m 0 $size-sm 0;
     }
     p {
       text-align: left;
+      margin-top: $size-sm;
     }
+  }
+  .techStack svg {
+    height: $size-m;
+    padding: 0 1rem;
   }
 }
 

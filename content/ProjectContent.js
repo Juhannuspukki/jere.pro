@@ -60,6 +60,7 @@ const data =
                 name: "jere.pro",
                 link: "dotpro-design",
                 external: "https://jere.pro",
+                techStack: [<Affinity/>, <Sketch/>],
                 github: "https://github.com/Juhannuspukki/jere.pro",
                 description: "Before starting my own website project, I used Affinity Designer to draw UI sketches. " +
                   "It turned out to be a good decision, since arranging components on a website is a lot easier in " +
@@ -70,6 +71,7 @@ const data =
                 link: "bsc",
                 external: "https://dspace.cc.tut.fi/dpub/handle/123456789/27191",
                 github: "unavailable",
+                techStack: [<Affinity/>],
                 description: "During my time at Neuro Event Labs Oy I had the opportunity to design their fleet " +
                 "management system. The design process is documented on my Bachelor's thesis. I was able to produce a " +
                 "clear and aesthetically pleasing UI using the existing design language."
@@ -79,6 +81,7 @@ const data =
                 link: "avaruuskerho-design",
                 external: "https://avaruuskerho.fi",
                 github: "https://github.com/castortut/castor-web",
+                techStack: [<Affinity/>],
                 description: "Before writing the actual code on avaruuskerho.fi I drew mockups, experimented with " +
                 "different designs and ran them through the board. I was able to come up with a rather spacey design," +
                 "don't you think?"
@@ -111,6 +114,7 @@ const data =
                 link: "dotpro",
                 external: "https://jere.pro",
                 github: "https://github.com/Juhannuspukki/jere.pro",
+                techStack: [<Reactjs/>, <Nextjs/>, <Sass/>, <HTML5/>],
                 description: "I decided that I need a website of my own. It took way too long to decide what technologies " +
                 "to use but I finally decided to try Next.js that has received a lot of praise recently. " +
                 "The result is the very fast SPA you see before you. Behold!"
@@ -120,6 +124,7 @@ const data =
                 link: "pollex",
                 external: "https://pollex.club",
                 github: "https://github.com/Juhannuspukki/pollex-web",
+                techStack: [<Sass/>, <HTML5/>, <Nodejs/>, <AWS/>],
                 description: "Pollex.club was the first website I created after neuroeventlabs.com. Its design is " +
                 "slightly dated, but it runs on the same victor-hugo generator as all of my newer static site projects. " +
                 "During this project I also learned to use AWS, for it was originally hosted there."
@@ -129,6 +134,7 @@ const data =
                 link: "koodarinpalkka",
                 external: "https://koodarinpalkka.fi",
                 github: "unavailable",
+                techStack: [<Reactjs/>, <Sass/>, <HTML5/>],
                 description: "In early 2019 Sysart contacted me. They wanted to increase their salary transparency and " +
                   "I designed and implemented a React application that lets anyone to see what they would earn at " +
                   "Sysart. Try it!"
@@ -138,6 +144,7 @@ const data =
                 link: "nel",
                 external: "https://neuroeventlabs.com",
                 github: "unavailable",
+                techStack: [<Sass/>, <HTML5/>, <Nodejs/>],
                 description: "Neuro Event Labs is a Finnish startup developing a video monitoring system for epilepsy " +
                 "patients. During my time with them, one of my main duties was taking care of the company's public " +
                 "website. I have now made three different versions of the website."
@@ -147,6 +154,7 @@ const data =
                 link: "tds",
                 external: "https://tamperedebatesociety.fi",
                 github: "https://github.com/Juhannuspukki/tampere-debate-society-web",
+                techStack: [<Sass/>, <HTML5/>, <Nodejs/>],
                 description: "I have been part of the debate society for three years now. Eventually, there were talks " +
                 "about making a new website. The debate society had previously had at least three, all of which were abandoned. " +
                 "First, there was talk about WordPress but I managed to convince them to trust my static site solution " +
@@ -158,15 +166,17 @@ const data =
                 link: "course-o-meter",
                 external: "https://course-o-meter.com",
                 github: "https://github.com/Juhannuspukki/project-daydream",
+                techStack: [<Reactjs/>, <Sass/>, <HTML5/>, <Python/>],
                 description: "After a particularly annoying university course I created the Course-o-Meter, a project " +
                   "that compares university courses against each other. A must-have tool for planning your studies! " +
-                  "The app is a static create-react-app that is hosted on Netlify."
+                  "The app is a static React application that is hosted on Netlify."
               },
               {
                 name: "avaruuskerho.fi",
                 link: "avaruuskerho",
                 external: "https://avaruuskerho.fi",
                 github: "https://github.com/castortut/castor-web",
+                techStack: [<Sass/>, <HTML5/>, <Nodejs/>],
                 description: "I serve on the board of Tampereen teekkarien avaruusteknillinen kerho Castor ry in 2019. " +
                   "During that time, it was my duty to create a new website for the club. It is a static site based on the " +
                   "Netlify victor-hugo project and also features the Netlify CMS to allow easy content editing."
@@ -176,6 +186,7 @@ const data =
                 link: "muistola",
                 external: "https://muistola.fi",
                 github: "https://github.com/Juhannuspukki/muistola-web",
+                techStack: [<Sass/>, <HTML5/>, <Nodejs/>],
                 description: "Muistola is a small company in Teisko, Tampere focusing on new (or old?) ways of caring " +
                 "for the elderly. I had the opportunity to work with them in 2018. I coded their website entirely by " +
                 "myself according to the UI plans I received. I also became a .fi domain dealer in the process."
@@ -210,6 +221,7 @@ const data =
                 link: "logos",
                 external: "http://t.me/logosthebot",
                 github: "https://github.com/Juhannuspukki/LogosTheBot",
+                techStack: [<Python/>],
                 description: "Logos was my first software project. After learning Python for the very first time I " +
                   "figured that I had to do something to keep up the knowledge. I started the development of a bot. " +
                   "During all these years I have added several features to the bot, such as wayfinding services," +
@@ -221,6 +233,7 @@ const data =
                 link: "courserobot",
                 external: "http://t.me/courserobot",
                 github: "https://github.com/Juhannuspukki/project-daydream-telegram",
+                techStack: [<Python/>, <Docker/>],
                 description: "CourseRobot is Python-made Telegram bot that brings the functionality of Course-O-Meter " +
                   "directly to Telegram. It is also my first project using Docker. The app can be accessed from " +
                   "any chat due to it being an inline bot."
@@ -236,7 +249,7 @@ const data =
           ],
           description: "Embedded systems are devices that combine both hardware and software. Probably the most " +
             "famous example of this are Arduino boards. Playing with Arduino's is fun, but my interests have steered me " +
-            "towards the higher-level languages.",
+            "towards higher-level languages.",
           image: <Embedded className={"vectorLink"}/>,
           projectList:
             [
@@ -245,6 +258,7 @@ const data =
                 link: "qr",
                 external: "unavailable",
                 github: "https://github.com/Juhannuspukki/led-matrix",
+                techStack: [<C/>],
                 description: "I have not listed many school projects here because in the end everyone has to complete them. " +
                   "However, this is one succeeded exceptionally well. The assignment was to design a product from a bunch" +
                   "of LEDs controlled by a microcontroller. I came up with the idea of a quick-read code (2-dimensional barcode) " +
@@ -256,6 +270,7 @@ const data =
                 link: "led",
                 external: "unavailable",
                 github: "https://github.com/Juhannuspukki/arduino-fft",
+                techStack: [<C/>, <CPlusPlus/>],
                 description: "I used a Teensy 3.2 board (almost like an Arduino, but not quite) to make a device that " +
                   "uses FFT to analyze music. The resulting information is then used to control a RGB LED in real time. " +
                   "Yeah, I know the video doesn't look like much without the audio track. Sorry."

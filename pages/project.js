@@ -2,6 +2,8 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import ProjectObject from "../content/ProjectContent";
+import StackLevel from "../components/StackLevel";
 
 
 class Project extends React.Component {
@@ -18,7 +20,7 @@ class Project extends React.Component {
   }
 
   render () {
-    const {name, link, external, github, description} = this.props;
+    const {name, link, external, github, techStack, description} = this.props;
     return (
       <div>
         <Head>
@@ -42,6 +44,13 @@ class Project extends React.Component {
               <source src={"../static/img/projects/" + link + ".mp4"} type="video/mp4"/>
             </video>
             <h1>{name}</h1>
+            <div className="techStack">
+              {techStack.map(tech => (
+                <React.Fragment key={tech.id}>
+                  {tech}
+                </React.Fragment>
+              ))}
+            </div>
             <p>
               {description}
             </p>

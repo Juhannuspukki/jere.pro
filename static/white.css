@@ -14,7 +14,9 @@ a, p {
 .footerLinkVector > path,
 .graphIcon path,
 .graphIcon circle,
-.dotPro path {
+.dotPro path,
+.techStack svg path,
+.techStack svg circle {
   fill: #000;
 }
 

@@ -52,6 +52,7 @@ class Index extends React.Component {
           <meta name="description" content="Yo, my name is Jere, and I design stuff. Sometimes I also develop stuff. Such as this website, for example. It's cool, check it out." />
           <meta property="og:url" content="https://jere.pro"/>
         </Head>
+        <h1 className={"hidden"}>jere.pro - Main Menu</h1>
         { this.props.cookies.token !== "true" &&
           <div className={"dotProContainer"}>
             <DotPro/>
@@ -59,7 +60,6 @@ class Index extends React.Component {
         }
         { this.state.renderMenu === true &&
           <div className={"container mainMenuContainer animated"}>
-            <h1 className={"hidden"}>jere.pro</h1>
             <div className={"row no-gutters"}>
             <FrontLink title={"about"}><About className={"vectorLink"}/></FrontLink>
             <FrontLink title={"projects"}><Project className={"vectorLink"}/></FrontLink>
