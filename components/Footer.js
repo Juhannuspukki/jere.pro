@@ -11,7 +11,7 @@ const Footer = (props) => (
       <div className={"row"}>
         <div className={"col-3 footerLinkContainer"}>
           <Link prefetch href={props.url}>
-            <a className={props.url === "" ? "hidden" : "footerLink"} aria-label={"Previous page"}>
+            <a className={props.url === "" ? "disabled footerLink" : "footerLink"} aria-label={"Previous page"}>
               <Arrow className={"footerLinkVector"}/>
             </a>
           </Link>
