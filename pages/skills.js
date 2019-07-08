@@ -20,8 +20,10 @@ class Post extends React.Component {
     return (
       <div>
         <Head>
-          <title>jere.pro - Projects - {title}</title>
+          <title>jere.pro - Skills - {title}</title>
           <meta property="og:title" content={"jere.pro - Skills - " + title}/>
+          <meta property="og:description" content={`Yo, my name is Jere, and I design stuff. Read about my ${title} skills on this page.`} />
+          <meta name="description" content={`Yo, my name is Jere, and I design stuff. Read about my ${title} skills on this page.`} />
         </Head>
         <NavBar url={"/projects"}/>
         <div className={"skills animated"}>

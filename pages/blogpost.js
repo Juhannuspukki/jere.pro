@@ -22,6 +22,7 @@ class BlogPost extends React.Component {
       <div>
         <Head>
           <title>jere.pro - {this.props.data.title}</title>
+          <meta name="description" content={`jere.pro - Blog - ${this.props.data.title}`} />
           <meta property="og:title" content={`jere.pro - Blog - ${this.props.data.title}`} />
           <meta property="og:description" content={`Read my blog post "${this.props.data.title}" on jere.pro`} />
           <meta property="og:image" content={`../static/img/blog/${this.props.data.image}.jpg?resize&size=100`}/>

@@ -45,6 +45,8 @@ export default class extends React.Component {
         <Head>
           <title>jere.pro - Blog</title>
           <meta property="og:title" content="jere.pro - Blog" />
+          <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Here is my blog. It's cool, check it out." />
+          <meta name="description" content="Yo, my name is Jere, and I design stuff. Here is my blog. It's cool, check it out." />
         </Head>
         <NavBar url={"/"}/>
         <div className={"container animated blogContainer"}>

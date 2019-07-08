@@ -10,6 +10,8 @@ const Index = (props) => (
     <Head>
       <title>jere.pro - Projects</title>
       <meta property="og:title" content="jere.pro - Projects" />
+      <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Read about my more or less awesome projects here!" />
+      <meta name="description" content="Yo, my name is Jere, and I design stuff. Read about my more or less awesome projects here!" />
     </Head>
     <NavBar url={"/"}/>
     <div className={"container projectContainer animated"}>

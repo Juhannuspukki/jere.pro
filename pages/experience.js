@@ -15,6 +15,8 @@ const Index = () => {
       <Head>
         <title>jere.pro - Experience</title>
         <meta property="og:title" content="jere.pro - Experience"/>
+        <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Read about the stuff I have done on this page." />
+        <meta name="description" content="Yo, my name is Jere, and I design stuff. Read about the stuff I have done on this page." />
       </Head>
       <NavBar url={"/"}/>
       <div className={"timeLineContainer animated"}>

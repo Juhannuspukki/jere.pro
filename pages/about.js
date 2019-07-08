@@ -25,6 +25,8 @@ const Index = () => (
     <Head>
       <title>jere.pro - About me</title>
       <meta property="og:title" content="jere.pro - About me" />
+      <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Read about me on this page." />
+      <meta name="description" content="Yo, my name is Jere, and I design stuff. Read about me on this page." />
     </Head>
     <NavBar url={"/"}/>
     <div className={"about animated"}>
