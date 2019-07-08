@@ -9,27 +9,45 @@
       filter: grayscale(100%);
     }
     p {
-      margin: $size-m auto;
+      margin-bottom: $size-m
     }
     .phone {
       text-align: center;
       display: block;
       font-weight: bold;
       font-size: $size-sm;
-      margin-bottom: $size-m;
+      margin: $size-s 0 $size-m;
     }
     .linkLogoContainer {
       display: block;
       margin: auto;
       text-align: center;
+      margin-bottom: $size-m;
       .link {
         display: inline;
         .linkLogo {
           display: inline-block;
-          margin: auto $size-sm;
+          margin: auto $size-s;
           height: $size-m;
         }
       }
+    }
+    h1 {
+      margin: $size-s auto $size-s;
+    }
+    h2 {
+      margin-bottom: $size-s;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: $size-s;
+    }
+    ul {
+      max-width: 350px;
+      margin: 0 auto $size-m;
+    }
+    .languageLabel {
+      font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     }
   }
 }

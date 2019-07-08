@@ -16,7 +16,11 @@ a, p {
 .graphIcon circle,
 .dotPro path,
 .techStack svg path,
-.techStack svg circle {
+.techStack svg circle,
+.languageLabel,
+.pieHole,
+.vx-axis text,
+.experienceGraph .textContainer text tspan{
   fill: #000;
 }
 
@@ -24,32 +28,22 @@ a, p {
   background-color: #ffffffcc;
 }
 
-.projectList a:hover {
-  color: #E350B9;
-}
-
-.postExternalLink:hover {
-  color: #E350B9;
-}
-
 .blogLink:hover p,
-.blogLink:hover h2 {
+.blogLink:hover h2,
+.postExternalLink:hover,
+.projectList a:hover {
   color: #E350B9;
 }
 
 .frontLink:hover path,
 .frontLink:hover circle,
-.frontLink:hover h2 {
-  fill: #E350B9;
-  color: #E350B9;
-}
-
+.frontLink:hover h2,
 .phone:hover,
 .linkLogo:hover path,
 .arrow:hover path,
 .footerLinkVector:hover path {
-  color: #E350B9;
   fill: #E350B9;
+  color: #E350B9;
 }
 
 .graphGrid > line,
@@ -57,11 +51,6 @@ a, p {
 .experienceGraph .outerCircle,
 .dotPro path {
   stroke: #000;
-}
-
-.vx-axis text,
-.experienceGraph .textContainer text tspan {
-  fill: #000;
 }
 
 .experienceGraph .innerCircle {

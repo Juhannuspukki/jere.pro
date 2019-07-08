@@ -2,8 +2,6 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import ProjectObject from "../content/ProjectContent";
-import StackLevel from "../components/StackLevel";
 
 
 class Project extends React.Component {
@@ -28,6 +26,8 @@ class Project extends React.Component {
           <meta property="og:title" content={"jere.pro - Projects - " + name} />
           <meta property="description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
           <meta property="og:description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
+          <meta property="og:image" content={ require(`../static/img/projects/${link}.jpg`) } />
+          <meta name="robots" content="noindex" />
         </Head>
         <NavBar url={"/projects"}/>
         <div className={"post"}>
@@ -39,19 +39,30 @@ class Project extends React.Component {
                    controls={false}
                    className={"hero"}
                    aria-hidden={"true"}
-                   poster={require("../static/img/projects/" + link + ".jpg")}
+                   poster={require(`../static/img/projects/${link}.jpg`)}
             >
-              <source src={"../static/img/projects/" + link + ".mp4"} type="video/mp4"/>
+              <source src={`../static/img/projects/${link}.mp4`} type="video/mp4"/>
             </video>
             <h1>{name}</h1>
-            <div className="techStack">
+            <div className="techStack container">
+              <div className="row">
+                {techStack.map(tech => (
+                  <div className="col" key={tech.text}>
+                    {tech.icon}
+                  </div>
+                ))}
+              </div>
+              <div className="row">
               {techStack.map(tech => (
-                <React.Fragment key={tech.id}>
-                  {tech}
-                </React.Fragment>
+                <div key={tech.text} className="col">
+                  <span>
+                    {tech.text}
+                  </span>
+                </div>
               ))}
+              </div>
             </div>
-            <p>
+            <p className="techStackDescription">
               {description}
             </p>
             <div className={"row"}>

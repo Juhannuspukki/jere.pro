@@ -30,21 +30,20 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h2, h3 {
   font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-align: center;
   font-weight: bold;
   margin: 0;
 }
 
-a {
+a, p, ol, ul, span {
   font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-decoration: none;
 }
 
-p, ol {
-  font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  text-decoration: none;
+ul {
+  padding-left: $size-sm
 }
 
 .animated {
