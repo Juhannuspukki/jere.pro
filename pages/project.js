@@ -2,23 +2,23 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import ProjectContent from "../content/ProjectContent";
+import {withRouter} from 'next/router'
 
 
 class Project extends React.Component {
-  static async getInitialProps({ query }) {
-    const findProject = projectList => projectList.find(project => project.link === query.link);
+  constructor(props) {
+    super(props);
+    const {router} = this.props;
 
-    const post = await import(`../content/ProjectContent`);
+    const findProject = projectList => projectList.find(project => project.link === router.query.link);
+    const document = ProjectContent.projects.find(stackLevel => findProject(stackLevel.projectList));
 
-    const document = post.default.projects.find(stackLevel => findProject(stackLevel.projectList));
-    const data = findProject(document.projectList);
-    return {
-      ...data,
-    };
+    this.state = findProject(document.projectList);
   }
 
   render () {
-    const {name, link, external, github, techStack, description} = this.props;
+    const {name, external, github, link, description, techStack} = this.state;
     return (
       <div>
         <Head>
@@ -47,19 +47,19 @@ class Project extends React.Component {
             <div className="techStack container">
               <div className="row">
                 {techStack.map(tech => (
-                  <div className="col" key={tech.text}>
+                  <div key={tech.text + "-icon"} className="col">
                     {tech.icon}
                   </div>
                 ))}
               </div>
               <div className="row">
-              {techStack.map(tech => (
-                <div key={tech.text} className="col">
-                  <span>
-                    {tech.text}
-                  </span>
-                </div>
-              ))}
+                {techStack.map(tech => (
+                  <div key={tech.text + "-text"} className="col">
+                    <span>
+                      {tech.text}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
             <p className="techStackDescription">
@@ -85,5 +85,5 @@ class Project extends React.Component {
   }
 }
 
-export default Project
+export default withRouter(Project)
 

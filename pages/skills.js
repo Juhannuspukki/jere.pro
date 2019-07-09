@@ -12,6 +12,7 @@ class Post extends React.Component {
   constructor(props) {
     super(props);
     const {router} = this.props;
+
     this.state = ProjectContent.projects.find(stackLevel => stackLevel.link === router.query.link);
   }
 
