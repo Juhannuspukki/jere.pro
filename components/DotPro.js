@@ -4,7 +4,7 @@ import {Spring} from 'react-spring/renderprops.cjs'
 const Footer = () => {
   return (
     <Spring from={{ opacity: 0, strokeDashoffset: 720, width: "60%", display: "block"}}
-            to={{ opacity: 1, strokeDashoffset: 0, width: "10000%", display: "none" }}
+            to={{ opacity: 1, strokeDashoffset: 0, width: "11000%", display: "none" }}
             config={key => {
               switch (key) {
                 case 'opacity':
@@ -14,7 +14,7 @@ const Footer = () => {
                 case 'width':
                   return {delay: 2000, duration: 500};
                 case 'display':
-                  return {delay: 2500};
+                  return {delay: 2550};
               }
             }}
     >
