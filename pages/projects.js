@@ -6,20 +6,23 @@ import Head from 'next/head'
 import React from 'react'
 
 const Index = (props) => (
-  <div className={"test"}>
+  <div>
     <Head>
       <title>jere.pro - Projects</title>
       <meta property="og:title" content="jere.pro - Projects" />
+      <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Read about my more or less awesome projects here!" />
+      <meta name="description" content="Yo, my name is Jere, and I design stuff. Read about my more or less awesome projects here!" />
     </Head>
-    <NavBar url={"/main-menu"}/>
+    <NavBar url={"/"}/>
     <div className={"container projectContainer animated"}>
+      <h1>Projects</h1>
       {ProjectObject.projects.map((project) => (
         <StackLevel key={project.title} title={project.title} link={project.link} projectList={project.projectList}>
           {project.image}
         </StackLevel>
       ))}
     </div>
-    <Footer url={"/main-menu"}/>
+    <Footer url={"/"}/>
   </div>
 )
 

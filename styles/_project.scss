@@ -1,27 +1,41 @@
 .post {
-  position: relative;
-  top: $size-ml;
-  padding-bottom: $size-xl;
+  padding: $size-l 0;
   .container {
     max-width: 768px;
+    text-align: center;
     .hero {
       width: 100%;
       min-height: 100%;
-      border-radius: $size-xs;
+      border-radius: $border-radius-size;
       filter: grayscale(100%);
     }
     .postExternalLink {
       font-weight: bold;
-      text-align: center;
       display: block;
-      margin: $size-sm;
+      margin: $size-s 0;
     }
     h1 {
       font-size: $size-sm;
-      margin: $size-m 0;
+      margin: $size-m 0 $size-sm 0;
     }
     p {
       text-align: left;
+      margin-top: $size-sm;
     }
+  }
+  .techStack {
+    max-width: 320px;
+    svg {
+      height: $size-m;
+    }
+    span {
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .post {
+    padding-top: $size-s;
+    padding-bottom: $size-xl;
   }
 }

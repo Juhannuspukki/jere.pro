@@ -1,78 +1,19 @@
 .timeLineContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  .largeTimeLine {
-    position: absolute;
-    width: 3880px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .smallTimeLine {
-    display: none;
-    position: relative;
-    width: 315px;
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .mediumTimeLine {
-    display: none;
-    position: relative;
-    width: 715px;
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .extraSmallTimeLine {
-    display: none;
-    position: relative;
-    width: 278px;
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  padding-top: $size-l
 }
 
-@media (max-width: 1450px) {
-  .timeLineContainer {
-    min-height: 990px;
-    .largeTimeLine {
-      display: none;
-    }
-    .mediumTimeLine {
-      display: block;
-    }
-  }
+.experienceGraph path,
+.experienceGraph text tspan,
+.experienceGraph circle {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.75s;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 575px) {
   .timeLineContainer {
-    height: 2250px;
-    .mediumTimeLine {
-      display: none;
-    }
-    .smallTimeLine {
-      display: block;
-    }
-  }
-}
-
-@media (max-width: 350px) {
-  .timeLineContainer {
-    height: 2250px;
-    .smallTimeLine {
-      display: none;
-    }
-    .extraSmallTimeLine {
-      display: block;
-    }
+    padding-top: $size-ml;
   }
 }

@@ -2,48 +2,80 @@ import Head from 'next/head'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import ProjectContent from "../content/ProjectContent";
+import {withRouter} from 'next/router'
 
 
 class Project extends React.Component {
-  static async getInitialProps({ query }) {
-    const findProject = projectList => projectList.find(project => project.link === query.link);
+  constructor(props) {
+    super(props);
+    const {router} = this.props;
 
-    const post = await import(`../content/ProjectContent`);
-  
-    const document = post.default.projects.find(stackLevel => findProject(stackLevel.projectList));
-    const data = findProject(document.projectList);
-    return {
-      ...data,
-    };
+    const findProject = projectList => projectList.find(project => project.link === router.query.link);
+    const document = ProjectContent.projects.find(stackLevel => findProject(stackLevel.projectList));
+
+    this.state = findProject(document.projectList);
   }
 
   render () {
-    const {name, link, external, github, description} = this.props;
+    const {name, external, github, link, description, techStack} = this.state;
     return (
       <div>
         <Head>
           <title>jere.pro - Projects - {name}</title>
           <meta property="og:title" content={"jere.pro - Projects - " + name} />
+          <meta property="description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
+          <meta property="og:description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
+          <meta property="og:image" content={ require(`../static/img/projects/${link}.jpg`) } />
+          <meta name="robots" content="noindex" />
         </Head>
         <NavBar url={"/projects"}/>
         <div className={"post"}>
           <div className={"container animated"}>
-            <img className={"hero"} src={require("../static/img/" + link + ".jpeg")}/>
+            <video loop={true}
+                   autoPlay={true}
+                   muted={true}
+                   playsInline={true}
+                   controls={false}
+                   className={"hero"}
+                   aria-hidden={"true"}
+                   poster={require(`../static/img/projects/${link}.jpg`)}
+            >
+              <source src={`../static/img/projects/${link}.mp4`} type="video/mp4"/>
+            </video>
             <h1>{name}</h1>
-            <p>
+            <div className="techStack container">
+              <div className="row">
+                {techStack.map(tech => (
+                  <div key={tech.text + "-icon"} className="col">
+                    {tech.icon}
+                  </div>
+                ))}
+              </div>
+              <div className="row">
+                {techStack.map(tech => (
+                  <div key={tech.text + "-text"} className="col">
+                    <span>
+                      {tech.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="techStackDescription">
               {description}
             </p>
             <div className={"row"}>
-              <div className={"col-sm-6"}>
-                {(external === "unavailable") ? <div /> :
+              {external !== "unavailable" &&
+                <div className={"col-6"}>
                   <a className={"postExternalLink"} href={external} target="_blank">See in action →</a>
-                }
-              </div>
-              <div className={"col-sm-6"}>
-                {(github === "unavailable") ? <div /> :
+                </div>
+              }
+              {github !== "unavailable" &&
+                <div className={"col-6"}>
                   <a className={"postExternalLink"} href={github} target="_blank">View on GitHub →</a>
-                }
-              </div>
+                </div>
+              }
             </div>
           </div>
         </div>
@@ -53,5 +85,5 @@ class Project extends React.Component {
   }
 }
 
-export default Project
+export default withRouter(Project)
 

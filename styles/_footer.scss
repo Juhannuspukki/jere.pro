@@ -7,24 +7,32 @@
   width: 100%;
   z-index: 1130;
   padding-bottom: $size-s; /* iPhone home slider padding */
-  .footerLinkContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .footerLink {
+  .footerContainer {
+    max-width: 480px;
+    .footerLinkContainer {
       display: flex;
       align-items: center;
       justify-content: center;
-      .footerLinkVector {
-        width: 100%;
-        cursor: pointer;
-        margin: $size-s;
+      .disabled {
+        pointer-events: none;
+        opacity: 0.3;
+      }
+      .footerLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .footerLinkVector {
+          width: 100%;
+          cursor: pointer;
+          margin: $size-s;
+        }
       }
     }
   }
+
 }
 
-@media (max-width: 511px) {
+@media (max-width: 575px) {
   .footer {
     display: block;
   }

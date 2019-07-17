@@ -8,7 +8,7 @@ const FrontLink = (props) => (
       <a className={"frontLink"}>
         {props.children}
         <h2>{props.title}</h2>
-        </a>
+      </a>
     </Link>
   </div>
 );

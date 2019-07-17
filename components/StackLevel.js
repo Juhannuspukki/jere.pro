@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const StackLevel = (props) => (
-  <div className={"row"}>
+  <div className={"row stackLevel"}>
     <div className={"col-md-2"} />
     <div className={"col-md-4 projectLinkContainer"}>
       <Link prefetch as={`/skills/${props.link}`} href={`/skills?link=${props.link}`} key={props.link}>

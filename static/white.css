@@ -1,4 +1,4 @@
-body {
+body, .dotProContainer {
   background-color: #fff;
   color: #000;
 }
@@ -13,7 +13,14 @@ a, p {
 .linkLogo > path,
 .footerLinkVector > path,
 .graphIcon path,
-.graphIcon circle {
+.graphIcon circle,
+.dotPro path,
+.techStack svg path,
+.techStack svg circle,
+.languageLabel,
+.pieHole,
+.vx-axis text,
+.experienceGraph .textContainer text tspan{
   fill: #000;
 }
 
@@ -21,63 +28,31 @@ a, p {
   background-color: #ffffffcc;
 }
 
-.largeTimeLine path,
-.smallTimeLine path,
-.mediumTimeLine path,
-.extraSmallTimeLine path {
-  fill: #000;
-}
-
-.largeTimeLine > path,
-.largeTimeLine > ellipse,
-.mediumTimeLine > g:last-of-type > path,
-.mediumTimeLine > g > ellipse,
-.smallTimeLine > g:last-of-type > path,
-.smallTimeLine > g > ellipse,
-.extraSmallTimeLine > g:last-of-type > path,
-.extraSmallTimeLine > g > ellipse {
-  stroke: #000;
-  fill: none;
-}
-
-.mediumTimeLine > path,
-.smallTimeLine > path,
-.extraSmallTimeLine > path {
-  stroke: #000;
-}
-
-.projectList a:hover {
-  color: #E350B9;
-}
-
-.postExternalLink:hover {
-  color: #E350B9;
-}
-
 .blogLink:hover p,
-.blogLink:hover h2 {
+.blogLink:hover h2,
+.postExternalLink:hover,
+.projectList a:hover {
   color: #E350B9;
 }
 
 .frontLink:hover path,
 .frontLink:hover circle,
-.frontLink:hover h2 {
-  fill: #E350B9;
-  color: #E350B9;
-}
-
+.frontLink:hover h2,
 .phone:hover,
 .linkLogo:hover path,
 .arrow:hover path,
 .footerLinkVector:hover path {
-  color: #E350B9;
   fill: #E350B9;
+  color: #E350B9;
 }
 
-.graphGrid > line {
-  stroke: #000 !important;
+.graphGrid > line,
+.experienceGraph path,
+.experienceGraph .outerCircle,
+.dotPro path {
+  stroke: #000;
 }
 
-.vx-axis text {
-  fill: #000 !important;
+.experienceGraph .innerCircle {
+  fill: #fff;
 }

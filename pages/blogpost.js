@@ -7,6 +7,7 @@ import NavBar from "../components/NavBar";
 
 class BlogPost extends React.Component {
   static async getInitialProps({ query }) {
+    // note to future self: if you try to import instead of require, this breaks in production
     const post = require(`../content/blog/${query.link}.md`);
     const document = matter(post.default);
     const readingTime = Math.round((document.content.trim().split(/\s+/).length)/220);
@@ -18,16 +19,22 @@ class BlogPost extends React.Component {
 
   render() {
     return (
-      <div className={"test"}>
+      <div>
         <Head>
           <title>jere.pro - {this.props.data.title}</title>
-          <meta property="og:title" content={"jere.pro - Blog - " + this.props.data.title} />
-          <meta property="og:description" content={`Read my blog bost "${this.props.data.title}" on jere.pro`} />
+          <meta name="description" content={`jere.pro - Blog - ${this.props.data.title}`} />
+          <meta property="og:title" content={`jere.pro - Blog - ${this.props.data.title}`} />
+          <meta property="og:description" content={`Read my blog post "${this.props.data.title}" on jere.pro`} />
+          <meta property="og:image" content={`../static/img/blog/${this.props.data.image}.jpg?resize&size=100`}/>
         </Head>
         <NavBar url={"/blog"}/>
         <div className={"blogPost"}>
           <div className={"container animated"}>
-            <img className={"hero"} src={require("../static/img/blog/" + this.props.data.image + ".jpg?inline?resize&size=100")} height="100%"/>
+            <img className={"hero"}
+                 src={require(`../static/img/blog/${this.props.data.image}.jpg?inline?resize&size=100`)}
+                 alt={this.props.data.image}
+                 height="100%"
+            />
             <h1>{this.props.data.title}</h1>
             <p className={"publishDate"}>Published on {new Date(this.props.data.date).toDateString()}, {this.props.readingTime} min read</p>
             <ReactMarkdown source={this.props.content} />
