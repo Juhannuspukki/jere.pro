@@ -15,6 +15,7 @@ a, p {
 .postExternalLink:hover,
 .blogLink:hover p,
 .blogLink:hover h2,
+.frontLink:hover li,
 .frontLink:hover path
 {
   color: #50E3C2;

@@ -3,7 +3,7 @@ import React from 'react'
 import matter from 'gray-matter';
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import CookBookPreview from '../components/CookBookPreview'
+import BlogPreview from "../components/BlogPreview";
 
 export default class extends React.Component {
   static async getInitialProps() {
@@ -19,21 +19,13 @@ export default class extends React.Component {
         // Parse document
         const document = matter(value.default);
 
-        const readingTime = Math.round((document.content.trim().split(/\s+/).length)/220);
-
         return {
           document,
-          readingTime,
           slug
         };
       });
       return data;
     })(require.context('../content/cookbook', true, /\.md$/));
-
-    // Sort posts, newest first
-    posts = posts.sort(
-      (a, b) => new Date(a.document.data.date) - new Date(b.document.data.date)
-    ).reverse();
 
     return {
       posts
@@ -43,16 +35,24 @@ export default class extends React.Component {
     return (
       <div className={"test"}>
         <Head>
-          <title>jere.pro - Blog</title>
+          <title>jere.pro - CookBook</title>
           <meta property="og:title" content="jere.pro - CookBook" />
+          <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Here is my cookbook with a variety of recipes." />
+          <meta name="description" content="Yo, my name is Jere, and I design stuff. Here is my cookbook with a variety of recipes." />
         </Head>
-        <NavBar url={"/main-menu"}/>
+        <NavBar url={"/"}/>
         <div className={"container animated blogContainer"}>
           {this.props.posts.map(({ document: { data, content }, slug, readingTime }) => (
-            <CookBookPreview content={content} data={data} slug={slug} key={slug} readingTime={readingTime}/>
+            <BlogPreview
+              content={content}
+              data={data}
+              slug={slug}
+              key={slug}
+              readingTime={readingTime}
+            />
           ))}
         </div>
-        <Footer url={"/main-menu"}/>
+        <Footer url={"/"}/>
       </div>
     )
   }

@@ -52,7 +52,13 @@ export default class extends React.Component {
         <div className={"container animated blogContainer"}>
           <h1>Blog</h1>
           {this.props.posts.map(({ document: { data, content }, slug, readingTime }) => (
-            <BlogPreview content={content} data={data} slug={slug} key={slug} readingTime={readingTime}/>
+            <BlogPreview
+              content={content}
+              data={data}
+              slug={slug}
+              key={slug}
+              readingTime={readingTime}
+            />
           ))}
         </div>
         <Footer url={"/"}/>
