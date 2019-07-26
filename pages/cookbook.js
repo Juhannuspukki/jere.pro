@@ -3,7 +3,7 @@ import React from 'react'
 import matter from 'gray-matter';
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import BlogPreview from '../components/BlogPreview'
+import BlogPreview from "../components/BlogPreview";
 
 export default class extends React.Component {
   static async getInitialProps() {
@@ -19,21 +19,13 @@ export default class extends React.Component {
         // Parse document
         const document = matter(value.default);
 
-        const readingTime = Math.round((document.content.trim().split(/\s+/).length)/220);
-
         return {
           document,
-          readingTime,
           slug
         };
       });
       return data;
-    })(require.context('../content/blog', true, /\.md$/));
-
-    // Sort posts, newest first
-    posts = posts.sort(
-      (a, b) => new Date(a.document.data.date) - new Date(b.document.data.date)
-    ).reverse();
+    })(require.context('../content/cookbook', true, /\.md$/));
 
     return {
       posts
@@ -41,16 +33,16 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className={"test"}>
         <Head>
-          <title>jere.pro - Blog</title>
-          <meta property="og:title" content="jere.pro - Blog" />
-          <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Here is my blog. It's cool, check it out." />
-          <meta name="description" content="Yo, my name is Jere, and I design stuff. Here is my blog. It's cool, check it out." />
+          <title>jere.pro - CookBook</title>
+          <meta property="og:title" content="jere.pro - CookBook" />
+          <meta property="og:description" content="Yo, my name is Jere, and I design stuff. Here is my cookbook with a variety of recipes." />
+          <meta name="description" content="Yo, my name is Jere, and I design stuff. Here is my cookbook with a variety of recipes." />
         </Head>
         <NavBar url={"/"}/>
-        <div className={"container animated blogContainer"}>
-          <h1>Blog</h1>
+        <div className={"container animated blogContainer cookBookContainer"}>
+          <h1>CookBook</h1>
           {this.props.posts.map(({ document: { data, content }, slug, readingTime }) => (
             <BlogPreview
               content={content}
