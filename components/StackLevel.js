@@ -17,7 +17,7 @@ const StackLevel = (props) => (
       <div>
       {props.projectList.map((project) => (
           <Link prefetch as={`/projects/${project.link}`} href={`/project?link=${project.link}`} key={project.link}>
-            <a>{project.name}</a>
+            <a>{project.name} →</a>
           </Link>
       ))}
       </div>

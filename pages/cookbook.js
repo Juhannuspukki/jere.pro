@@ -41,7 +41,8 @@ export default class extends React.Component {
           <meta name="description" content="Yo, my name is Jere, and I design stuff. Here is my cookbook with a variety of recipes." />
         </Head>
         <NavBar url={"/"}/>
-        <div className={"container animated blogContainer"}>
+        <div className={"container animated blogContainer cookBookContainer"}>
+          <h1>CookBook</h1>
           {this.props.posts.map(({ document: { data, content }, slug, readingTime }) => (
             <BlogPreview
               content={content}

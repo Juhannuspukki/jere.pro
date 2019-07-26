@@ -12,3 +12,21 @@
     margin-bottom: 0.5rem;
   }
 }
+
+.cookBookContainer {
+  .blogLink {
+    .blogPreviewImageContainer {
+      .blogPreviewImage {
+        filter: none;
+      }
+    }
+  }
+}
+
+.blogPost {
+  .container {
+    .cookBookHero {
+      filter: none;
+    }
+  }
+}

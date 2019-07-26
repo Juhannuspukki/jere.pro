@@ -65,7 +65,7 @@ class BlogPost extends React.Component {
         <NavBar url={"/cookbook"}/>
         <div className={"blogPost"}>
           <div className={"container animated"}>
-            <img className={"hero"} src={require("../static/img/cookbook/" + image + ".jpg?inline?resize&size=100")} height="100%"/>
+            <img className={"hero cookBookHero"} src={require("../static/img/cookbook/" + image + ".jpg?inline?resize&size=100")} height="100%"/>
             <h1>{title}</h1>
             <p className={"publishDate"}>{source}</p>
             <div className={"row"}>
