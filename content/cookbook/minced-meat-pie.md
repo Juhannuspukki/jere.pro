@@ -9,6 +9,7 @@ ingredients:
     - 2.5dl ish onion-flavoured cream
     - 150g-300g grated cheese of your choice (cheddar is good)
     - Spices
+    - Canola oil
 tools:
     - Frying pan
     - Pie dish (ø ≈ 28cm)

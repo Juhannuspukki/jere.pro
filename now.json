@@ -2,6 +2,9 @@
   "version": 2,
   "name": "jere.pro",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "github": {
+    "silent": true
+  },
   "routes": [
     { "src": "_next/static/", "headers": { "cache-control": "immutable,max-age=31536000" }},
     { "src": "/projects/(?<link>[^/]+)$", "dest": "/project?link=$link" },
