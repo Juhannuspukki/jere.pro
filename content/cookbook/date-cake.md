@@ -3,10 +3,10 @@ title: Date cake
 image: date-cake
 source: A Laine family recipe
 ingredients:
-    - 250g block of dried dates
+    - 250 g block of dried dates
     - 2 dl water
     - 2 dl sugar
-    - 200g butter
+    - 200 g butter
     - 2 eggs
     - 1 dl sour cream
     - 3.5 dl wheat flour

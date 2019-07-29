@@ -3,14 +3,14 @@ title: Mac & cheese
 image: mac-and-cheese
 source: A recipe by Ainuli
 ingredients:
-    - 400g penne-pasta
-    - 150g emmental cheese
-    - 150g cheddar cheese
-    - 250g mascarpone
+    - 400 g penne-pasta
+    - 150 g emmental cheese
+    - 150 g cheddar cheese
+    - 250 g mascarpone
     - Parmesan cheese
-    - 2dl cream
+    - 2 dl cream
     - 1 dl apple juice
-    - 200g bacon
+    - 200 g bacon
     - Pepper
     - Canola oil
 tools:

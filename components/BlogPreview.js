@@ -6,10 +6,10 @@ const BlogPreview = (props) => (
   <Link prefetch as={`${props.router.pathname}/${props.slug}`} href={`${props.router.pathname}post?link=${props.slug}`} key={props.slug}>
     <a className={"frontLink"}>
       <div className={"row blogLink"}>
-        <div className={"col-sm-6 col-md-4 blogPreviewImageContainer"}>
+        <div className={`col-sm-6 ${props.router.pathname === "/blog" ? "col-md-4" : "col-md-8"} blogPreviewImageContainer`}>
           <img className={"blogPreviewImage"} src={require(`../static/img${props.router.pathname}/${props.data.image}.jpg?inline?resize&size=100`)} alt={props.data.image}/>
         </div>
-        <div className={"col-sm-6 col-md-8 blogPreviewDescriptionContainer"}>
+        <div className={`col-sm-6 ${props.router.pathname === "/blog" ? "col-md-8" : "col-md-4"} blogPreviewDescriptionContainer`}>
             {props.router.pathname === "/blog"
               ? (
               <div>

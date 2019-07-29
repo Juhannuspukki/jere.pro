@@ -3,11 +3,11 @@ title: Minced meat pie
 image: minced-meat-pie
 source: A recipe by Elvi Koskinen
 ingredients:
-    - 400g ready-made frozen pie dough
-    - 400g minced meat
+    - 400 g ready-made frozen pie dough
+    - 400 g minced meat
     - Bell peppers or corn or olives or whatever you feel like adding
-    - 2.5dl ish onion-flavoured cream
-    - 150g-300g grated cheese of your choice (cheddar is good)
+    - 2.5 dl ish onion-flavoured cream
+    - 150g-300 g grated cheese of your choice (cheddar is good)
     - Spices
     - Canola oil
 tools:
