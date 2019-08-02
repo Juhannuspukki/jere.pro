@@ -26,7 +26,7 @@ class Project extends React.Component {
           <meta property="og:title" content={"jere.pro - Projects - " + name} />
           <meta property="description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
           <meta property="og:description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
-          <meta property="og:image" content={ require(`../static/img/projects/${link}.jpg`) } />
+          <meta property="og:image" content={ require(`../static/img/projects/${link}/desktop.jpg`) } />
           <meta name="robots" content="noindex" />
         </Head>
         <NavBar url={"/projects"}/>
@@ -37,11 +37,11 @@ class Project extends React.Component {
                    muted={true}
                    playsInline={true}
                    controls={false}
-                   className={"hero"}
+                   className={"hero-desktop"}
                    aria-hidden={"true"}
-                   poster={require(`../static/img/projects/${link}.jpg`)}
+                   poster={require(`../static/img/projects/${link}/desktop.jpg`)}
             >
-              <source src={`../static/img/projects/${link}.mp4`} type="video/mp4"/>
+              <source src={`../static/img/projects/${link}/desktop.mp4`} type="video/mp4"/>
             </video>
             <h1>{name}</h1>
             <div className="techStack container">

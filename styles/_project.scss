@@ -3,11 +3,14 @@
   .container {
     max-width: 768px;
     text-align: center;
-    .hero {
+    .hero-desktop, .hero-mobile {
       width: 100%;
       min-height: 100%;
       border-radius: $border-radius-size;
       filter: grayscale(100%);
+    }
+    .hero-mobile {
+      display: none;
     }
     .postExternalLink {
       font-weight: bold;
@@ -37,5 +40,13 @@
   .post {
     padding-top: $size-s;
     padding-bottom: $size-xl;
+    .container {
+      .hero-desktop {
+        display: none;
+      }
+      .hero-mobile {
+        display: block;
+      }
+    }
   }
 }
