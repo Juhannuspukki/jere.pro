@@ -31,7 +31,7 @@ tools:
     - Spoon
     - Whisk
 instructions:
-    - Set the oven to 225 ºC
+    - Set the oven to 225 ºC.
     - Heat the olive oil in a hot pan.
     - Grate the onion and carrot and crush the garlic before frying together.
     - Season with the bay leaf, a pinch of oregano, Worcestershire sauce and a little salt and pepper.
