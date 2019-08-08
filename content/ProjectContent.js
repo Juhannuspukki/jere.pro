@@ -92,15 +92,15 @@ const data =
           title: "Frontend",
           link: "frontend",
           skills: [
-            [95,70, "React.js", <Reactjs/>],
-            [95, 55, "Next.js", <Nextjs/>],
+            [85,80, "React.js", <Reactjs/>],
+            [95, 80, "Next.js", <Nextjs/>],
             [80,95, "CSS", <Css3/>],
-            [60, 60, "JavaScript", <JavaScript/>],
+            [60, 80, "JavaScript", <JavaScript/>],
             [95, 95, "HTML5", <HTML5/>],
-            [95,80, "Sass", <Sass/>],
+            [95,70, "Sass", <Sass/>],
             [40,30, "Webpack", <Webpack/>],
             [20,10, "Angular", <Angular/>],
-            [90,0, "Vue.js", <Vuejs/>],
+            [85,0, "Vue.js", <Vuejs/>],
           ],
           description: "Frontend development is the art of programming user interfaces designed by a UI designer. " +
           "Unlike backend, frontend is a piece of software that runs on the end user's device. For example, this " +
