@@ -38,7 +38,7 @@ class Index extends React.Component {
         {renderMenu: true}
         )
       )
-    }, this.props.cookies.token !== "true" ? 2200 : 0)
+    }, this.props.cookies.token !== "true" ? 2800 : 0)
 
   }
 
