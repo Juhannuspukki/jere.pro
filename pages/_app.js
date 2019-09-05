@@ -1,5 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
+import { hotjar } from 'react-hotjar';
 import "../styles/style.scss"
 
 class MyApp extends App {
@@ -11,6 +12,10 @@ class MyApp extends App {
     }
 
     return { pageProps };
+  }
+  
+  componentDidMount() {
+    hotjar.initialize(1474004, 6);
   }
 
   render() {
