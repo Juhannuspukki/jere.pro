@@ -105,7 +105,7 @@ const data = [
           x: "right"
         },
       },
-      timeFrame: "27.3.2019 - 5.9.2019"
+      timeFrame: "27.3.2019 - 9.9.2019"
     },
     {
       title: "Collateral Solutions Oy",
