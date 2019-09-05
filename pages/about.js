@@ -117,6 +117,9 @@ const Index = () => (
               <li>
                 Chief designer, Tampere Debate Society -19
               </li>
+              <li>
+                Member of Mensa Finland since -13
+              </li>
             </ul>
           </div>
         </div>
