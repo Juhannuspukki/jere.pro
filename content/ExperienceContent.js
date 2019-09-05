@@ -24,7 +24,7 @@ const data = [
           x: "left"
         },
         small: {
-          y: 120,
+          y: 135,
           x: "left"
         },
       },
@@ -37,7 +37,7 @@ const data = [
           x: "left"
         },
         small: {
-          y: 125,
+          y: 145,
           x: "right"
         },
       },
@@ -51,7 +51,7 @@ const data = [
           x: "right"
         },
         small: {
-          y: 130,
+          y: 170,
           x: "right"
         },
       },
@@ -67,7 +67,7 @@ const data = [
           x: "right"
         },
         small: {
-          y: 175,
+          y: 215,
           x: "right"
         },
       },
@@ -84,7 +84,7 @@ const data = [
           x: "right"
         },
         small: {
-          y: 230,
+          y: 275,
           x: "right"
         },
       },
@@ -92,19 +92,37 @@ const data = [
     },
     {
       title: "Anders Innovations Oy",
-      description: "My current job is related to UX research, UI drawings and frontend development with tools such " +
-        "as React and Sketch.",
+      description: "During my time at Anders I familiarized myself with accessibility evaluation and UX/UI design " +
+        "tools such as Hotjar and Sketch. However, most of my time was spent developing React applications in " +
+        "various teams and projects.",
       position: {
         medium: {
-          y: 300,
+          y: 315,
           x: "right"
         },
         small: {
-          y: 265,
+          y: 325,
           x: "right"
         },
       },
-      timeFrame: "27.3.2019 - Present"
+      timeFrame: "27.3.2019 - 5.9.2019"
+    },
+    {
+      title: "Collateral Solutions Oy",
+      description: "Collateral Solutions is a start-up and my job is also very start-up-ish: doing whatever needs to " +
+        "be done at any given time. For the most part I have been designing user interfaces and then bringing those " +
+        "to reality with various languages and frameworks. Stay tuned!",
+      position: {
+        medium: {
+          y: 400,
+          x: "right"
+        },
+        small: {
+          y: 380,
+          x: "right"
+        },
+      },
+      timeFrame: "1.9.2019 - Present"
     }
   ],
   [
@@ -130,27 +148,45 @@ const data = [
           x: "left"
         },
         small: {
-          y: 50,
+          y: 35,
           x: "right"
         },
       },
-      timeFrame: "1.9.2012 - 1.5.2015"
+      timeFrame: "2012 - 2015"
     },
     {
-      title: "Tampere University",
-      description: "Studies focus on biomedical engineering with and software engineering. " +
-        "Bachelor's thesis is about UI design in medical context. Current status: 187 ECTS credits.",
+      title: "Tampere University, BSc",
+      description: "I am majoring in biomedical engineering and minoring in software engineering. " +
+        "you can find my Bachelor's thesis (UI design in medical context) under the projects page of this website. " +
+        "During my studies I have also held positions of trust in various clubs and societies. " +
+        "Current status: 167/180 ECTS credits.",
       position: {
         medium: {
-          y: 180,
+          y: 205,
           x: "left"
         },
         small: {
-          y: 90,
+          y: 95,
           x: "right"
         },
       },
-      timeFrame: "1.9.2015 - Present"
+      timeFrame: "2015 - 2019"
+    },
+    {
+      title: "Tampere University, MSc",
+      description: "My master's degree studies focus on human-technology interaction (major) and industrial " +
+        "engineering. Still in positions of trust in various clubs and societies! Current status: 30/120 ECTS credits.",
+      position: {
+        medium: {
+          y: 275,
+          x: "left"
+        },
+        small: {
+          y: 135,
+          x: "right"
+        },
+      },
+      timeFrame: "2019 - 2021"
     },
   ],
   [
@@ -158,7 +194,7 @@ const data = [
       title: "Connector",
       position: {
         medium: {
-          y: 190,
+          y: 270,
           x: "right"
         },
         small: {
@@ -171,11 +207,11 @@ const data = [
       title: "Connector",
       position: {
         medium: {
-          y: 220,
+          y: 280,
           x: "right"
         },
         small: {
-          y: 290,
+          y: 390,
           x: "left"
         },
       },
@@ -184,26 +220,26 @@ const data = [
       title: "Connector",
       position: {
         medium: {
-          y: 230,
+          y: 290,
           x: "left"
         },
         small: {
-          y: 295,
+          y: 400,
           x: "left"
         },
       },
     },
     {
       title: "Entrepreneur",
-      description: "I registered to OP-kevytyrittäjä. If you think I can help your business, do not hesitate to " +
+      description: "If you think I can help your business based on the things seen on this site, do not hesitate to " +
         "contact me!",
       position: {
         medium: {
-          y: 240,
+          y: 400,
           x: "left"
         },
         small: {
-          y: 300,
+          y: 410,
           x: "right"
         },
       },

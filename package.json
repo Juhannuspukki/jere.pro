@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Juhannuspukki/dotpro.git"
+    "url": "git+https://github.com/Juhannuspukki/jere.pro.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Juhannuspukki/dotpro/issues"
+    "url": "https://github.com/Juhannuspukki/jere.pro/issues"
   },
-  "homepage": "https://github.com/Juhannuspukki/dotpro#readme",
+  "homepage": "https://github.com/Juhannuspukki/jere.pro#readme",
   "dependencies": {
     "@vx/axis": "0.0.189",
     "@vx/curve": "0.0.189",
