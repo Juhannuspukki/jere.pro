@@ -88,7 +88,7 @@ const data = [
           x: "right"
         },
       },
-      timeFrame: "29.11.2017 - 30.9.2018"
+      timeFrame: "29.11.2017 - 31.8.2018"
     },
     {
       title: "Anders Innovations Oy",
