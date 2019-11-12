@@ -19,6 +19,7 @@ const Footer = (props) => (
         <div className={"col-3 footerLinkContainer"}>
           <a href={"https://t.me/juhannuspukki"}
              target="_blank"
+             rel="noreferrer"
              className={"footerLink"}
              aria-label={"Message via Telegram"}>
             <Telegram className={"footerLinkVector"}/>
