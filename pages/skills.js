@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
@@ -7,10 +6,8 @@ import Graph from "../components/SkillGraph";
 import ProjectContent from '../content/ProjectContent'
 import {ParentSize} from "@vx/responsive";
 
-const Skills = () => {
-  const router = useRouter()
-  
-  const {title, skills, description} = ProjectContent.projects.find(stackLevel => stackLevel.link === router.query.link);
+const Skills = (props) => {
+  const {title, skills, description} = props;
   
   return (
     <div>
@@ -47,6 +44,10 @@ const Skills = () => {
       <Footer url={"/projects"}/>
     </div>
   )
+}
+
+Skills.getInitialProps = (ctx) => {
+  return ProjectContent.projects.find(stackLevel => stackLevel.link === ctx.query.link);
 }
 
 export default Skills

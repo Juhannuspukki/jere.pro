@@ -1,18 +1,12 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import ProjectContent from "../content/ProjectContent";
 import Skills from './skills'
 
-const Project = () => {
-  const router = useRouter()
-  
-  const findProject = projectList => projectList.find(project => project.link === router.query.link);
-  const document = ProjectContent.projects.find(stackLevel => findProject(stackLevel.projectList));
-  
-  const {name, external, github, link, description, techStack} = findProject(document.projectList);
+const Project = (props) => {
+  const {name, external, github, link, description, techStack} = props;
   
   return (
     <div>
@@ -80,7 +74,7 @@ const Project = () => {
 }
 
 
-Skills.getInitialProps = (ctx) => {
+Project.getInitialProps = (ctx) => {
   const findProject = projectList => projectList.find(project => project.link === ctx.query.link);
   const document = ProjectContent.projects.find(stackLevel => findProject(stackLevel.projectList));
   return findProject(document.projectList);
