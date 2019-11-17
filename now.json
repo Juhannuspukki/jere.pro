@@ -8,6 +8,6 @@
   "routes": [
     { "src": "_next/static/", "headers": { "cache-control": "immutable,max-age=31536000" }},
     { "src": "/projects/(?<link>[^/]+)$", "dest": "/project?link=$link" },
-    { "src": "/skills/(?<link>[^/]+)$", "dest": "/skills?link=$link" },
+    { "src": "/skills/(?<link>[^/]+)$", "dest": "/skills?link=$link" }
   ]
 }
