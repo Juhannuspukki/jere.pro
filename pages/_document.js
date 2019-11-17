@@ -2,6 +2,11 @@ import Document, {Html, Head, Main, NextScript} from 'next/document'
 import React from 'react'
 
 export default class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
+  }
+  
   render() {
     return (
       <Html lang="en">
@@ -10,7 +15,8 @@ export default class MyDocument extends Document {
 
         <meta property="og:image" content="/img/ogimg.png"/>
         <meta name="application-name" content="jere.pro"/>
-
+        <link rel="manifest" href="/manifest.json" />
+        
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon-precomposed" sizes="57x57"
               href="/img/favicons/apple-touch-icon-57x57.png"/>

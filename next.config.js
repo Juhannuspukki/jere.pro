@@ -3,6 +3,7 @@ const Mode = require('frontmatter-markdown-loader/mode');
 const withSass = require('@zeit/next-sass');
 const withOptimizedImages = require('next-optimized-images');
 const blogPostsFolder = './content/blog'
+const withOffline = require('next-offline')
 
 const getPathsForPosts = () =>
   fs.readdirSync(blogPostsFolder).reduce((acc, blogName) => {
@@ -17,7 +18,7 @@ const getPathsForPosts = () =>
     })
   }, {})
 
-module.exports = withOptimizedImages(withSass({
+module.exports = withOffline(withOptimizedImages(withSass({
     target: 'serverless',
     optimizeImagesInDev: true,
     inlineImageLimit: 1000000,
@@ -45,4 +46,4 @@ module.exports = withOptimizedImages(withSass({
       ...getPathsForPosts()
     }
   }
-}));
+})));
