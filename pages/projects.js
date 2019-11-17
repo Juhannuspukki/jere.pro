@@ -5,7 +5,7 @@ import ProjectObject from '../content/ProjectContent'
 import Head from 'next/head'
 import React from 'react'
 
-const Index = (props) => (
+const Index = () => (
   <div>
     <Head>
       <title>jere.pro - Projects</title>
