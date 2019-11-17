@@ -1,7 +1,7 @@
-import Arrow from '../svg/arrow-left.svg'
-import Phone from '../svg/phone.svg'
-import Telegram from '../svg/about/tg.svg'
-import Mail from '../svg/about/mail.svg'
+import Arrow from '../svg/arrow-left.svg?sprite'
+import Phone from '../svg/phone.svg?sprite'
+import Telegram from '../svg/about/tg.svg?sprite'
+import Mail from '../svg/about/mail.svg?sprite'
 import React from 'react'
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ const Footer = (props) => (
     <div className={"container footerContainer"}>
       <div className={"row"}>
         <div className={"col-3 footerLinkContainer"}>
-          <Link prefetch href={props.url}>
+          <Link href={props.url}>
             <a className={props.url === "" ? "disabled footerLink" : "footerLink"} aria-label={"Previous page"}>
               <Arrow className={"footerLinkVector"}/>
             </a>

@@ -1,0 +1,54 @@
+.black {
+  background-color: #000;
+  color: #fff;
+
+  .dotProContainer {
+    background-color: #000;
+    color: #fff;
+  }
+
+  a, p {
+    color: #fff
+  }
+
+  .navBar, .footer {
+    background-color: #000000cc;
+  }
+
+  .vectorLink use,
+  .arrow use,
+  .linkLogo use,
+  .footerLinkVector use,
+  .graphIcon use,
+  .dotPro use,
+  .techStack use,
+  .languageLabel use,
+  .pieHole,
+  .vx-axis use,
+  .experienceGraph use{
+    fill: $colorWhite;
+  }
+
+  .projectList a:hover,
+  .postExternalLink:hover
+  {
+    color: #50E3C2;
+  }
+
+  .blogLink,
+  .frontLink,
+  .arrow,
+  .linkLogo,
+  .link,
+  .navBar,
+  .footerLink {
+    fill: $colorWhite;
+    &:hover {
+      svg use, h2, p, li {
+        fill: #50E3C2;
+        color: #50E3C2;
+      }
+    }
+  }
+}
+

@@ -16,7 +16,6 @@ ingredients:
     - OPTIONAL Salami
     - OPTIONAL Bacon
     - OPTIONAL French fries
-    - OPTIONAL Pasta
 tools:
     - Frying pan
     - Spatula

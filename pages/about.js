@@ -1,19 +1,16 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import PieHole from '../components/PieHole'
-import Telegram from '../svg/about/tg.svg'
-import GitHub from '../svg/about/git.svg'
-import Mail from '../svg/about/mail.svg'
-import LinkedIn from '../svg/about/in.svg'
-import Me from '../static/img/me.jpeg'
+import Telegram from '../svg/about/tg.svg?sprite'
+import GitHub from '../svg/about/git.svg?sprite'
+import Mail from '../svg/about/mail.svg?sprite'
+import LinkedIn from '../svg/about/in.svg?sprite'
+import Phone from "../svg/phone.svg?sprite";
+import Me from '../public/img/me.jpeg'
 import Head from 'next/head'
 import React from 'react'
 import {ParentSize} from "@vx/responsive";
-import Phone from "../svg/phone.svg";
 
-const msPerYear = 365*24*60*60*1000;
-const dateOfBirth = new Date("1996-03-15");
-const myAge = Math.floor((Date.now() - dateOfBirth)/msPerYear);
 const languages = [
       {language: "Finnish", proficiency: 100},
       {language: "English", proficiency: 95},
@@ -75,11 +72,12 @@ const Index = () => (
         </div>
         <h2>About me</h2>
         <p>
-          I’m a {myAge}-year-old Apple fanboy from Hervanta. I consider myself to be introverted, but I believe
-          I have become more ambiverted over the years. I have quite many hobbies, including aquariums,
-          debating, cooking, motion graphics, still graphics, coding apps in Swift, bots in Python and websites
-          in many technologies. I occasionally try some embedded project as well. I like coding because
-          it allows me to create anything I can imagine and boy, I can imagine a lot! Also, nothing beats the
+          Hello, and welcome to my site. I am a university student from Hervanta, Finland who likes to tinker with software.
+          I consider myself to be introverted, but I believe I have become more ambiverted over the years.
+          I have quite many hobbies, including aquariums, debating, cooking, motion graphics, still graphics,
+          coding bots in Python and websites with many technologies. I occasionally try
+          my hand on an embedded project as well. I like programming because it allows me to create
+          anything I can imagine and boy, I can imagine a lot! Also, nothing beats the
           feeling you get when you try something new, overcome a difficult challenge for the first time and
           learn something in the process… except an apache helicopter. An apache helicopter is armed with machine
           guns and missiles; it’s an absolute death machine!

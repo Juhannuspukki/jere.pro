@@ -6,13 +6,13 @@
     </g>
     <g transform="matrix(1,0,0,1,-31.9,-30)">
         <g>
-            <path d="M125,153.4L100.3,153.4L88.6,182.6L66.9,182.6L66.8,182.6L125,52.1L125,52.2L125,30L31.9,63.2L46.1,186.3L125,230L125,153.4Z" style="fill:white;fill-rule:nonzero;"/>
-            <path d="M108,135.4L125,135.4L125,94.5L108,135.4Z" style="fill:white;fill-rule:nonzero;"/>
+            <path d="M125,153.4L100.3,153.4L88.6,182.6L66.9,182.6L66.8,182.6L125,52.1L125,52.2L125,30L31.9,63.2L46.1,186.3L125,230L125,153.4Z" style=".svg?sprite;fill-rule:nonzero;"/>
+            <path d="M108,135.4L125,135.4L125,94.5L108,135.4Z" style=".svg?sprite;fill-rule:nonzero;"/>
         </g>
         <g>
             <g opacity="0.9">
-                <path d="M125,153.4L149.7,153.4L161.4,182.6L183.2,182.6L125,52.1L125,52.2L125,30L218.1,63.2L203.9,186.3L125,230L125,153.4Z" style="fill:white;fill-rule:nonzero;"/>
-                <path d="M142,135.4L125,135.4L125,94.5L142,135.4Z" style="fill:white;fill-rule:nonzero;"/>
+                <path d="M125,153.4L149.7,153.4L161.4,182.6L183.2,182.6L125,52.1L125,52.2L125,30L218.1,63.2L203.9,186.3L125,230L125,153.4Z" style=".svg?sprite;fill-rule:nonzero;"/>
+                <path d="M142,135.4L125,135.4L125,94.5L142,135.4Z" style=".svg?sprite;fill-rule:nonzero;"/>
             </g>
         </g>
     </g>

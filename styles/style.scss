@@ -11,6 +11,8 @@
 @import 'blogpost';
 @import 'cookbook';
 @import 'footer';
+@import 'white';
+@import 'black';
 
 body {
   position: absolute;
@@ -54,7 +56,6 @@ ul {
   animation-timing-function: linear;
   animation-duration: 0.5s;
 }
-
 
 @keyframes fadeInOpacity {
   0% {

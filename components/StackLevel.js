@@ -6,7 +6,7 @@ const StackLevel = (props) => (
   <div className={"row stackLevel"}>
     <div className={"col-md-2"} />
     <div className={"col-md-4 projectLinkContainer"}>
-      <Link prefetch as={`/skills/${props.link}`} href={`/skills?link=${props.link}`} key={props.link}>
+      <Link as={`/skills/${props.link}`} href={`/skills?link=${props.link}`} key={props.link}>
         <a className={"frontLink"}>
           {props.children}
           <h2 className={"projectTitle"}>{props.title}</h2>
@@ -16,7 +16,7 @@ const StackLevel = (props) => (
     <div className={"col-md-6 projectList"}>
       <div>
       {props.projectList.map((project) => (
-          <Link prefetch as={`/projects/${project.link}`} href={`/project?link=${project.link}`} key={project.link}>
+          <Link as={`/projects/${project.link}`} href={`/project?link=${project.link}`} key={project.link}>
             <a>{project.name} →</a>
           </Link>
       ))}

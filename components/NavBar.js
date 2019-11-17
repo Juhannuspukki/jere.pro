@@ -1,15 +1,18 @@
-import Arrow from '../svg/arrow-left.svg'
+import Arrow from '../svg/arrow-left.svg?sprite'
 import React from 'react'
 import Link from "next/link";
 
 const NavBar = (props) => (
-  <div className={"navBar"}>
-    <p className="navText">
-    <Link prefetch href={props.url}>
-      <a><Arrow className={"arrow"} aria-label={"Previous page"}/></a>
-    </Link>
-    </p>
-  </div>
+  <Link href={props.url}>
+    <a className={"navBar"}>
+      <div>
+        <Arrow
+          className={"arrow"}
+          aria-label={"Previous page"}
+        />
+      </div>
+    </a>
+  </Link>
 )
 
 export default NavBar
