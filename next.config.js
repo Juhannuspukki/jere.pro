@@ -45,7 +45,7 @@ module.exports = withOffline(withOptimizedImages(withSass({
       ],
     },
     optimizeImagesInDev: true,
-    inlineImageLimit: 1000000,
+    inlineImageLimit: 10000000,
     mozjpeg: {
       quality: 80,
   },
