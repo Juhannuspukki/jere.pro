@@ -54,7 +54,7 @@ const Post = ({ blogpost }) => {
         <div className={"container animated"}>
           <img
             className={"hero cookBookHero"}
-            src={require("../../public/img/cookbook/" + image + ".jpg?inline?resize&size=100")}
+            src={require("../../public/img/cookbook/" + image + ".jpg?resize&size=738")}
             height="100%"
           />
           <h1>{title}</h1>

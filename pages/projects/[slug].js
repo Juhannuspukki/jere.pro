@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
-import ProjectContent from "../content/ProjectContent";
-import Skills from './skills'
+import NavBar from '../../components/NavBar'
+import Footer from '../../components/Footer'
+import ProjectContent from "../../content/ProjectContent";
 
 const Project = (props) => {
   const {name, external, github, link, description, techStack} = props;
@@ -15,7 +14,7 @@ const Project = (props) => {
         <meta property="og:title" content={"jere.pro - Projects - " + name} />
         <meta property="description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
         <meta property="og:description" content={ description.replace(/^(.{100}[^\s]*).*/s, "$1") + "..."} />
-        <meta property="og:image" content={ require(`../public/img/projects/${link}/desktop.jpg`) } />
+        <meta property="og:image" content={ require(`../../public/img/projects/${link}/desktop.jpg`) } />
         <meta name="robots" content="noindex" />
       </Head>
       <NavBar url={"/projects"}/>
@@ -28,7 +27,7 @@ const Project = (props) => {
                  controls={false}
                  className={"hero-desktop"}
                  aria-hidden={"true"}
-                 poster={require(`../public/img/projects/${link}/desktop.jpg`)}
+                 poster={require(`../../public/img/projects/${link}/desktop.jpg`)}
           >
             <source src={`/img/projects/${link}/desktop.mp4`} type="video/mp4"/>
           </video>
@@ -74,8 +73,9 @@ const Project = (props) => {
 }
 
 
-Project.getInitialProps = (ctx) => {
-  const findProject = projectList => projectList.find(project => project.link === ctx.query.link);
+Project.getInitialProps = async ({ query }) => {
+  const { slug } = query
+  const findProject = projectList => projectList.find(project => project.link === slug);
   const document = ProjectContent.projects.find(stackLevel => findProject(stackLevel.projectList));
   return findProject(document.projectList);
 }

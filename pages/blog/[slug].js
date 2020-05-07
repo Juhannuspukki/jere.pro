@@ -24,7 +24,7 @@ const Post = ({ blogpost }) => {
       <div className={"blogPost"}>
         <div className={"container animated"}>
           <img className={"hero"}
-               src={require(`../../public/img/blog/${blogpost.attributes.image}.jpg?inline?resize&size=100`)}
+               src={require(`../../public/img/blog/${blogpost.attributes.image}.jpg?resize&size=738`)}
                alt={blogpost.attributes.image}
                height="100%"
           />

@@ -20,6 +20,8 @@ class Chart extends React.Component {
   render() {
     const points = this.props.skills;
 
+    console.log(points)
+
     const {
       tooltipData,
       tooltipLeft,

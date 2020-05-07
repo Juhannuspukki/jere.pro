@@ -7,7 +7,7 @@ const BlogPreview = (props) => (
     <a className={"frontLink"}>
       <div className={"row blogLink"}>
         <div className={`col-sm-6 ${props.router.pathname === "/blog" ? "col-md-4" : "col-md-8"} blogPreviewImageContainer`}>
-          <img className={"blogPreviewImage"} src={require(`../public/img${props.router.pathname}/${props.data.image}.jpg?inline?resize&size=100`)} alt={props.data.image}/>
+          <img className={"blogPreviewImage"} src={require(`../public/img${props.router.pathname}/${props.data.image}.jpg?resize&size=400`)} alt={props.data.image}/>
         </div>
         <div className={`col-sm-6 ${props.router.pathname === "/blog" ? "col-md-8" : "col-md-4"} blogPreviewDescriptionContainer`}>
             {props.router.pathname === "/blog"

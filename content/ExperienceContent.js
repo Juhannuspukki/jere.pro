@@ -111,7 +111,7 @@ const data = [
       title: "Collateral Solutions Oy",
       description: "Collateral Solutions is a start-up and my job is also very start-up-ish: doing whatever needs to " +
         "be done at any given time. For the most part I have been designing user interfaces and then bringing those " +
-        "to reality with various languages and frameworks. Stay tuned!",
+        "to reality with various languages and frameworks.",
       position: {
         medium: {
           y: 400,
@@ -122,7 +122,7 @@ const data = [
           x: "right"
         },
       },
-      timeFrame: "1.9.2019 - Present"
+      timeFrame: "1.9.2019 - 30.4.2020"
     }
   ],
   [
