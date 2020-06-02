@@ -4,7 +4,6 @@ import DotPro from '../components/DotPro'
 import Project from '../svg/projects.svg?sprite'
 import Experience from '../svg/experience.svg?sprite'
 import About from '../svg/about.svg?sprite'
-import Blog from '../svg/blog.svg?sprite'
 import Head from 'next/head'
 import React, {useState, useEffect} from 'react'
 import { parseCookies, setCookie } from 'nookies'
@@ -22,10 +21,6 @@ const menu = [
     title: "experience",
     icon: <Experience className={"vectorLink"}/>
   },
-  {
-    title: "blog",
-    icon: <Blog className={"vectorLink"}/>
-  }
 ]
 
 const Index = (props) => {
