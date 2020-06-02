@@ -16,10 +16,6 @@ class MyApp extends App {
   //   return { ...appProps }
   // }
   
-  componentDidMount() {
-    hotjar.initialize(1474004, 6);
-  }
-  
   render() {
     const { Component, pageProps } = this.props
     return <Component {...pageProps} />
