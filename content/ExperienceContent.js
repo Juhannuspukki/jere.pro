@@ -24,7 +24,7 @@ const data = [
           x: "left"
         },
         small: {
-          y: 135,
+          y: 170,
           x: "left"
         },
       },
@@ -37,7 +37,7 @@ const data = [
           x: "left"
         },
         small: {
-          y: 145,
+          y: 175,
           x: "right"
         },
       },
@@ -51,7 +51,7 @@ const data = [
           x: "right"
         },
         small: {
-          y: 170,
+          y: 200,
           x: "right"
         },
       },
@@ -67,7 +67,7 @@ const data = [
           x: "right"
         },
         small: {
-          y: 215,
+          y: 240,
           x: "right"
         },
       },
@@ -84,7 +84,7 @@ const data = [
           x: "right"
         },
         small: {
-          y: 275,
+          y: 290,
           x: "right"
         },
       },
@@ -101,7 +101,7 @@ const data = [
           x: "right"
         },
         small: {
-          y: 325,
+          y: 330,
           x: "right"
         },
       },
@@ -109,16 +109,18 @@ const data = [
     },
     {
       title: "Collateral Solutions Oy",
-      description: "Collateral Solutions is a start-up and my job is also very start-up-ish: doing whatever needs to " +
-        "be done at any given time. For the most part I have been designing user interfaces and then bringing those " +
-        "to reality with various languages and frameworks.",
+      description: "Collateral Solutions Oy is a startup best known for Evoir, a product for real " +
+        "estate investors. My most important responsibilities included choosing many of the key " +
+        "technologies and tools used and designing the overall architecture of the product. " +
+        "I also designed most of the user interface, contributed to marketing decisions and wrote " +
+        "much of the front-end code of the product.",
       position: {
         medium: {
-          y: 400,
+          y: 425,
           x: "right"
         },
         small: {
-          y: 380,
+          y: 388,
           x: "right"
         },
       },
@@ -148,7 +150,7 @@ const data = [
           x: "left"
         },
         small: {
-          y: 35,
+          y: 44,
           x: "right"
         },
       },
@@ -158,35 +160,51 @@ const data = [
       title: "Tampere University, BSc",
       description: "I am majoring in biomedical engineering and minoring in software engineering. " +
         "you can find my Bachelor's thesis (UI design in medical context) under the projects page of this website. " +
-        "During my studies I have also held positions of trust in various clubs and societies. " +
-        "Current status: 167/180 ECTS credits.",
+        "During my studies I have also held positions of trust in various clubs and societies. ",
       position: {
         medium: {
           y: 205,
           x: "left"
         },
         small: {
-          y: 95,
+          y: 90,
           x: "right"
         },
       },
       timeFrame: "2015 - 2019"
     },
     {
-      title: "Tampere University, MSc",
-      description: "My master's degree studies focus on human-technology interaction (major) and industrial " +
-        "engineering. Still in positions of trust in various clubs and societies! Current status: 30/120 ECTS credits.",
+      title: "Exchange, Kasetsart University",
+      description: "I spent spring 2020 as an exhange student in Kasetsart University, Thailand. " +
+        "I studied Thai language and familiarized myself with Asian culture. I also took a course " +
+        "in game development.",
       position: {
         medium: {
           y: 275,
           x: "left"
         },
         small: {
-          y: 135,
+          y: 130,
           x: "right"
         },
       },
-      timeFrame: "2019 - 2021"
+      timeFrame: "Spring 2020"
+    },
+    {
+      title: "Tampere University, MSc",
+      description: "My master's degree studies focus on human-technology interaction and industrial " +
+        "engineering. Still in positions of trust in various clubs and societies! Current status: 42/120 ECTS credits.",
+      position: {
+        medium: {
+          y: 345,
+          x: "left"
+        },
+        small: {
+          y: 168,
+          x: "right"
+        },
+      },
+      timeFrame: "2020 - 2021"
     },
   ],
   [
@@ -194,7 +212,7 @@ const data = [
       title: "Connector",
       position: {
         medium: {
-          y: 270,
+          y: 340,
           x: "right"
         },
         small: {
@@ -207,11 +225,11 @@ const data = [
       title: "Connector",
       position: {
         medium: {
-          y: 280,
+          y: 350,
           x: "right"
         },
         small: {
-          y: 390,
+          y: 420,
           x: "left"
         },
       },
@@ -220,26 +238,27 @@ const data = [
       title: "Connector",
       position: {
         medium: {
-          y: 290,
+          y: 360,
           x: "left"
         },
         small: {
-          y: 400,
+          y: 425,
           x: "left"
         },
       },
     },
     {
-      title: "Entrepreneur",
-      description: "If you think I can help your business based on the things seen on this site, do not hesitate to " +
-        "contact me!",
+      title: "StaticCharge",
+      description: "In 2017 I realized that there was demand for my skills for short-term projects. " +
+        "I founded StaticCharge, a company specializing in static websites with content management" +
+        "systems and other web development projects.",
       position: {
         medium: {
-          y: 400,
+          y: 430,
           x: "left"
         },
         small: {
-          y: 410,
+          y: 430,
           x: "right"
         },
       },

@@ -26,7 +26,7 @@ const Index = () => {
               <ExperienceGraph
                 data={ExperienceContent}
                 width={parent.width}
-                height={parent.width > 576 ? 1200: 2400}
+                height={parent.width > 576 ? 1300: 2900}
                 parentTop={parent.top}
                 parentLeft={parent.left}
                 parentRef={parent.ref}

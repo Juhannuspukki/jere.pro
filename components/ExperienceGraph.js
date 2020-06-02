@@ -51,7 +51,7 @@ export default ({ width, height, margin, data }) => {
 
   // scales
   const yScale = scaleLinear({
-    domain: [0, 410]
+    domain: [0, 430]
   });
 
   // bounds
