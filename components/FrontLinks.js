@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const FrontLink = (props) => (
-  <div className={"col-xl-3 col-md-6 linkButton"}>
+  <div className={"col-md-4 linkButton"}>
     <Link as={props.title} href={"/"+ props.title}>
       <a className={"frontLink"}>
         {props.children}

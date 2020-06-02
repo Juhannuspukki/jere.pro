@@ -36,7 +36,7 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 1080px;
+    max-width: 768px;
     h1 {
       margin-bottom: $size-xl
     }
@@ -70,7 +70,6 @@
       h1 {
         margin-bottom: $size-m
       }
-      max-width: 576px;
       .linkButton {
         margin: 5vh 0;
       }
