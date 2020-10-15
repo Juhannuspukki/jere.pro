@@ -24,12 +24,11 @@
         .footerLinkVector {
           width: 100%;
           cursor: pointer;
-          margin: $size-s;
+          padding: $size-xs 6vw;
         }
       }
     }
   }
-
 }
 
 @media (max-width: 575px) {

@@ -1,0 +1,35 @@
+{
+  "title": "Backend",
+  "link": "backend",
+  "skills": [
+    {"interest": 80, "confidence": 75, "icon": "Python"},
+    {"interest": 0, "confidence": 0, "icon": "Java"},
+    {"interest": 0, "confidence": 10, "icon": "Php"},
+    {"interest": 40, "confidence": 30, "icon": "PostgreSQL"},
+    {"interest": 30, "confidence": 60, "icon": "MongoDB"},
+    {"interest": 60, "confidence": 50, "icon": "Node.js"},
+    {"interest": 95, "confidence": 0, "icon": "Rust"},
+    {"interest": 75, "confidence": 0, "icon": "GraphQL"}
+  ],
+  "description": "Backend servers are used to store content and perform complex operations for it. A backend can be thought as a black box with stuff going in, to which operations are performed and as a result stuff comes out. Backend code is what determines what exactly is allowed to go in and what operations are performed on it. Average user never accesses backends directly, since backends only deal with machine language. Instead, users use a frontend which communicates with the backend. I have developed several Python backends for Telegram bots.",
+  "projectList": [
+    {
+      "name": "@LogosTheBot on Telegram",
+      "link": "logos",
+      "external": "http://t.me/logosthebot",
+      "github": "https://github.com/Juhannuspukki/LogosTheBot",
+      "techStack": ["Python"],
+      "description":
+      "Logos was my first software project. After learning Python for the very first time I figured that I had to do something to not forget how to use it. I started the development of a bot. During all these years I have added several features to the bot, such as wayfinding services,nysse-locator services, a minesweeper game, information about the school's menus, weather forecasts and so on and so forth."
+    },
+    {
+      "name": "@CourseRobot on Telegram",
+      "link": "courserobot",
+      "external": "http://t.me/courserobot",
+      "github": "https://github.com/Juhannuspukki/project-daydream-telegram",
+      "techStack": ["Python", "Docker"],
+      "description":
+      "CourseRobot is Python-made Telegram bot that brings the functionality of Course-O-Meter directly to Telegram. It is also my first project using Docker. The app is an inline bot, so it can be accessed from any chat."
+    }
+  ]
+}

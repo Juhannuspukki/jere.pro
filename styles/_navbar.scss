@@ -1,9 +1,10 @@
 .navBar {
   position: fixed;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
   width: 100%;
   z-index: 1130;
+  top: 0;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   display: flex;
   align-items: center;
   justify-content: center;

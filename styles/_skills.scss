@@ -14,28 +14,63 @@
         animation-timing-function: linear;
         animation-duration: 0.5s;
       }
+      .graphIcon {
+        cursor: pointer;
+      }
     }
     h1 {
-      font-size: $size-sm;
+      font-size: $largeResponsiveFontSize;
       margin: $size-s 0 $size-m 0;
     }
     p {
       text-align: left;
       margin-bottom: $size-ml;
     }
-    .projectList {
+    .techSymbolContainer {
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 100%;
-      a {
+      align-items: center;
+      height: 16rem;
+      svg {
+        height: 10rem;
+        max-width: 10rem;
+      }
+      h3 {
+        margin-top: 1rem;
+      }
+    }
+    .techProjectContainer {
+      height: 16rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .techProjectLinks {
         text-align: center;
-        display: block;
-        font-size: $size-sm;
+        .passive {
+          opacity: 0.5;
+        }
+        a {
+          font-weight: 700;
+          display: block;
+        }
       }
     }
   }
+  .extendedTooltip {
+    small {
+      font-size: 0.95rem;
+    }
+  }
 }
+
+@media (max-width: 950px) {
+  .skills {
+    .extendedTooltip {
+      display: none;
+    }
+  }
+}
+
 
 @media (max-width: 575px) {
   .skills {

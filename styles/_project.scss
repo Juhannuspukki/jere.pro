@@ -21,17 +21,21 @@
       font-size: $size-sm;
       margin: $size-m 0 $size-sm 0;
     }
-    p {
+    .techStackDescription {
       text-align: left;
-      margin-top: $size-sm;
+      margin-top: $size-s;
     }
   }
   .techStack {
-    max-width: 320px;
-    svg {
-      height: $size-m;
-    }
-    span {
+    .col {
+      margin-bottom: $size-s;
+      svg {
+        display: block;
+        margin: 0 auto $size-xs;
+        height: $size-m;
+      }
+      span {
+      }
     }
   }
 }

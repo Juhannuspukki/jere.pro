@@ -1,5 +1,8 @@
 .indexContainer {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   right: 0;
   bottom: 0;
@@ -7,9 +10,8 @@
   margin: 0;
   width: 100%;
   height: 100%;
-  display: block;
 
-  .dotProContainer {
+  .dotProLogoContainer {
     position: absolute;
     top: 0;
     right: 0;
@@ -19,7 +21,8 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    .dotPro {
+
+    .dotProLogo {
       opacity: 0;
       animation-name: fadeOutOpacity;
       animation-iteration-count: 1;
@@ -31,70 +34,84 @@
       transform: translate(-50%, -50%);
     }
   }
+}
 
-  .mainMenuContainer {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 768px;
-    h1 {
-      margin-bottom: $size-xl
+.menuContainer {
+  max-width: 768px;
+  h1 {
+    margin-bottom: $size-ml
+  }
+  .bigLinkButton {
+    align-content: center;
+    justify-content: center;
+    margin-bottom: $size-m;
+    a {
+      svg {
+        display: block;
+        height: 120px;
+        max-width: 120px;
+        margin: auto;
+      }
+      &:hover {
+        text-decoration: none;
+      }
     }
-    .linkButton {
-      align-content: center;
-      justify-content: center;
-      .frontLink {
-        .vectorLink {
-          display: block;
-          height: 150px;
-          max-width: 150px;
-          margin: auto;
-        }
-        &:hover {
-          text-decoration: none;
-        }
-      }
-      h2 {
-        margin-top: $size-sm;
-        font-size: $size-m;
-        font-weight: bold;
-        text-transform: capitalize;
-      }
+    h2 {
+      margin: $size-s 0;
+      font-size: $size-m;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  .indexContainer {
+    display: block;
+    .menuContainer {
+      padding: $size-ml 0 $size-l;
     }
   }
 }
 
 @media (max-width: 1200px) {
   .indexContainer {
-    .mainMenuContainer {
+    .menuContainer {
       h1 {
-        margin-bottom: $size-m
+        margin-bottom: $size-ml;
       }
-      .linkButton {
-        margin: 5vh 0;
+      .bigLinkButton {
+        h2 {
+          font-size: $mediumResponsiveFontSize;
+        }
       }
     }
   }
 }
 
 @media (max-width: 767px) {
+  @media (max-height: 800px) {
+    .indexContainer {
+      display: block;
+      .menuContainer {
+        padding: $size-ml 0 $size-l;
+      }
+    }
+  }
   .indexContainer {
-    .mainMenuContainer {
+    .menuContainer {
+      h1 {
+        margin-bottom: $size-m;
+      }
       top: 0;
       transform: none;
-      padding: $size-xl 0;
-
-      .linkButton {
-        margin: 4vh 0;
-      }
+      max-width: 512px;
     }
   }
 }
 
 @media (max-width: 575px) {
-  .mainMenuContainer {
-    padding-top: $size-ml;
-    padding-bottom: $size-xl;
+  .menuContainer {
     h1 {
       margin-bottom: 0;
     }

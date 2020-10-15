@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 207 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-    <rect x="0" y="0.287" width="206.762" height="124.016" style="fill-opacity:0.0117647;"/>
+    <rect x="0" y="0.287" width="206.762" height="124.016" style="fill-opacity:0.001;"/>
     <g id="next-black">
         <g>
             <path id="EXT" d="M48.942,32.632L87.901,32.632L87.901,35.714L52.513,35.714L52.513,58.907L85.791,58.907L85.791,61.989L52.513,61.989L52.513,87.453L88.307,87.453L88.307,90.534L48.942,90.534L48.942,32.632ZM91.391,32.632L95.531,32.632L113.874,58.096L132.623,32.632L158.124,0.287L116.228,60.772L137.817,90.534L133.516,90.534L113.874,63.448L94.151,90.534L89.93,90.534L111.682,60.772L91.391,32.632ZM139.359,35.714L139.359,32.632L183.756,32.632L183.756,35.714L163.303,35.714L163.303,90.534L159.732,90.534L159.732,35.714L139.359,35.714Z" style=".svg?sprite;fill-rule:nonzero;"/>

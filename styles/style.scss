@@ -11,8 +11,7 @@
 @import 'blogpost';
 @import 'cookbook';
 @import 'footer';
-@import 'white';
-@import 'black';
+@import 'chameleon';
 
 body {
   position: absolute;
@@ -27,16 +26,16 @@ body {
 
 h1 {
   font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: calc(32px + 4vw);
+  font-size: $largeResponsiveFontSize;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
 }
 
 h2, h3 {
   font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
 }
 

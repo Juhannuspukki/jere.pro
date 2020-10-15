@@ -36,13 +36,13 @@ of tasks await in the future?
  your favorite bicycle and the name of your first school online. That information can be used the reset the password of
  certain services. In turn, those services reveal even more information about you. If all of this information is readily
  accessible on Facebook, it is even easier. When I was young, I and my friend tried to break into our classmate's email
- services by guessing the answers to their security questions. The probability of success was quite decent. About 160
+ services by guessing the answers to their security questions. The probability of success was quite decent. Index 160
  000 citizens of Finland have had their identity stolen at some point, and about half of them have suffered a financial
  loss as a result. Most of the victims cannot say where the information has come from but in a third of the cases,
  social media is assumed to be the main culprit.
 
 3. What about privacy as a collective value? The past examples deliberated privacy from the viewpoint of the individual.
-What if the government were to abolish the right to privacy? If the people give their government unlimited access to 
+What if the government were to abolish the right to privacy? If the people give their government unlimited access to
 their data, the people also give the government enormous power since they will be able to dictate what information about
 you is public and what is not. There is not a single case in the history of the world in which a government has failed
 to misuse this power. If there is no right to privacy, the government can start blackmailing people to become moles and
