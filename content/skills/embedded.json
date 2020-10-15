@@ -1,0 +1,29 @@
+{
+  "title": "Embedded",
+  "link": "embedded",
+  "skills": [
+    {"interest": 50, "confidence": 50, "icon": "C"}
+  ],
+  "description":
+  "Embedded systems are devices that combine both hardware and software. Playing with Arduino's is fun, but my interests have steered me towards higher-level languages.",
+  "projectList": [
+    {
+      "name": "4D QR code",
+      "link": "qr",
+      "external": "unavailable",
+      "github": "https://github.com/Juhannuspukki/led-matrix",
+      "techStack": ["C"],
+      "description":
+      "I have not listed many school projects here because in the end everyone has to complete them. However, this is one succeeded exceptionally well. The assignment was to design a product from a bunch of LEDs controlled by a microcontroller. I came up with the idea of a quick-read code (2-dimensional barcode) This particular code changes every few milliseconds. Modern smartphone cameras capture up to 960 frames per second. Hence the name: 2 spatial dimensions and the fourth (temporal) dimension."
+    },
+    {
+      "name": "FFT controlled LED",
+      "link": "led",
+      "external": "unavailable",
+      "github": "https://github.com/Juhannuspukki/arduino-fft",
+      "techStack": ["C"],
+      "description":
+      "I used a Teensy 3.2 board (almost like an Arduino, but not quite) to make a device that uses FFT to analyze music. The resulting information is then used to control a RGB LED in real time. Yeah, I know the video doesn't look like much without the audio track. Sorry."
+    }
+  ]
+}

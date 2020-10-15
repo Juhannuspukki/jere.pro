@@ -23,14 +23,12 @@
       margin: auto;
       text-align: center;
       margin-bottom: $size-m;
-      .link {
-        display: inline;
-        .linkLogo {
-          display: inline-block;
-          margin: auto $size-s;
-          height: $size-m;
-        }
+      svg {
+        display: inline-block;
+        margin: auto $size-s;
+        height: $size-m;
       }
+
     }
     h1 {
       margin: $size-s auto $size-s;

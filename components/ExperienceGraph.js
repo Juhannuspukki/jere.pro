@@ -1,57 +1,48 @@
-import React from 'react';
-import { Group } from '@vx/group';
-import { GlyphDot } from '@vx/glyph';
-import { LinePath } from '@vx/shape';
-import { AxisLeft, AxisRight} from '@vx/axis';
-import { scaleTime, scaleLinear } from '@vx/scale';
-import { curveMonotoneY, curveMonotoneX } from '@vx/curve';
-import { Text } from '@vx/text';
-import { timeParse, timeFormat } from 'd3-time-format';
+import React from "react";
+import { Group } from "@vx/group";
+import { GlyphDot } from "@vx/glyph";
+import { LinePath } from "@vx/shape";
+import { scaleLinear } from "@vx/scale";
+import { curveMonotoneY } from "@vx/curve";
+import { Text } from "@vx/text";
+import { timeFormat } from "d3-time-format";
 
-const format = timeFormat('%b %Y');
-const formatDate = date => format(date);
+const format = timeFormat("%b %Y");
+const formatDate = (date) => format(date);
 
 // accessors
-const date = d => d;
+const date = (d) => d;
 
 // colors
-const primary = '#fff';
-const contrast = '#000';
+const primary = "#fff";
+const contrast = "#000";
 
-export default ({ width, height, margin, data }) => {
-
+const Graph = ({ width, height, margin, data }) => {
   const filterData = (d) =>
-    d.reduce(
-    (accumulator, currentValue) => {
+    d.reduce((accumulator, currentValue) => {
       if (width > 576) {
-        accumulator.push(
-          {
-            ...currentValue,
-            xPosition: currentValue.position.medium.x,
-            yPosition: currentValue.position.medium.y,
-          })
-      }
-      else {
-        accumulator.push(
-          {
-            ...currentValue,
-            xPosition: currentValue.position.small.x,
-            yPosition: currentValue.position.small.y,
-          }
-        )
+        accumulator.push({
+          ...currentValue,
+          xPosition: currentValue.position.medium.x,
+          yPosition: currentValue.position.medium.y,
+        });
+      } else {
+        accumulator.push({
+          ...currentValue,
+          xPosition: currentValue.position.small.x,
+          yPosition: currentValue.position.small.y,
+        });
       }
       return accumulator;
     }, []);
 
   const responsiveData = [];
 
-  data.forEach((i) =>
-    responsiveData.push(filterData(i))
-  );
+  data.forEach((i) => responsiveData.push(filterData(i)));
 
   // scales
   const yScale = scaleLinear({
-    domain: [0, 430]
+    domain: [0, 430],
   });
 
   // bounds
@@ -62,103 +53,111 @@ export default ({ width, height, margin, data }) => {
   let textWidth = 0;
 
   if (width > 576) {
-    xRight = width/2 - margin.left + 15;
-    xLeft = width/2 - margin.right - 15;
-    textWidth = width / 2 - 60 < 325 ? width / 2 - 60 : 325
-  }
-  else {
+    xRight = width / 2 - margin.left + 15;
+    xLeft = width / 2 - margin.right - 15;
+    textWidth = width / 2 - 60 < 325 ? width / 2 - 60 : 325;
+  } else {
     textWidth = 220;
-    xRight = (width - textWidth - 60)/2 + 30;
-    xLeft = (width - textWidth - 60)/2;
+    xRight = (width - textWidth - 60) / 2 + 30;
+    xLeft = (width - textWidth - 60) / 2;
   }
 
   // positions
-  const y = d => yScale(d.yPosition);
-  const x = d => d.xPosition === "left" ? xLeft : xRight;
-  const xText = d => d.xPosition === "left" ? xLeft - 25 : xRight + 25;
+  const y = (d) => yScale(d.yPosition);
+  const x = (d) => (d.xPosition === "left" ? xLeft : xRight);
+  const xText = (d) => (d.xPosition === "left" ? xLeft - 25 : xRight + 25);
   // update scale range to match bounds
   yScale.range([yMax, 0]);
 
+  const mapDots = (dataPoints, source) =>
+    dataPoints.map((d, i) => {
+      const yPosition = y(d);
+      const xPosition = x(d);
+      const xTextPosition = xText(d);
 
-  const mapDots = (dataPoints, source) => dataPoints.map((d, i) => {
-    const yPosition = y(d);
-    const xPosition = x(d);
-    const xTextPosition = xText(d);
+      if (d.title === "Connector") {
+        return;
+      }
 
-    if (d.title === "Connector") {
-      return;
-    }
-
-    return (
-      <g key={`line-point-${source}-${i}`} className={"textContainer"}>
-        <GlyphDot cx={xPosition} cy={yPosition} r={6} stroke={primary} strokeWidth={5} className={"outerCircle"}/>
-        <GlyphDot cx={xPosition} cy={yPosition} r={5} fill={contrast} className={"innerCircle"}/>
-        <Text
-          x={xTextPosition}
-          y={yPosition - 25}
-          width={textWidth}
-          verticalAnchor="end"
-          textAnchor={d.xPosition === "left" ? "end" : "start"}
-          style={
-            {
-              fill: '#fff',
+      return (
+        <g key={`line-point-${source}-${i}`} className={"textContainer"}>
+          <GlyphDot
+            cx={xPosition}
+            cy={yPosition}
+            r={6}
+            stroke={primary}
+            strokeWidth={5}
+            className={"outerCircle"}
+          />
+          <GlyphDot
+            cx={xPosition}
+            cy={yPosition}
+            r={5}
+            fill={contrast}
+            className={"innerCircle"}
+          />
+          <Text
+            className={"chameleon"}
+            x={xTextPosition}
+            y={yPosition - 25}
+            width={textWidth}
+            verticalAnchor="end"
+            textAnchor={d.xPosition === "left" ? "end" : "start"}
+            style={{
               fontSize: 16,
               fontWeight: 600,
-              fontFamily: "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif"
-            }
-          }
-        >
-          {d.timeFrame}
-        </Text>
-        <Text
-          x={xTextPosition}
-          y={yPosition}
-          width={textWidth}
-          verticalAnchor="middle"
-          textAnchor={d.xPosition === "left" ? "end" : "start"}
-          style={
-            {
-            fill: '#fff',
-            fontSize: 20,
-            fontWeight: 700,
-            fontFamily: "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif"
-            }
-          }
-        >
-          {d.title}
-        </Text>
-        <Text
-          x={xTextPosition}
-          y={yPosition + 25}
-          width={textWidth}
-          verticalAnchor="start"
-          textAnchor={d.xPosition === "left" ? "end" : "start"}
-          lineHeight={20}
-          style={
-              {
-                fill: '#fff',
-                fontSize: 16,
-                fontFamily: "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif"
-              }
-            }
-        >
-          {d.description}
-        </Text>
-      </g>
-    )
-  });
+              fontFamily:
+                "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif",
+            }}
+          >
+            {d.timeFrame}
+          </Text>
+          <Text
+            className={"chameleon"}
+            x={xTextPosition}
+            y={yPosition}
+            width={textWidth}
+            verticalAnchor="middle"
+            textAnchor={d.xPosition === "left" ? "end" : "start"}
+            style={{
+              fontSize: 20,
+              fontWeight: 600,
+              fontFamily:
+                "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif",
+            }}
+          >
+            {d.title}
+          </Text>
+          <Text
+            className={"chameleon"}
+            x={xTextPosition}
+            y={yPosition + 25}
+            width={textWidth}
+            verticalAnchor="start"
+            textAnchor={d.xPosition === "left" ? "end" : "start"}
+            lineHeight={20}
+            style={{
+              fontSize: 16,
+              fontFamily:
+                "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif",
+            }}
+          >
+            {d.description}
+          </Text>
+        </g>
+      );
+    });
 
   const mapLines = (dataPoints, source) => {
     let initialValue = [];
-    dataPoints = dataPoints.reduce(
-      (accumulator, currentValue) => {
-        accumulator.push(
-          {yPosition: currentValue.yPosition, xPosition: currentValue.xPosition}
-        );
+    dataPoints = dataPoints.reduce((accumulator, currentValue) => {
+      accumulator.push({
+        yPosition: currentValue.yPosition,
+        xPosition: currentValue.xPosition,
+      });
 
-        return accumulator;
-      },
-      initialValue);
+      return accumulator;
+    }, initialValue);
     return (
       <LinePath
         key={`line-${source}`}
@@ -173,25 +172,18 @@ export default ({ width, height, margin, data }) => {
   };
 
   return (
-    <svg width={width} height={height+100} className={"experienceGraph"}>
-      <Group
-        top={margin.top+100}
-        left={margin.left}
-      >
-
+    <svg width={width} height={height + 100} className={"experienceGraph"}>
+      <Group top={margin.top + 100} left={margin.left}>
         {mapLines(responsiveData[0], "work")}
         {mapDots(responsiveData[0], "work")}
         {mapLines(responsiveData[1], "private")}
         {mapDots(responsiveData[1], "private")}
         {mapLines(responsiveData[2], "education")}
         {mapDots(responsiveData[2], "education")}
-
       </Group>
-      <Group
-        top={margin.top+100}
-        left={margin.left}
-      >
-      </Group>
+      <Group top={margin.top + 100} left={margin.left}></Group>
     </svg>
   );
 };
+
+export default Graph;

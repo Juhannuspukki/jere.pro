@@ -1,0 +1,79 @@
+// For black background
+.black, .dotProContainer {
+  background-color: $colorBlack;
+  color: $colorWhite;
+
+  .navBar, .footer {
+    background-color: $colorTransparentBlack;
+  }
+
+  a, p {
+    color: $colorWhite;
+  }
+
+  .chameleon {
+    color: $colorWhite;
+    fill: $colorWhite;
+  }
+
+  .chameleonStroke {
+    stroke: $colorWhite;
+  }
+
+  .vx-axis use,
+  .experienceGraph use{
+    fill: $colorWhite;
+  }
+
+  .highLightOnHover:hover {
+    color: $colorTeal;
+    fill: $colorTeal;
+    p {
+      color: $colorTeal;
+    }
+  }
+}
+
+// For white background
+.white, .dotProContainer {
+  background-color: $colorWhite;
+  color: $colorBlack;
+
+  .navBar, .footer {
+    background-color: $colorTransparentWhite;
+  }
+
+  a, p {
+    color: $colorBlack;
+  }
+
+  .chameleon {
+    color: $colorBlack;
+    fill: $colorBlack;
+  }
+
+  .chameleonStroke {
+    stroke: $colorBlack;
+  }
+
+  .highLightOnHover:hover {
+    color: $colorPurple;
+    fill: $colorPurple;
+    p {
+      color: $colorPurple;
+    }
+  }
+
+  // Graph styling
+  .graphGrid > line,
+  .experienceGraph path,
+  .experienceGraph .outerCircle {
+    stroke: $colorBlack;
+  }
+
+  .experienceGraph .innerCircle {
+    fill: $colorWhite;
+  }
+}
+
+

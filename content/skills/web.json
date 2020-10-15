@@ -1,0 +1,113 @@
+{
+  "title": "Web",
+  "link": "web",
+  "skills": [
+    {"interest": 70, "confidence": 82, "icon": "React.js"},
+    {"interest": 90, "confidence": 85, "icon": "Next.js"},
+    {"interest": 40, "confidence": 95, "icon": "CSS3"},
+    {"interest": 35, "confidence": 80, "icon": "JavaScript"},
+    {"interest": 75, "confidence": 0, "icon": "TypeScript"},
+    {"interest": 80, "confidence": 95, "icon": "HTML5"},
+    {"interest": 88, "confidence": 70, "icon": "Sass"},
+    {"interest": 35, "confidence": 20, "icon": "Webpack"},
+    {"interest": 20, "confidence": 10, "icon": "Angular"},
+    {"interest": 55, "confidence": 0, "icon": "Vue.js"},
+    {"interest": 95, "confidence": 0, "icon": "WebAssembly"},
+    {"interest": 55, "confidence": 68, "icon": "Hugo"},
+    {"interest": 70, "confidence": 50, "icon": "Selenium"},
+    {"interest": 50, "confidence": 40, "icon": "D3.js"}
+  ],
+  "projectList": [
+    {
+      "name": "jere.pro",
+      "link": "dotpro",
+      "external": "https://jere.pro",
+      "github": "https://github.com/Juhannuspukki/jere.pro",
+      "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Vercel", "D3.js"],
+      "description": "I decided that I need a website of my own. It took way too long to decide what technologies to use but I finally decided to try Next.js which had received a lot of praise recently. The result is the very fast hybrid application you see before you. Behold!"
+    },
+    {
+      "name": "pollex.club",
+      "link": "pollex",
+      "external": "https://pollex.club",
+      "github": "https://github.com/Juhannuspukki/pollex-web",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "AWS", "Netlify"],
+      "description": "Pollex.club was the first website I created after neuroeventlabs.com. It received a substantial redesign in 2019 and it runs on the same victor-hugo generator as all of my newer static site projects. During this project I also learned to use AWS, for it was originally hosted there."
+    },
+    {
+      "name": "koodarinpalkka.fi",
+      "link": "koodarinpalkka",
+      "external": "https://koodarinpalkka.fi",
+      "github": "unavailable",
+      "techStack": ["React.js", "JavaScript", "Sass", "CSS3", "HTML5"],
+      "description": "In early 2019 Sysart contacted me. They wanted to increase their salary transparency and I designed and implemented a React application that lets anyone to see what they would earn at Sysart. This calculator was later featured in Ilta-Sanomat and was nominated as the recruitment deed of the year. Try it!"
+    },
+    {
+      "name": "neuroeventlabs.com",
+      "link": "nel",
+      "external": "https://neuroeventlabs.com",
+      "github": "unavailable",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5"],
+      "description":
+      "Neuro Event Labs is a Finnish company developing a video monitoring system for epilepsy patients. During my time with them, one of my main duties was taking care of the company's public website. I have now made three different versions of the website. The latest revision was also one of my first projects using Sass instead of plain CSS."
+    },
+    {
+      "name": "STO Finexter calculator",
+      "link": "sto-calc",
+      "external": "https://sto-calc.now.sh",
+      "techStack": ["React.js", "JavaScript", "CSS3", "HTML5"],
+      "description": "I was hired by construction material company STO Finexter to create a web calculator that demonstrates the thermal isolation capabilites of their new product. You can see the end result above."
+    },
+    {
+      "name": "tamperedebatesociety.fi",
+      "link": "tds",
+      "external": "https://tamperedebatesociety.fi",
+      "github": "https://github.com/Juhannuspukki/tampere-debate-society-web",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
+      "description":
+      "I have been part of the debate society for three years. Eventually, there were talks about making a new website. The debate society had previously had at least three, all of which were abandoned. First, there was talk about WordPress but I managed to convince them to trust my static site solution instead. Due to the lack of UI designers, I also designed the site myself. All of us are very pleased with the result. As a bonus, I installed Netlify CMS to allow non-coders to update the site as well."
+    },
+    {
+      "name": "course-o-meter.com",
+      "link": "course-o-meter",
+      "external": "https://course-o-meter.com",
+      "github": "https://github.com/Juhannuspukki/project-daydream",
+      "techStack": [
+        "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Selenium", "Netlify"
+      ],
+      "description": "29th of October, 2018. After taking a course which had mandatory lectures that lasted for 20 minutes instead of the scheduled two hours, a lecturer who barely spoke English and very poor communication from the course personnel I started going through the course feedback in the university's systems. On the scale of zero to five students had given this course a 3. As a matter of fact about 94% of courses seemed to have a grade between 3 and 4.5. I reinvented the scale. Frontend coded with react, data scraping done with Selenium."
+    },
+    {
+      "name": "avaruuskerho.fi",
+      "link": "avaruuskerho",
+      "external": "https://avaruuskerho.fi",
+      "github": "https://github.com/castortut/castor-web",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
+      "description": "I served on the board of Tampereen teekkarien avaruusteknillinen kerho Castor ry in 2019. During that time, it was my duty to create a new website for the club. It is a static site based on the Netlify victor-hugo project and also featured the Netlify CMS to allow easy content editing."
+    },
+    {
+      "name": "staticcharge.fi",
+      "link": "staticcharge",
+      "github": "https://github.com/Juhannuspukki/staticcharge.fi",
+      "external": "https://staticcharge.fi",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Vercel"],
+      "description": "This website lists the services I offer. It also has a blog (in Finnish) for explaining how websites work."
+    },
+    {
+      "name": "muistola.fi",
+      "link": "muistola",
+      "external": "https://muistola.fi",
+      "github": "https://github.com/Juhannuspukki/muistola-web",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
+      "description": "Muistola is a small company in Teisko, Tampere focusing on new (or old?) ways of caring for the elderly. I had the opportunity to work with them in 2018. I coded their website entirely by myself according to the UI plans I received. I also became a .fi domain dealer in the process."
+    },
+    {
+      "name": "Evoir",
+      "link": "evoir",
+      "external": "https://evoir.fi",
+      "github": "unavailable",
+      "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5"],
+      "description": "When working at Collateral Solutions I programmed most of the frontend of the product known as Evoir. I picked the key technologies used, designed the architecture and implemented the authentication myself."
+    }
+  ]
+}

@@ -1,60 +1,42 @@
-import React, { useEffect, useState } from 'react'
-import Footer from "../../components/Footer";
+import React from "react";
 import Head from "next/head";
+import ErrorPage from "next/error";
+import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar";
-import { parseCookies, setCookie } from 'nookies'
+import Footer from "../../components/Footer";
+import { Img } from "react-optimized-image";
+import { getPostBySlug, getAllPosts } from "../../lib/api";
+import markdownToHtml from "../../lib/markdownToHtml";
+import StepList from "../../components/StepList";
 
-
-const Post = ({ blogpost }) => {
-  if (!blogpost) return <div>404</div>
-  
-  const { attributes: {title, image, source, ingredients, tools, instructions}} = blogpost;
-  const ingr = {linesFor: title, ingredientLines: [], instructionLines: [], toolLines: []};
-  
-  const [guideLines, setGuideLines] = useState(ingr)
-  
-  useEffect(() => {
-    const cookies = parseCookies({});
-    
-    try {
-      const ingred = JSON.parse(cookies[title]);
-      setGuideLines(ingred);
-    }
-    catch(err) {
-      setGuideLines({...guideLines, ingredientLines: new Array(ingredients.length).fill(false)});
-      setGuideLines({...guideLines, instructionLines: new Array(instructions.length).fill(false)});
-      setGuideLines({...guideLines, toolLines: new Array(tools.length).fill(false)});
-    }
-  }, []);
-  
-  const toggleLine = (type, title, index) => {
-    // Copy state to mutate it
-    const newState = {...guideLines};
-    newState[type][index] = !newState[type][index];
-    
-    // Set cookie
-    setCookie({}, title, JSON.stringify(newState), {
-      maxAge: 24 * 60 * 60,
-      path: `/cookbook`,
-    });
-  
-    setGuideLines(newState)
+const Post = ({ post }) => {
+  const router = useRouter();
+  if (!router.isFallback && !post?.slug) {
+    return <ErrorPage statusCode={404} />;
   }
-  
+
+  const { slug, title, image, source, ingredients, tools, instructions } = post;
+
   return (
     <div className={"test"}>
       <Head>
         <title>jere.pro - {title}</title>
         <meta property="og:title" content={"jere.pro - CookBook - " + title} />
-        <meta name="description" content={`Read how to cook "${title}" on jere.pro`} />
-        <meta property="og:description" content={`Read how to cook "${title}" on jere.pro`} />
+        <meta
+          name="description"
+          content={`Read how to cook "${title}" on jere.pro`}
+        />
+        <meta
+          property="og:description"
+          content={`Read how to cook "${title}" on jere.pro`}
+        />
       </Head>
-      <NavBar url={"/cookbook"}/>
+      <NavBar url={"/cookbook"} />
       <div className={"blogPost"}>
-        <div className={"container animated"}>
-          <img
+        <article className={"container animated"}>
+          <Img
             className={"hero cookBookHero"}
-            src={require("../../public/img/cookbook/" + image + ".jpg?resize&size=738")}
+            src={require(`../../public/img/cookbook/${image}.jpg`)}
             height="100%"
           />
           <h1>{title}</h1>
@@ -63,58 +45,62 @@ const Post = ({ blogpost }) => {
             <div className={"col-md-6"}>
               <h2 className={"cookBookTitle"}>Ingredients</h2>
               <ul className={"cookBookList"}>
-                {ingredients.map((ingredient, index) =>
-                   <li
-                     key={ingredient+index}
-                     className={guideLines.ingredientLines[index] && guideLines.linesFor === title ? "line-through" : undefined}
-                     onClick={() => toggleLine("ingredientLines", title, index)}
-                   >
-                     {ingredient}
-                   </li>
-                )}
+                <StepList slug={slug} steps={ingredients} />
               </ul>
             </div>
             <div className={"col-md-6"}>
               <h2 className={"cookBookTitle"}>Tools</h2>
               <ul className={"cookBookList"}>
-                {tools.map((tool, index) =>
-                   <li
-                     key={tool+index}
-                     className={guideLines.toolLines[index] && guideLines.linesFor === title ? "line-through" : undefined}
-                     onClick={() => toggleLine("toolLines", title, index)}
-                   >
-                     {tool}
-                   </li>
-                )}
+                <StepList slug={slug} steps={tools} />
               </ul>
             </div>
           </div>
           <h2 className={"cookBookTitle"}>Instructions</h2>
           <ol className={"cookBookList"}>
-            {instructions.map((instruction, index) =>
-              <li
-                key={instruction+index}
-                className={guideLines.instructionLines[index] && guideLines.linesFor === title ? "line-through" : undefined}
-                onClick={() => toggleLine("instructionLines", title, index)}
-              >
-                {instruction}
-              </li>
-            )}
+            <StepList slug={slug} steps={instructions} />
           </ol>
-          
-        </div>
+        </article>
       </div>
-      <Footer url={"/cookbook"}/>
+      <Footer url={"/cookbook"} />
     </div>
-  )
+  );
+};
+
+export async function getStaticProps({ params }) {
+  const post = getPostBySlug(params.slug, [
+    "title",
+    "image",
+    "source",
+    "ingredients",
+    "tools",
+    "instructions",
+    "slug",
+  ]);
+  const content = await markdownToHtml(post.content || "");
+
+  return {
+    props: {
+      post: {
+        ...post,
+        content,
+      },
+    },
+  };
 }
 
-Post.getInitialProps = async ({ query }) => {
-  const { slug } = query
-  const blogpost = await import(`../../content/cookbook/${slug}.md`).catch(
-    () => null
-  )
-  return { blogpost }
+export async function getStaticPaths() {
+  const posts = getAllPosts(["slug"]);
+
+  return {
+    paths: posts.map((post) => {
+      return {
+        params: {
+          slug: post.slug,
+        },
+      };
+    }),
+    fallback: false,
+  };
 }
 
-export default Post
+export default Post;
