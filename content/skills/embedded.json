@@ -10,7 +10,7 @@
     {
       "name": "4D QR code",
       "link": "qr",
-      "external": "unavailable",
+      "external": null,
       "github": "https://github.com/Juhannuspukki/led-matrix",
       "techStack": ["C"],
       "description":
@@ -19,7 +19,7 @@
     {
       "name": "FFT controlled LED",
       "link": "led",
-      "external": "unavailable",
+      "external": null,
       "github": "https://github.com/Juhannuspukki/arduino-fft",
       "techStack": ["C"],
       "description":

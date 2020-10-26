@@ -64,7 +64,7 @@ const Project = (props) => {
           </div>
           <p className="techStackDescription">{description}</p>
           <div className={"row"}>
-            {external !== "unavailable" && (
+            {external && (
               <div className={"col-6"}>
                 <a
                   className={"postExternalLink"}
@@ -75,7 +75,7 @@ const Project = (props) => {
                 </a>
               </div>
             )}
-            {github !== "unavailable" && (
+            {github && (
               <div className={"col-6"}>
                 <a className={"postExternalLink"} href={github} target="_blank">
                   View on GitHub →

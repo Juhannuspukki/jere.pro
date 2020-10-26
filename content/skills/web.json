@@ -38,7 +38,7 @@
       "name": "koodarinpalkka.fi",
       "link": "koodarinpalkka",
       "external": "https://koodarinpalkka.fi",
-      "github": "unavailable",
+      "github": null,
       "techStack": ["React.js", "JavaScript", "Sass", "CSS3", "HTML5"],
       "description": "In early 2019 Sysart contacted me. They wanted to increase their salary transparency and I designed and implemented a React application that lets anyone to see what they would earn at Sysart. This calculator was later featured in Ilta-Sanomat and was nominated as the recruitment deed of the year. Try it!"
     },
@@ -46,7 +46,7 @@
       "name": "neuroeventlabs.com",
       "link": "nel",
       "external": "https://neuroeventlabs.com",
-      "github": "unavailable",
+      "github": null,
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5"],
       "description":
       "Neuro Event Labs is a Finnish company developing a video monitoring system for epilepsy patients. During my time with them, one of my main duties was taking care of the company's public website. I have now made three different versions of the website. The latest revision was also one of my first projects using Sass instead of plain CSS."
@@ -55,6 +55,7 @@
       "name": "STO Finexter calculator",
       "link": "sto-calc",
       "external": "https://sto-calc.now.sh",
+      "github": null,
       "techStack": ["React.js", "JavaScript", "CSS3", "HTML5"],
       "description": "I was hired by construction material company STO Finexter to create a web calculator that demonstrates the thermal isolation capabilites of their new product. You can see the end result above."
     },
@@ -105,7 +106,7 @@
       "name": "Evoir",
       "link": "evoir",
       "external": "https://evoir.fi",
-      "github": "unavailable",
+      "github": null,
       "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5"],
       "description": "When working at Collateral Solutions I programmed most of the frontend of the product known as Evoir. I picked the key technologies used, designed the architecture and implemented the authentication myself."
     }

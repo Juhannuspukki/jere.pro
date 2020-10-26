@@ -21,7 +21,7 @@
     {
       "name": "Bubble Fighters",
       "link": "bubble-fighters-design",
-      "external": "http://bubble-fighters.now.sh",
+      "external": "https://bubble-fighters.now.sh",
       "github": "https://github.com/Juhannuspukki/bubble-fighters",
       "techStack": ["Unity", "C#"],
       "description": "I was quarantined and had nothing better to do so I decided to ace the Kasetsart University game development course. I decided to re-create one of those Flash-based games. The process involved drawing all the sprites and the UI for the game."
@@ -30,6 +30,7 @@
       "name": "Bachelor's thesis",
       "link": "bsc",
       "external": "https://dspace.cc.tut.fi/dpub/handle/123456789/27191",
+      "github": null,
       "techStack": ["Affinity"],
       "description": "During my time at Neuro Event Labs Oy I had the opportunity to design their fleet management system. The design process is documented on my Bachelor's thesis. I was able to produce a clear and aesthetically pleasing UI using the existing design language."
     },
@@ -37,6 +38,7 @@
       "name": "STO Finexter calculator",
       "link": "sto-calc-design",
       "external": "https://sto-calc.now.sh",
+      "github": null,
       "techStack": ["Sketch"],
       "description": "I was hired by construction material company STO Finexter to create a web calculator that demonstrates the thermal isolation capabilites of their new product. You can see the end result above."
     },
@@ -52,12 +54,15 @@
       "name": "staticcharge.fi",
       "link": "staticcharge-design",
       "external": "https://staticcharge.fi",
+      "github": "https://github.com/Juhannuspukki/staticcharge.fi",
       "techStack": ["Sketch"],
       "description": "StaticCharge is my company website. It is designed by me and it is also the first of my websites to feature a logo design of my own making."
     },
     {
       "name": "Evoir",
       "link": "evoir-design",
+      "external": null,
+      "github": null,
       "techStack": ["Affinity", "Sketch"],
       "description": "During my time in Collateral Solutions team I made designs for the Collateral Solutions website, Evoir website and the Evoir product itself."
     }

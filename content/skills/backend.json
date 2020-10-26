@@ -8,7 +8,7 @@
     {"interest": 40, "confidence": 30, "icon": "PostgreSQL"},
     {"interest": 30, "confidence": 60, "icon": "MongoDB"},
     {"interest": 60, "confidence": 50, "icon": "Node.js"},
-    {"interest": 95, "confidence": 0, "icon": "Rust"},
+    {"interest": 95, "confidence": 10, "icon": "Rust"},
     {"interest": 75, "confidence": 0, "icon": "GraphQL"}
   ],
   "description": "Backend servers are used to store content and perform complex operations for it. A backend can be thought as a black box with stuff going in, to which operations are performed and as a result stuff comes out. Backend code is what determines what exactly is allowed to go in and what operations are performed on it. Average user never accesses backends directly, since backends only deal with machine language. Instead, users use a frontend which communicates with the backend. I have developed several Python backends for Telegram bots.",
