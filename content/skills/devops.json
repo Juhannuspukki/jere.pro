@@ -12,7 +12,7 @@
     {"interest": 30, "confidence": 10, "icon": "Kubernetes"}
 
   ],
-  "description": "No one really seems to understand what DevOps really means, but pretty much all my projects use some kind of CI/CD.",
+  "description": "While no one really understands what DevOps really means, pretty much all my projects use some kind of CI/CD.",
   "projectList": [
   
   ]

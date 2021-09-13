@@ -5,9 +5,9 @@
     {"interest": 80, "confidence": 75, "icon": "Python"},
     {"interest": 0, "confidence": 0, "icon": "Java"},
     {"interest": 0, "confidence": 10, "icon": "Php"},
-    {"interest": 40, "confidence": 30, "icon": "PostgreSQL"},
+    {"interest": 40, "confidence": 20, "icon": "PostgreSQL"},
     {"interest": 30, "confidence": 60, "icon": "MongoDB"},
-    {"interest": 60, "confidence": 50, "icon": "Node.js"},
+    {"interest": 50, "confidence": 60, "icon": "Node.js"},
     {"interest": 95, "confidence": 10, "icon": "Rust"},
     {"interest": 75, "confidence": 0, "icon": "GraphQL"}
   ],
