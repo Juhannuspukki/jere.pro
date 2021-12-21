@@ -185,9 +185,10 @@
     {
       "title": "Tampere University, MSc",
       "description":
-        "My master's degree studies focus on human-technology interaction and industrial engineering. Still in positions of trust in various clubs and societies! Current status: 42/120 ECTS credits.",
+        "My master's degree studies focused on human-technology interaction and industrial engineering. Still in positions of trust in various clubs and societies!",
       "position": {
-        "medium": {
+        "medium"
+        : {
           "y": 345,
           "x": "left"
         },
