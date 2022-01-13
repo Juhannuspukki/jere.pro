@@ -2,16 +2,6 @@
   padding-top: $size-l
 }
 
-.experienceGraph path,
-.experienceGraph text tspan,
-.experienceGraph circle {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.75s;
-}
-
 @media (max-width: 575px) {
   .timeLineContainer {
     padding-top: $size-ml;
