@@ -1,8 +1,8 @@
 import React from "react";
 import Me from "../../public/img/me.jpeg";
 import Head from "next/head";
-import { Svg, Img } from "react-optimized-image";
-import { ParentSize } from "@vx/responsive";
+import Image from "next/image";
+import { ParentSize } from "@visx/responsive";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -17,11 +17,11 @@ const languages = [
   { language: "Finnish", proficiency: 100 },
   { language: "English", proficiency: 95 },
   { language: "Swedish", proficiency: 40 },
-  { language: "Valyrian", proficiency: 20 },
+  { language: "Valyrian", proficiency: 15 },
   { language: "Thai", proficiency: 20 },
   { language: "German", proficiency: 15 },
   { language: "Spanish", proficiency: 15 },
-  { language: "Japanese", proficiency: 10 },
+  { language: "Japanese", proficiency: 5 },
 ];
 
 const Index = () => (
@@ -41,35 +41,40 @@ const Index = () => (
     <NavBar url={"/"} />
     <div className={"about animated"}>
       <div className={"container"}>
-        <Img className={"parsta"} src={Me} alt={"Me in San Francisco"} webp />
+        <Image
+            className={"parsta"}
+            src={Me}
+            alt={"Me in San Francisco"}
+            priority
+        />
         <h1>Jere Laine</h1>
         <div className={"linkLogoContainer"}>
           <a aria-label={"Call me"} href={"tel:+358458664303"}>
-            <Svg src={Phone} className={"chameleon highLightOnHover"} />
+            <Phone className={"chameleon highLightOnHover"} />
           </a>
           <a aria-label={"Send an email"} href={"mailto:jere@jere.pro"}>
-            <Svg src={Mail} className={"chameleon highLightOnHover"} />
+            <Mail className={"chameleon highLightOnHover"} />
           </a>
           <a
             href={"https://t.me/juhannuspukki"}
             aria-label={"Contact on Telegram"}
             target="_blank"
           >
-            <Svg src={Telegram} className={"chameleon highLightOnHover"} />
+            <Telegram className={"chameleon highLightOnHover"} />
           </a>
           <a
             href={"https://www.linkedin.com/in/jjlaine/"}
             aria-label={"LinkedIn profile"}
             target="_blank"
           >
-            <Svg src={LinkedIn} className={"chameleon highLightOnHover"} />
+            <LinkedIn className={"chameleon highLightOnHover"} />
           </a>
           <a
             href={"https://github.com/Juhannuspukki"}
             aria-label={"GitHub profile"}
             target="_blank"
           >
-            <Svg src={GitHub} className={"chameleon highLightOnHover"} />
+            <GitHub className={"chameleon highLightOnHover"} />
           </a>
         </div>
         <h2>About me</h2>

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import { Svg } from "react-optimized-image";
 import fs from "fs";
 import path from "path";
 import NavBar from "../../components/NavBar";
@@ -24,7 +23,7 @@ const Project = (props) => {
         />
         <meta
           property="og:image"
-          content={require(`../../public/img/projects/${link}/desktop.jpg`)}
+          content={`/img/projects/${link}/desktop.jpg`}
         />
         <meta name="robots" content="noindex" />
       </Head>
@@ -39,7 +38,7 @@ const Project = (props) => {
             controls={false}
             className={"hero-desktop"}
             aria-hidden={"true"}
-            poster={require(`../../public/img/projects/${link}/desktop.jpg`)}
+            poster={`/img/projects/${link}/desktop.jpg`}
           >
             <source
               src={`/img/projects/${link}/desktop.mp4`}
@@ -49,17 +48,17 @@ const Project = (props) => {
           <h1>{name}</h1>
           <div className="techStack container">
             <div className="row">
-              {techStack.map((tech) => (
-                <div key={tech + "-icon"} className="col">
-                  <Svg
-                    src={require(`../../svg/graphsymbols/${tech
-                      .toLowerCase()
-                      .replace(/\./g, "")}.svg`)}
-                    className={"chameleon"}
-                  />
-                  <span>{tech}</span>
-                </div>
-              ))}
+              {techStack.map((tech) => {
+                const Icon = (require(`../../svg/graphsymbols/${tech.toLowerCase().replace(/\./g, "")}.svg`)).default
+                return (
+                  <div key={tech + "-icon"} className="col">
+                    <Icon
+                        className={"chameleon"}
+                    />
+                    <span>{tech}</span>
+                  </div>
+                )
+              })}
             </div>
           </div>
           <p className="techStackDescription">{description}</p>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Svg } from "react-optimized-image";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import BigLinkButton from "../components/BigLinkButton";
@@ -13,17 +12,17 @@ const menu = [
   {
     title: "Projects",
     link: "/projects",
-    icon: <Svg src={Project} />,
+    icon: <Project />,
   },
   {
     title: "About",
     link: "/about",
-    icon: <Svg src={About} />,
+    icon: <About />,
   },
   {
     title: "Experience",
     link: "/experience",
-    icon: <Svg src={Experience} />,
+    icon: <Experience />,
   },
 ];
 

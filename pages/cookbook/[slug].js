@@ -1,10 +1,10 @@
 import React from "react";
+import Image from "next/image";
 import Head from "next/head";
 import ErrorPage from "next/error";
 import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
-import { Img } from "react-optimized-image";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
 import StepList from "../../components/StepList";
@@ -34,11 +34,13 @@ const Post = ({ post }) => {
       <NavBar url={"/cookbook"} />
       <div className={"blogPost"}>
         <article className={"container animated"}>
-          <Img
-            className={"hero cookBookHero"}
-            src={require(`../../public/img/cookbook/${image}.jpg`)}
-            height="100%"
-          />
+          {
+            <Image
+                className={"hero cookBookHero"}
+                src={require(`../../public/img/cookbook/${image}.jpg`)}
+                priority
+            />
+          }
           <h1>{title}</h1>
           <p className={"publishDate"}>{source}</p>
           <div className={"row"}>

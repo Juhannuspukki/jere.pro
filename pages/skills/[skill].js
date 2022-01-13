@@ -1,10 +1,9 @@
 import Head from "next/head";
 import React, { useState } from "react";
-import { Svg } from "react-optimized-image";
 import Link from "next/link";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
-import { ParentSize } from "@vx/responsive";
+import { ParentSize } from "@visx/responsive";
 import Graph from "../../components/SkillGraph";
 
 const Skills = ({ content }) => {
@@ -50,17 +49,16 @@ const Skills = ({ content }) => {
             <div className={"col-md-6"}>
               <h2>Selected technology</h2>
               <div className={"techSymbolContainer"}>
-                {activeTech !== null && (
-                  <div>
-                    <Svg
-                      src={require(`../../svg/graphsymbols/${activeTech
-                        .toLowerCase()
-                        .replace(/\./g, "")}.svg`)}
-                      className={"chameleon"}
-                    />
-                    <h3>{activeTech}</h3>
-                  </div>
-                )}
+                {activeTech !== null && (() => {
+                  const Icon = (require(`../../svg/graphsymbols/${activeTech.toLowerCase().replace(/\./g, "")}.svg`)).default
+                  return (
+                      <div>
+                        <Icon className={"chameleon"}/>
+                        <h3>{activeTech}</h3>
+                      </div>
+                  )
+                })()
+                }
               </div>
             </div>
             <div className={"col-md-6"}>
