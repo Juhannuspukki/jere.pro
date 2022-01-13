@@ -4,16 +4,6 @@
     max-width: 768px;
     .graphContainer {
       min-height: 404px;
-      .graphSVG line,
-      .vx-axis text,
-      .graphIcon path,
-      .graphIcon circle {
-        opacity: 1;
-        animation-name: fadeInOpacity;
-        animation-iteration-count: 1;
-        animation-timing-function: linear;
-        animation-duration: 0.5s;
-      }
       .graphIcon {
         cursor: pointer;
       }
