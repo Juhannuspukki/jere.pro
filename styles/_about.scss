@@ -31,10 +31,13 @@
 
     }
     h1 {
-      margin: $size-s auto $size-s;
+      margin: $size-s auto 0;
     }
     h2 {
       margin-bottom: $size-s;
+      &.education {
+        margin-bottom: $size-m;
+      }
     }
     h3 {
       font-size: 1.2rem;

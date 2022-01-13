@@ -45,9 +45,12 @@ const Index = () => (
             className={"parsta"}
             src={Me}
             alt={"Me in San Francisco"}
+            width={768}
+            height={432}
             priority
         />
         <h1>Jere Laine</h1>
+        <h2 className={"education"}>M.Sc. (Tech)</h2>
         <div className={"linkLogoContainer"}>
           <a aria-label={"Call me"} href={"tel:+358458664303"}>
             <Phone className={"chameleon highLightOnHover"} />
