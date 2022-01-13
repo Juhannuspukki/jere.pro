@@ -1,16 +1,15 @@
-const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
 
-module.exports = withPlugins([
-  [
-    optimizedImages,
-    {
-      images: {
-        // for example
-        handleImages: ["jpeg", "png", "svg", "webp", "gif", "ico"],
-      },
-    },
-  ],
+module.exports = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"]
+    });
 
-  // your other plugins here
-]);
+    return config;
+  }
+};
+

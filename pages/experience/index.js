@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import ExperienceGraph from "../../components/ExperienceGraph";
 import Head from "next/head";
 import React from "react";
-import { ParentSize } from "@vx/responsive";
+import { ParentSize } from "@visx/responsive";
 import ExperienceData from "../../content/experience";
 
 const Index = () => {

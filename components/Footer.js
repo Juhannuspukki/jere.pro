@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { Svg } from "react-optimized-image";
 
 import Arrow from "../svg/arrow-left.svg";
 import Phone from "../svg/phone.svg";
@@ -19,8 +18,7 @@ const Footer = (props) => (
               }
               aria-label={"Previous page"}
             >
-              <Svg
-                src={Arrow}
+              <Arrow
                 className={"footerLinkVector chameleon highLightOnHover"}
               />
             </a>
@@ -34,8 +32,7 @@ const Footer = (props) => (
             className={"footerLink"}
             aria-label={"Message via Telegram"}
           >
-            <Svg
-              src={Telegram}
+            <Telegram
               className={"footerLinkVector chameleon highLightOnHover"}
             />
           </a>
@@ -46,8 +43,7 @@ const Footer = (props) => (
             className={"footerLink"}
             aria-label={"Call me"}
           >
-            <Svg
-              src={Phone}
+            <Phone
               className={"footerLinkVector chameleon highLightOnHover"}
             />
           </a>
@@ -58,8 +54,7 @@ const Footer = (props) => (
             className={"footerLink"}
             aria-label={"Send an email"}
           >
-            <Svg
-              src={Mail}
+            <Mail
               className={"footerLinkVector chameleon highLightOnHover"}
             />
           </a>

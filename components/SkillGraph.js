@@ -1,11 +1,10 @@
 import React from "react";
-import { Group } from "@vx/group";
-import { scaleLinear } from "@vx/scale";
-import { AxisLeft, AxisBottom } from "@vx/axis";
-import { withTooltip, TooltipWithBounds } from "@vx/tooltip";
-import { localPoint } from "@vx/event";
-import { Grid } from "@vx/grid";
-import { Svg } from "react-optimized-image";
+import { Group } from "@visx/group";
+import { scaleLinear } from "@visx/scale";
+import { AxisLeft, AxisBottom } from "@visx/axis";
+import { useTooltip, useTooltipInPortal, TooltipWithBounds } from "@visx/tooltip";
+import { localPoint } from "@visx/event";
+import { Grid } from "@visx/grid";
 
 const chooseInterestResponse = (interest, confidence) => {
   if (confidence < 31) {
@@ -44,25 +43,31 @@ const chooseConfidenceResponse = (interest, confidence) => {
 };
 
 const Chart = (props) => {
-  const handleMouseOver = (event, datum, confidence, interest) => {
-    const coords = localPoint(
-      event.target.ownerSVGElement.ownerSVGElement,
-      event
-    );
-    props.showTooltip({
-      tooltipLeft: coords.x,
-      tooltipTop: coords.y,
-      tooltipData: { title: datum, interest: interest, confidence: confidence },
-    });
-  };
-
   const {
     tooltipData,
     tooltipLeft,
     tooltipTop,
     tooltipOpen,
+    showTooltip,
     hideTooltip,
-  } = props;
+  } = useTooltip();
+
+  const { containerRef, TooltipInPortal } = useTooltipInPortal({
+    // use TooltipWithBounds
+    detectBounds: true,
+    // when tooltip containers are scrolled, this will correctly update the Tooltip position
+    scroll: true,
+  })
+
+  const handleMouseOver = (event, datum, confidence, interest) => {
+    const coords = localPoint(event.target.ownerSVGElement, event);
+    showTooltip({
+      tooltipLeft: coords.x,
+      tooltipTop: coords.y,
+      tooltipData: { title: datum, interest: interest, confidence: confidence }
+    });
+  };
+
 
   const width = props.parentWidth;
   const height = 350;
@@ -95,7 +100,7 @@ const Chart = (props) => {
   return (
     // note React.Fragment is only available in >= react@16.2
     <>
-      <svg width={width} height={height} className="graphSVG">
+      <svg ref={containerRef} width={width} height={height} className="graphSVG">
         <Grid
           className="graphGrid"
           top={margin.top}
@@ -113,14 +118,7 @@ const Chart = (props) => {
           const cx = xScale(point.confidence);
           const cy = yScale(point.interest);
 
-          // Dynamically loading svgs
-          const Icon = (
-            <Svg
-              src={require(`../svg/graphsymbols/${point.icon
-                .toLowerCase()
-                .replace(/\./g, "")}.svg`)}
-            />
-          );
+          const Icon = (require(`../svg/graphsymbols/${point.icon.toLowerCase().replace(/\./g, "")}.svg`)).default;
 
           return (
             <Group
@@ -130,15 +128,15 @@ const Chart = (props) => {
               }
               onMouseOut={hideTooltip}
             >
-              {React.cloneElement(Icon, {
-                key: `point-${point.x}-${i}`,
-                className: "graphIcon chameleon highLightOnHover",
-                x: cx + 35,
-                y: cy - 15,
-                width: 50,
-                height: 50,
-                onClick: () => props.setActiveTech(point.icon),
-              })}
+              <Icon
+                  key={`point-${point.x}-${i}`}
+                  className={"graphIcon chameleon highLightOnHover"}
+                  x={cx + 35}
+                  y={cy - 15}
+                  width={50}
+                  height={50}
+                  onClick={() => props.setActiveTech(point.icon)}
+              />
             </Group>
           );
         })}
@@ -205,15 +203,20 @@ const Chart = (props) => {
       </svg>
 
       {tooltipOpen && (
-        <TooltipWithBounds
+        <TooltipInPortal
           // set this to random so it correctly updates with parent bounds
           key={Math.random()}
           top={tooltipTop}
           left={tooltipLeft}
+          applyPositionStyle={true}
           style={{
             textAnchor: "middle",
             fontSize: 20,
             color: "#000000",
+            backgroundColor: "#FFFFFF",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 4px 0px",
+            padding: 8,
+            borderRadius: 4,
             fontFamily:
               "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif",
           }}
@@ -234,13 +237,13 @@ const Chart = (props) => {
               )}
             </small>
           </div>
-        </TooltipWithBounds>
+        </TooltipInPortal>
       )}
     </>
   );
 };
 
-export default withTooltip(Chart);
+export default Chart;
 
 // ... somewhere else, render it ...
 // <BarGraph />

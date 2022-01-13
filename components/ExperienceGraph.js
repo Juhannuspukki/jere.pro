@@ -1,10 +1,10 @@
 import React from "react";
-import { Group } from "@vx/group";
-import { GlyphDot } from "@vx/glyph";
-import { LinePath } from "@vx/shape";
-import { scaleLinear } from "@vx/scale";
-import { curveMonotoneY } from "@vx/curve";
-import { Text } from "@vx/text";
+import { Group } from "@visx/group";
+import { GlyphDot } from "@visx/glyph";
+import { LinePath } from "@visx/shape";
+import { scaleLinear } from "@visx/scale";
+import { curveMonotoneY } from "@visx/curve";
+import { Text } from "@visx/text";
 import { timeFormat } from "d3-time-format";
 
 const format = timeFormat("%b %Y");

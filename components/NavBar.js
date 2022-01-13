@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { Svg } from "react-optimized-image";
 import Arrow from "../svg/arrow-left.svg";
 
 const NavBar = (props) => {
@@ -9,8 +8,7 @@ const NavBar = (props) => {
     <Link href={url}>
       <a className={"navBar"}>
         <div>
-          <Svg
-            src={Arrow}
+          <Arrow
             className={"arrow chameleon highLightOnHover"}
             aria-label={"Previous page"}
           />

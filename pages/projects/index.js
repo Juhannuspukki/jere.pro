@@ -3,7 +3,6 @@ import Head from "next/head";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import BigLinkButton from "../../components/BigLinkButton";
-import { Svg } from "react-optimized-image";
 
 import UiDesign from "../../svg/projects/uidesign.svg";
 import Backend from "../../svg/projects/backend.svg";
@@ -16,32 +15,32 @@ const menu = [
   {
     title: "UI/UX design",
     link: "/skills/design",
-    icon: <Svg src={UiDesign} />,
+    icon: <UiDesign />,
   },
   {
     title: "Web",
     link: "/skills/web",
-    icon: <Svg src={Frontend} />,
+    icon: <Frontend />,
   },
   {
     title: "Native Apps",
     link: "/skills/native",
-    icon: <Svg src={DesktopAndMobile} />,
+    icon: <DesktopAndMobile />,
   },
   {
     title: "DevOps",
     link: "/skills/devops",
-    icon: <Svg src={DevOps} />,
+    icon: <DevOps />,
   },
   {
     title: "Backend",
     link: "/skills/backend",
-    icon: <Svg src={Backend} />,
+    icon: <Backend />,
   },
   {
     title: "Embedded",
     link: "/skills/embedded",
-    icon: <Svg src={Embedded} />,
+    icon: <Embedded />,
   },
 ];
 

@@ -1,6 +1,6 @@
 import React from "react";
-import { Pie } from "@vx/shape";
-import { Group } from "@vx/group";
+import { Pie } from "@visx/shape";
+import { Group } from "@visx/group";
 
 const usage = (d) => d.proficiency;
 
