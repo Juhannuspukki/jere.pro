@@ -82,12 +82,13 @@ const Index = () => (
         </div>
         <h2>About me</h2>
         <p>
-          Hello, and welcome to my site. I am a university student from
-          Hervanta, Finland who likes to tinker with software. I consider myself
-          to be introverted, but I believe I have become more ambiverted over
-          the years. I have quite many hobbies, including aquariums, debating,
-          cooking, motion graphics, still graphics, coding bots in Python and
-          websites with many technologies. I occasionally try my hand on an
+          Howdy folks! You are in the virtual presence of me: a master of science
+          (technology), privacy advocate, most astute apple pie baker, King of the
+          Andals and the first men, Khal of the Great Grass Sea, holder of the
+          Sacred Chalice of Rixx and the heir to the Holy Rings of Betazed.
+          I am a man of many interests: over the years I have had hobbies such
+          as aquariums, debating, cooking, motion graphics, still graphics, coding
+          bots in Python, websites in React, and games in C#. I occasionally try my hand on an
           embedded project as well. I like programming because it allows me to
           create anything I can imagine and boy, I can imagine a lot! Also,
           nothing beats the feeling you get when you try something new, overcome
