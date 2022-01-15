@@ -9,13 +9,15 @@
     {"interest": 75, "confidence": 60, "icon": "TypeScript"},
     {"interest": 80, "confidence": 95, "icon": "HTML5"},
     {"interest": 88, "confidence": 70, "icon": "Sass"},
-    {"interest": 35, "confidence": 20, "icon": "Webpack"},
+    {"interest": 15, "confidence": 25, "icon": "Webpack"},
     {"interest": 20, "confidence": 10, "icon": "Angular"},
     {"interest": 55, "confidence": 0, "icon": "Vue.js"},
     {"interest": 95, "confidence": 0, "icon": "WebAssembly"},
     {"interest": 55, "confidence": 75, "icon": "Hugo"},
-    {"interest": 70, "confidence": 50, "icon": "Selenium"},
-    {"interest": 50, "confidence": 40, "icon": "D3.js"}
+    {"interest": 40, "confidence": 60, "icon": "Selenium"},
+    {"interest": 50, "confidence": 40, "icon": "D3.js"},
+    {"interest": 60, "confidence": 25, "icon": "Jest"},
+    {"interest": 75, "confidence": 40, "icon": "Cypress"}
   ],
   "projectList": [
     {
@@ -24,7 +26,7 @@
       "external": "https://jere.pro",
       "github": "https://github.com/Juhannuspukki/jere.pro",
       "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Vercel", "D3.js"],
-      "description": "I decided that I need a website of my own. It took way too long to decide what technologies to use but I finally decided to try Next.js which had received a lot of praise recently. The result is the very fast hybrid application you see before you. Behold!"
+      "description": "I decided that I need a website of my own. It took way too long to decide what technologies to use but I finally decided to try Next.js which seemed an interesting choice at the time. The result is the very fast hybrid application you see before you. Behold! On the downside, due to breaking changes in Next.js it requires a rewrite every 6 months."
     },
     {
       "name": "pollex.club",
@@ -45,7 +47,7 @@
     {
       "name": "neuroeventlabs.com",
       "link": "nel",
-      "external": "https://neuroeventlabs.com",
+      "external": "https://web.archive.org/web/20190822141320/https://neuroeventlabs.com/",
       "github": null,
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5"],
       "description":
@@ -66,7 +68,7 @@
       "github": "https://github.com/Juhannuspukki/tampere-debate-society-web",
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
       "description":
-      "I have been part of the debate society for three years. Eventually, there were talks about making a new website. The debate society had previously had at least three, all of which were abandoned. First, there was talk about WordPress but I managed to convince them to trust my static site solution instead. Due to the lack of UI designers, I also designed the site myself. All of us are very pleased with the result. As a bonus, I installed Netlify CMS to allow non-coders to update the site as well."
+      "I was part of the debate society for three years. Eventually, there were talks about making a new website. The debate society had previously had at least three, all of which had been abandoned. First, there was talk about WordPress but I managed to convince them to trust my static site solution instead. Due to the lack of UI designers, I also designed the site myself. All of us were very pleased with the result. As a bonus, I installed Netlify CMS to allow non-coders to update the site as well."
     },
     {
       "name": "course-o-meter.com",
