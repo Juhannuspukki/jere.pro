@@ -1,5 +1,4 @@
 import React from "react";
-import Me from "../../public/img/me.jpeg";
 import Head from "next/head";
 import Image from "next/image";
 import { ParentSize } from "@visx/responsive";
@@ -7,6 +6,8 @@ import { ParentSize } from "@visx/responsive";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import PieHole from "../../components/PieHole";
+
+import Me from "../../public/img/me.jpeg";
 import Telegram from "../../svg/about/tg.svg";
 import GitHub from "../../svg/about/git.svg";
 import Mail from "../../svg/about/mail.svg";
