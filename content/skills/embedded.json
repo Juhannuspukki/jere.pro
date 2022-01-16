@@ -2,7 +2,9 @@
   "title": "Embedded",
   "link": "embedded",
   "skills": [
-    {"interest": 50, "confidence": 50, "icon": "C"}
+    {"interest": 95, "confidence": 10, "icon": "Rust"},
+    {"interest": 50, "confidence": 50, "icon": "C"},
+    {"interest": 10, "confidence": 22, "icon": "C++"}
   ],
   "description":
   "Embedded systems are devices that combine both hardware and software. Playing with Arduino's is fun, but my interests have steered me towards higher-level languages.",

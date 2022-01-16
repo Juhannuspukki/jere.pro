@@ -158,7 +158,7 @@ export async function getStaticPaths() {
       { params: { skill: "web" } },
       { params: { skill: "native" } },
       { params: { skill: "backend" } },
-      { params: { skill: "devops" } },
+      { params: { skill: "ci-cd" } },
       { params: { skill: "embedded" } },
     ],
     fallback: false,
