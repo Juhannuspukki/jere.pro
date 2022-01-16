@@ -8,7 +8,7 @@ import UiDesign from "../../svg/projects/uidesign.svg";
 import Backend from "../../svg/projects/backend.svg";
 import Frontend from "../../svg/projects/frontend.svg";
 import DesktopAndMobile from "../../svg/projects/desktopmobile.svg";
-import DevOps from "../../svg/projects/devops.svg";
+import CICD from "../../svg/projects/ci-cd.svg";
 import Embedded from "../../svg/projects/embedded.svg";
 
 const menu = [
@@ -28,9 +28,9 @@ const menu = [
     icon: <DesktopAndMobile />,
   },
   {
-    title: "DevOps",
-    link: "/skills/devops",
-    icon: <DevOps />,
+    title: "CI/CD",
+    link: "/skills/ci-cd",
+    icon: <CICD />,
   },
   {
     title: "Backend",

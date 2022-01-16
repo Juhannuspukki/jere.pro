@@ -75,19 +75,10 @@
       }
     }
   }
-  &.devops {
-    .projectList, .techFilterList {
-      display: none;
-    }
-  }
 }
 
 .tooltipText {
   font-size: 0.95rem;
-}
-
-.tooltipText.devops {
-  display: none;
 }
 
 @media (max-width: 575px) {

@@ -27,7 +27,7 @@
       "link": "electron-reader",
       "external": null,
       "github": "https://github.com/Juhannuspukki/barks",
-      "techStack": ["Electron", "React.js"],
+      "techStack": ["Electron", "React.js", "AWS"],
       "shortDescription": "A prototype Electron app.",
       "description": "I heard about this Electron thing that lets you create desktop apps with web technologies. I used it to create this program for reading comics stored in S3 or any similar service."
     },

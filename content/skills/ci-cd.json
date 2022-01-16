@@ -1,0 +1,67 @@
+{
+  "title": "CI/CD",
+  "link": "ci-cd",
+  "skills": [
+    {"interest": 55, "confidence": 45, "icon": "Docker"},
+    {"interest": 48, "confidence": 30, "icon": "AWS"},
+    {"interest": 48, "confidence": 10, "icon": "GCP"},
+    {"interest": 95, "confidence": 95, "icon": "Vercel"},
+    {"interest": 70, "confidence": 95, "icon": "Netlify"},
+    {"interest": 50, "confidence": 85, "icon": "GitLab"},
+    {"interest": 65, "confidence": 0, "icon": "Sentry"},
+    {"interest": 30, "confidence": 10, "icon": "Kubernetes"},
+    {"interest": 60, "confidence": 65, "icon": "Jest"},
+    {"interest": 75, "confidence": 55, "icon": "Cypress"},
+    {"interest": 40, "confidence": 70, "icon": "Selenium"}
+  ],
+  "description": "While no one really understands what DevOps really means, pretty much all my projects use some kind of CI/CD.",
+  "projectList": [
+    {
+      "name": "course-o-meter.com",
+      "link": "course-o-meter",
+      "external": "https://course-o-meter.com",
+      "github": "https://github.com/Juhannuspukki/project-daydream",
+      "techStack": [
+        "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Selenium", "Netlify"
+      ],
+      "shortDescription": "A web app built with React.",
+      "description": "29th of October, 2018. After taking a course which had mandatory lectures that lasted for 20 minutes instead of the scheduled two hours, a lecturer who barely spoke English and very poor communication from the course personnel I started going through the course feedback in the university's systems. On the scale of zero to five students had given this course a 3. As a matter of fact about 94% of courses seemed to have a grade between 3 and 4.5. I reinvented the scale. Frontend coded with react, data scraping done with Selenium."
+    },
+    {
+      "name": "Evoir",
+      "link": "evoir",
+      "external": "https://evoir.fi",
+      "github": null,
+      "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Docker"],
+      "shortDescription": "A web app built with Next.js.",
+      "description": "When working at Collateral Solutions I programmed most of the frontend of the product known as Evoir. I picked the key technologies used, designed the architecture and implemented the authentication myself."
+    },
+    {
+      "name": "Electron Reader",
+      "link": "electron-reader",
+      "external": null,
+      "github": "https://github.com/Juhannuspukki/barks",
+      "techStack": ["Electron", "React.js", "AWS"],
+      "shortDescription": "A prototype Electron app.",
+      "description": "I heard about this Electron thing that lets you create desktop apps with web technologies. I used it to create this program for reading comics stored in S3 or any similar service."
+    },
+    {
+      "name": "@CourseRobot on Telegram",
+      "link": "courserobot",
+      "external": "http://t.me/courserobot",
+      "github": "https://github.com/Juhannuspukki/project-daydream-telegram",
+      "techStack": ["Python", "Docker"],
+      "shortDescription": "A single-purpose Python bot.",
+      "description": "CourseRobot is Python-made Telegram bot that brings the functionality of Course-O-Meter directly to Telegram. It is also my first project using Docker. The app is an inline bot, so it can be accessed from any chat."
+    },
+    {
+      "name": "pollex.club",
+      "link": "pollex",
+      "external": "https://pollex.club",
+      "github": "https://github.com/Juhannuspukki/pollex-web",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "AWS", "Netlify"],
+      "shortDescription": "A static site built with Hugo.",
+      "description": "Pollex.club was the first website I created after neuroeventlabs.com. It received a substantial redesign in 2019 and it runs on the same victor-hugo generator as all of my newer static site projects. During this project I also learned to use AWS, for it was originally hosted there."
+    }
+  ]
+}

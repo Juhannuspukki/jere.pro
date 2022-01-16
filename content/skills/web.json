@@ -14,10 +14,7 @@
     {"interest": 55, "confidence": 0, "icon": "Vue.js"},
     {"interest": 95, "confidence": 0, "icon": "WebAssembly"},
     {"interest": 55, "confidence": 75, "icon": "Hugo"},
-    {"interest": 40, "confidence": 60, "icon": "Selenium"},
-    {"interest": 50, "confidence": 40, "icon": "D3.js"},
-    {"interest": 60, "confidence": 25, "icon": "Jest"},
-    {"interest": 75, "confidence": 40, "icon": "Cypress"}
+    {"interest": 50, "confidence": 40, "icon": "D3.js"}
   ],
   "projectList": [
     {
@@ -99,7 +96,7 @@
       "link": "evoir",
       "external": "https://evoir.fi",
       "github": null,
-      "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5"],
+      "techStack": ["Next.js", "React.js","JavaScript", "Sass", "CSS3", "HTML5", "Docker"],
       "shortDescription": "A web app built with Next.js.",
       "description": "When working at Collateral Solutions I programmed most of the frontend of the product known as Evoir. I picked the key technologies used, designed the architecture and implemented the authentication myself."
     },
