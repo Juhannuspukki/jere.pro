@@ -21,27 +21,12 @@
   ],
   "projectList": [
     {
-      "name": "jere.pro",
-      "link": "dotpro",
-      "external": "https://jere.pro",
-      "github": "https://github.com/Juhannuspukki/jere.pro",
-      "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Vercel", "D3.js"],
-      "description": "I decided that I need a website of my own. It took way too long to decide what technologies to use but I finally decided to try Next.js which seemed an interesting choice at the time. The result is the very fast hybrid application you see before you. Behold! On the downside, due to breaking changes in Next.js it requires a rewrite every 6 months."
-    },
-    {
-      "name": "pollex.club",
-      "link": "pollex",
-      "external": "https://pollex.club",
-      "github": "https://github.com/Juhannuspukki/pollex-web",
-      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "AWS", "Netlify"],
-      "description": "Pollex.club was the first website I created after neuroeventlabs.com. It received a substantial redesign in 2019 and it runs on the same victor-hugo generator as all of my newer static site projects. During this project I also learned to use AWS, for it was originally hosted there."
-    },
-    {
       "name": "koodarinpalkka.fi",
       "link": "koodarinpalkka",
       "external": "https://koodarinpalkka.fi",
       "github": null,
       "techStack": ["React.js", "JavaScript", "Sass", "CSS3", "HTML5"],
+      "shortDescription": "A static site built with React.",
       "description": "In early 2019 Sysart contacted me. They wanted to increase their salary transparency and I designed and implemented a React application that lets anyone to see what they would earn at Sysart. This calculator was later featured in Ilta-Sanomat and was nominated as the recruitment deed of the year. Try it!"
     },
     {
@@ -50,8 +35,8 @@
       "external": "https://web.archive.org/web/20190822141320/https://neuroeventlabs.com/",
       "github": null,
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5"],
-      "description":
-      "Neuro Event Labs is a Finnish company developing a video monitoring system for epilepsy patients. During my time with them, one of my main duties was taking care of the company's public website. I have now made three different versions of the website. The latest revision was also one of my first projects using Sass instead of plain CSS."
+      "shortDescription": "A static site built with Hugo.",
+      "description": "Neuro Event Labs is a Finnish company developing a video monitoring system for epilepsy patients. During my time with them, one of my main duties was taking care of the company's public website. I have now made three different versions of the website. The latest revision was also one of my first projects using Sass instead of plain CSS."
     },
     {
       "name": "STO Finexter calculator",
@@ -59,6 +44,7 @@
       "external": "https://sto-calc.now.sh",
       "github": null,
       "techStack": ["React.js", "JavaScript", "CSS3", "HTML5"],
+      "shortDescription": "A static site built with React.",
       "description": "I was hired by construction material company STO Finexter to create a web calculator that demonstrates the thermal isolation capabilites of their new product. You can see the end result above."
     },
     {
@@ -67,8 +53,8 @@
       "external": "https://tamperedebatesociety.fi",
       "github": "https://github.com/Juhannuspukki/tampere-debate-society-web",
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
-      "description":
-      "I was part of the debate society for three years. Eventually, there were talks about making a new website. The debate society had previously had at least three, all of which had been abandoned. First, there was talk about WordPress but I managed to convince them to trust my static site solution instead. Due to the lack of UI designers, I also designed the site myself. All of us were very pleased with the result. As a bonus, I installed Netlify CMS to allow non-coders to update the site as well."
+      "shortDescription": "A static site built with Hugo.",
+      "description": "I was part of the debate society for three years. Eventually, there were talks about making a new website. The debate society had previously had at least three, all of which had been abandoned. First, there was talk about WordPress but I managed to convince them to trust my static site solution instead. Due to the lack of UI designers, I also designed the site myself. All of us were very pleased with the result. As a bonus, I installed Netlify CMS to allow non-coders to update the site as well."
     },
     {
       "name": "course-o-meter.com",
@@ -78,6 +64,7 @@
       "techStack": [
         "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Selenium", "Netlify"
       ],
+      "shortDescription": "A web app built with React.",
       "description": "29th of October, 2018. After taking a course which had mandatory lectures that lasted for 20 minutes instead of the scheduled two hours, a lecturer who barely spoke English and very poor communication from the course personnel I started going through the course feedback in the university's systems. On the scale of zero to five students had given this course a 3. As a matter of fact about 94% of courses seemed to have a grade between 3 and 4.5. I reinvented the scale. Frontend coded with react, data scraping done with Selenium."
     },
     {
@@ -86,6 +73,7 @@
       "external": "https://avaruuskerho.fi",
       "github": "https://github.com/castortut/castor-web",
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
+      "shortDescription": "A static site built with Hugo.",
       "description": "I served on the board of Tampereen teekkarien avaruusteknillinen kerho Castor ry in 2019. During that time, it was my duty to create a new website for the club. It is a static site based on the Netlify victor-hugo project and also featured the Netlify CMS to allow easy content editing."
     },
     {
@@ -94,6 +82,7 @@
       "github": "https://github.com/Juhannuspukki/staticcharge.fi",
       "external": "https://staticcharge.fi",
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Vercel"],
+      "shortDescription": "A static site built with Hugo.",
       "description": "This website lists the services I offer. It also has a blog (in Finnish) for explaining how websites work."
     },
     {
@@ -102,6 +91,7 @@
       "external": "https://muistola.fi",
       "github": "https://github.com/Juhannuspukki/muistola-web",
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
+      "shortDescription": "A static site built with Hugo.",
       "description": "Muistola is a small company in Teisko, Tampere focusing on new (or old?) ways of caring for the elderly. I had the opportunity to work with them in 2018. I coded their website entirely by myself according to the UI plans I received. I also became a .fi domain dealer in the process."
     },
     {
@@ -110,7 +100,26 @@
       "external": "https://evoir.fi",
       "github": null,
       "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5"],
+      "shortDescription": "A web app built with Next.js.",
       "description": "When working at Collateral Solutions I programmed most of the frontend of the product known as Evoir. I picked the key technologies used, designed the architecture and implemented the authentication myself."
+    },
+    {
+      "name": "jere.pro",
+      "link": "dotpro",
+      "external": "https://jere.pro",
+      "github": "https://github.com/Juhannuspukki/jere.pro",
+      "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Vercel", "D3.js"],
+      "shortDescription": "A static site built with Next.js.",
+      "description": "I decided that I need a website of my own. It took way too long to decide what technologies to use but I finally decided to try Next.js which seemed an interesting choice at the time. The result is the very fast hybrid application you see before you. Behold! On the downside, due to breaking changes in Next.js it requires a rewrite every 6 months."
+    },
+    {
+      "name": "pollex.club",
+      "link": "pollex",
+      "external": "https://pollex.club",
+      "github": "https://github.com/Juhannuspukki/pollex-web",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "AWS", "Netlify"],
+      "shortDescription": "A static site built with Hugo.",
+      "description": "Pollex.club was the first website I created after neuroeventlabs.com. It received a substantial redesign in 2019 and it runs on the same victor-hugo generator as all of my newer static site projects. During this project I also learned to use AWS, for it was originally hosted there."
     }
   ]
 }

@@ -14,6 +14,7 @@
   .chameleon {
     color: $colorWhite;
     fill: $colorWhite;
+    border-color: $colorWhite;
   }
 
   .chameleonStroke {
@@ -28,8 +29,11 @@
   .highLightOnHover:hover {
     color: $colorTeal;
     fill: $colorTeal;
-    p {
+    p, span {
       color: $colorTeal;
+    }
+    svg {
+      fill: $colorTeal;
     }
   }
 }
@@ -50,6 +54,7 @@
   .chameleon {
     color: $colorBlack;
     fill: $colorBlack;
+    border-color: $colorBlack;
   }
 
   .chameleonStroke {
@@ -59,8 +64,11 @@
   .highLightOnHover:hover {
     color: $colorPurple;
     fill: $colorPurple;
-    p {
+    p, span {
       color: $colorPurple;
+    }
+    svg {
+      fill: $colorPurple;
     }
   }
 

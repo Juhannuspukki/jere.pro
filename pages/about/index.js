@@ -43,12 +43,12 @@ const Index = () => (
     <div className={"about animated"}>
       <div className={"container"}>
         <Image
-            className={"parsta"}
-            src={Me}
-            alt={"Me in San Francisco"}
-            width={768}
-            height={432}
-            priority
+          className={"parsta"}
+          src={Me}
+          alt={"Me in San Francisco"}
+          width={768}
+          height={432}
+          priority
         />
         <h1>Jere Laine</h1>
         <h2 className={"education"}>M.Sc. (Tech)</h2>
@@ -83,19 +83,20 @@ const Index = () => (
         </div>
         <h2>About me</h2>
         <p>
-          Howdy folks! You are in the virtual presence of me: a master of science
-          (technology), privacy advocate, most astute apple pie baker, King of the
-          Andals and the first men, Khal of the Great Grass Sea, holder of the
-          Sacred Chalice of Rixx and the heir to the Holy Rings of Betazed.
-          I am a man of many interests: over the years I have had hobbies such
-          as aquariums, debating, cooking, motion graphics, still graphics, coding
-          bots in Python, websites in React, and games in C#. I occasionally try my hand on an
-          embedded project as well. I like programming because it allows me to
-          create anything I can imagine and boy, I can imagine a lot! Also,
-          nothing beats the feeling you get when you try something new, overcome
-          a difficult challenge for the first time and learn something in the
-          process… except an apache helicopter. An apache helicopter is armed
-          with machine guns and missiles; it’s an absolute death machine!
+          Howdy folks! You are in the virtual presence of me: a master of
+          science (technology), privacy advocate, most astute apple pie baker,
+          King of the Andals and the first men, Khal of the Great Grass Sea,
+          holder of the Sacred Chalice of Rixx and the heir to the Holy Rings of
+          Betazed. I am a man of many interests: over the years I have had
+          hobbies such as aquariums, debating, cooking, motion graphics, still
+          graphics, coding bots in Python, websites in React, and games in C#. I
+          occasionally try my hand on an embedded project as well. I like
+          programming because it allows me to create anything I can imagine and
+          boy, I can imagine a lot! Also, nothing beats the feeling you get when
+          you try something new, overcome a difficult challenge for the first
+          time and learn something in the process… except an apache helicopter.
+          An apache helicopter is armed with machine guns and missiles; it’s an
+          absolute death machine!
         </p>
         <div className="row">
           <div className="col-md-6">
@@ -113,7 +114,7 @@ const Index = () => (
               <li>Treasurer, space tech club Castor -17, -18</li>
               <li>Frontend guy, space tech club Castor -19</li>
               <li>Treasurer, biomeditech club Pollex -18</li>
-              <li>Chief designer, Tampere Debate Society -19</li>
+              <li>Chief designer, Tre Debate Society -19</li>
               <li>Member of Mensa Finland since -13</li>
             </ul>
           </div>

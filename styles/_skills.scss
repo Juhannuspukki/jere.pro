@@ -12,54 +12,83 @@
       font-size: $largeResponsiveFontSize;
       margin: $size-s 0 $size-m 0;
     }
-    p {
-      text-align: left;
-      margin-bottom: $size-ml;
+    h2 {
+      margin-bottom: $size-sm;
     }
-    .techSymbolContainer {
+    .selectedTechnologies {
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 16rem;
-      svg {
-        height: 10rem;
-        max-width: 10rem;
-      }
-      h3 {
-        margin-top: 1rem;
-      }
-    }
-    .techProjectContainer {
-      height: 16rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .techProjectLinks {
-        text-align: center;
-        .passive {
-          opacity: 0.5;
+      .selectedTechnologyContainer {
+        margin-bottom: $size-ml;
+        .techButton {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          margin: 0 $size-xs;
+          svg {
+            display: block;
+            margin: 0 auto $size-xs;
+            height: $size-m;
+          }
+          span {
+            font-size: $size-s;
+          }
         }
-        a {
-          font-weight: 700;
+      }
+    }
+    .projectPreviewContainer {
+      .projectPreviewCard {
+        margin: 0 auto $size-m;
+        .projectPreviewCardInner {
+          border: 1px dashed;
+          border-radius: $border-radius-size;
           display: block;
+          padding: $size-s $size-sm;
+          &.passive {
+            opacity: 0.4;
+          }
+          .thumbnailImage {
+            display: block;
+            filter: grayscale(100%);
+            border-radius: $border-radius-size;
+          }
+          p, h3 {
+            text-align: center;
+            width: 100%;
+            margin: $size-sm 0 ;
+          }
+          .techStack {
+            margin-bottom: $size-sm;
+            .col {
+              margin-bottom: 0; // $size-s;
+              svg {
+                display: block;
+                height: $size-sm;
+                margin: auto;
+                &.passive {
+                  fill-opacity: 0.4;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
-}
-
-.extendedTooltip {
-  small {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 950px) {
-    .extendedTooltip {
+  &.devops {
+    .projectList, .techFilterList {
       display: none;
     }
+  }
 }
 
+.tooltipText {
+  font-size: 0.95rem;
+}
+
+.tooltipText.devops {
+  display: none;
+}
 
 @media (max-width: 575px) {
   .skills {

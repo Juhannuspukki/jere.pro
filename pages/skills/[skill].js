@@ -1,18 +1,37 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import Link from "next/link";
+import { ParentSize } from "@visx/responsive";
+
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
-import { ParentSize } from "@visx/responsive";
 import Graph from "../../components/SkillGraph";
 
 const Skills = ({ content }) => {
-  const { title, description, skills, projectList } = content;
+  const { title, skills, projectList, link } = content;
 
-  const [activeTech, setActiveTech] = useState(null);
+  const [activeTechs, setActiveTechs] = useState([]);
+
+  const setActiveTech = (tech) => {
+    activeTechs.includes(tech)
+      ? setActiveTechs(activeTechs.filter((e) => e !== tech))
+      : setActiveTechs([...activeTechs, tech]);
+  };
+
+  const sortedProjectList = projectList.sort((a, b) => {
+    let occurencesInA = 0;
+    let occurencesInB = 0;
+    activeTechs.forEach((element) =>
+      a.techStack.includes(element) ? occurencesInA++ : {}
+    );
+    activeTechs.forEach((element) =>
+      b.techStack.includes(element) ? occurencesInB++ : {}
+    );
+    return occurencesInB - occurencesInA;
+  });
 
   return (
-    <div>
+    <>
       <Head>
         <title>jere.pro - Skills - {title}</title>
         <meta property="og:title" content={"jere.pro - Skills - " + title} />
@@ -26,16 +45,21 @@ const Skills = ({ content }) => {
         />
       </Head>
       <NavBar url={"/projects"} />
-      <div className={"skills animated"}>
+      <div className={`${link} skills animated`}>
         <div className={"container"}>
+          {/* START OF GRAPH*/}
           <h1>{title}</h1>
           <div className="graphContainer">
             <ParentSize>
               {(parent) => (
                 <Graph
                   skills={skills}
+                  link={link}
                   setActiveTech={setActiveTech}
-                  parentWidth={parent.width}
+                  parentWidth={
+                    parent.width +
+                    20 /* Compensate for axis name on the other side*/
+                  }
                   parentHeight={parent.height}
                   parentTop={parent.top}
                   parentLeft={parent.left}
@@ -45,52 +69,85 @@ const Skills = ({ content }) => {
               )}
             </ParentSize>
           </div>
-          <div className={"row"}>
-            <div className={"col-md-6"}>
-              <h2>Selected technology</h2>
-              <div className={"techSymbolContainer"}>
-                {activeTech !== null && (() => {
-                  const Icon = (require(`../../svg/graphsymbols/${activeTech.toLowerCase().replace(/\./g, "")}.svg`)).default
-                  return (
-                      <div>
-                        <Icon className={"chameleon"}/>
-                        <h3>{activeTech}</h3>
-                      </div>
-                  )
-                })()
-                }
-              </div>
-            </div>
-            <div className={"col-md-6"}>
-              <h2>Projects</h2>
-              <div className={"techProjectContainer"}>
-                <div className={"techProjectLinks"}>
-                  {projectList.map((project) => (
-                    <Link
-                      as={`/projects/${project.link}`}
-                      href={`/projects/${project.link}`}
-                      key={project.link}
-                    >
-                      <a
-                        className={
-                          activeTech === null ||
-                          project.techStack.includes(activeTech)
-                            ? "highLightOnHover"
-                            : "passive highLightOnHover"
-                        }
+          {/* START OF TECH FILTER LIST*/}
+          {activeTechs.length !== 0 && (
+            <div className={"techFilterList"}>
+              <h2>Selected Filters</h2>
+              <div className={"selectedTechnologies"}>
+                <div className="selectedTechnologyContainer">
+                  {activeTechs.map((tech) => {
+                    const Icon = require(`../../svg/graphsymbols/${tech
+                      .toLowerCase()
+                      .replace(/\./g, "")}.svg`).default;
+                    return (
+                      <button
+                        onClick={() => setActiveTech(tech)}
+                        key={tech + "-icon"}
+                        className="techButton highLightOnHover"
                       >
-                        {project.name} →
-                      </a>
-                    </Link>
-                  ))}
+                        <Icon className={"chameleon"} />
+                        <span className={"chameleon"}>{tech}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
+            </div>
+          )}
+          {/* START OF PROJECT SECTION*/}
+          <div className={"projectList"}>
+            <h2>Projects</h2>
+            <div className={"row projectPreviewContainer"}>
+              {sortedProjectList.map((project) => (
+                <div
+                  className={"col-md-6 projectPreviewCard"}
+                  key={project.link}
+                >
+                  <Link
+                    as={`/projects/${project.link}`}
+                    href={`/projects/${project.link}`}
+                  >
+                    <a
+                      className={
+                        activeTechs.length === 0 ||
+                        project.techStack.some((r) => activeTechs.includes(r))
+                          ? "highLightOnHover projectPreviewCardInner chameleon"
+                          : "passive highLightOnHover projectPreviewCardInner chameleon"
+                      }
+                    >
+                      <h3>{project.name} →</h3>
+                      <p>{project.shortDescription}</p>
+                      <div className="techStack container">
+                        <div className="row no-gutters">
+                          {project.techStack.map((tech) => {
+                            const Icon = require(`../../svg/graphsymbols/${tech
+                              .toLowerCase()
+                              .replace(/\./g, "")}.svg`).default;
+                            return (
+                              <div key={tech + "-icon"} className="col">
+                                <Icon
+                                  className={
+                                    activeTechs.length === 0 ||
+                                    activeTechs.includes(tech)
+                                      ? "chameleon"
+                                      : "passive chameleon"
+                                  }
+                                />
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
       <Footer url={"/projects"} />
-    </div>
+    </>
   );
 };
 
