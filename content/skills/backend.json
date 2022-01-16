@@ -32,6 +32,15 @@
       "description": "CourseRobot is Python-made Telegram bot that brings the functionality of Course-O-Meter directly to Telegram. It is also my first project using Docker. The app is an inline bot, so it can be accessed from any chat."
     },
     {
+      "name": "Master's thesis",
+      "link": "msc",
+      "external": "https://www.icloud.com/iclouddrive/0yXcBJollw83SWiO9oFrcPYiw#MSc_FiNAL",
+      "github": null,
+      "techStack": ["Affinity", "Hugo", "JavaScript", "Sass", "CSS3", "HTML5"],
+      "shortDescription": "A dark pattern research project.",
+      "description": "My master's thesis involved a deep dive into dark patterns both theoretically and empirically. For the empirical part I created two websites and a backend with Lambda functions."
+    },
+    {
       "name": "FTL Tools",
       "link": "ftl-tools",
       "external": "https://ftl-tools.vercel.app/",
