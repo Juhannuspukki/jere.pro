@@ -19,6 +19,7 @@
       "external": "http://bubble-fighters.now.sh",
       "github": "https://github.com/Juhannuspukki/bubble-fighters",
       "techStack": ["Unity", "C#"],
+      "shortDescription": "A game built with C#/Unity.",
       "description": "I was quarantined and had nothing better to do so I decided to ace the Kasetsart University game development course. I decided to re-create one of those Flash-based games I used to play as a kid and came up with this Unity version. I got an A."
     },
     {
@@ -27,6 +28,7 @@
       "external": null,
       "github": "https://github.com/Juhannuspukki/barks",
       "techStack": ["Electron", "React.js"],
+      "shortDescription": "A prototype Electron app.",
       "description": "I heard about this Electron thing that lets you create desktop apps with web technologies. I used it to create this program for reading comics stored in S3 or any similar service."
     },
     {
@@ -35,6 +37,7 @@
       "external": null,
       "github": "https://github.com/Juhannuspukki/pagespeed-native",
       "techStack": ["React Native"],
+      "shortDescription": "A prototype React Native app.",
       "description": "This application uses the Google PageSpeed API to make basic measurements to websites."
     },
     {
@@ -43,6 +46,7 @@
       "external": null,
       "github": "https://github.com/Juhannuspukki/Refutation",
       "techStack": ["Swift"],
+      "shortDescription": "A prototype Swift app.",
       "description": "This is a 7-minute academic debate timer app designed to work with Apple's 3D touch display. One touch would pause or resume, hard press would reset the timer. While this functionality worked, Apple has since decided to give up using 3D touch displays."
     }
   ]

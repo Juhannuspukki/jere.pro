@@ -2,7 +2,11 @@ import React from "react";
 import { Group } from "@visx/group";
 import { scaleLinear } from "@visx/scale";
 import { AxisLeft, AxisBottom } from "@visx/axis";
-import { useTooltip, useTooltipInPortal, TooltipWithBounds } from "@visx/tooltip";
+import {
+  useTooltip,
+  useTooltipInPortal,
+  TooltipWithBounds,
+} from "@visx/tooltip";
 import { localPoint } from "@visx/event";
 import { Grid } from "@visx/grid";
 
@@ -57,20 +61,19 @@ const Chart = (props) => {
     detectBounds: true,
     // when tooltip containers are scrolled, this will correctly update the Tooltip position
     scroll: true,
-  })
+  });
 
   const handleMouseOver = (event, datum, confidence, interest) => {
     const coords = localPoint(event.target.ownerSVGElement, event);
     showTooltip({
       tooltipLeft: coords.x,
       tooltipTop: coords.y,
-      tooltipData: { title: datum, interest: interest, confidence: confidence }
+      tooltipData: { title: datum, interest: interest, confidence: confidence },
     });
   };
 
-
   const width = props.parentWidth;
-  const height = 350;
+  const height = 370;
   const margin = {
     top: 10,
     left: 40,
@@ -100,7 +103,12 @@ const Chart = (props) => {
   return (
     // note React.Fragment is only available in >= react@16.2
     <>
-      <svg ref={containerRef} width={width} height={height} className="graphSVG">
+      <svg
+        ref={containerRef}
+        width={width}
+        height={height}
+        className="graphSVG"
+      >
         <Grid
           className="graphGrid"
           top={margin.top}
@@ -118,7 +126,9 @@ const Chart = (props) => {
           const cx = xScale(point.confidence);
           const cy = yScale(point.interest);
 
-          const Icon = (require(`../svg/graphsymbols/${point.icon.toLowerCase().replace(/\./g, "")}.svg`)).default;
+          const Icon = require(`../svg/graphsymbols/${point.icon
+            .toLowerCase()
+            .replace(/\./g, "")}.svg`).default;
 
           return (
             <Group
@@ -129,13 +139,13 @@ const Chart = (props) => {
               onMouseOut={hideTooltip}
             >
               <Icon
-                  key={`point-${point.x}-${i}`}
-                  className={"graphIcon chameleon highLightOnHover"}
-                  x={cx + 35}
-                  y={cy - 15}
-                  width={50}
-                  height={50}
-                  onClick={() => props.setActiveTech(point.icon)}
+                key={`point-${point.x}-${i}`}
+                className={"graphIcon chameleon highLightOnHover"}
+                x={cx + 35}
+                y={cy - 15}
+                width={width < 500 ? 40 : 50}
+                height={width < 500 ? 40 : 50}
+                onClick={() => props.setActiveTech(point.icon)}
               />
             </Group>
           );
@@ -217,26 +227,32 @@ const Chart = (props) => {
             boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 4px 0px",
             padding: 8,
             borderRadius: 4,
+            maxWidth: width / 2,
             fontFamily:
               "SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif",
           }}
         >
           <strong>{tooltipData.title}</strong>
           <div className={"extendedTooltip"}>
-            <small>
+            <small className={"tooltipText"}>
               {chooseInterestResponse(
                 tooltipData.interest,
                 tooltipData.confidence
               )}
             </small>
             <br />
-            <small>
+            <small className={"tooltipText"}>
               {chooseConfidenceResponse(
                 tooltipData.interest,
                 tooltipData.confidence
               )}
             </small>
+            <br />
           </div>
+          <small className={`${props.link} tooltipText`}>
+            <br />
+            (Click to use as a filter)
+          </small>
         </TooltipInPortal>
       )}
     </>

@@ -19,8 +19,8 @@
       "external": "http://t.me/logosthebot",
       "github": "https://github.com/Juhannuspukki/LogosTheBot",
       "techStack": ["Python"],
-      "description":
-      "Logos was my first software project. After learning Python for the very first time I figured that I had to do something to not forget how to use it. I started the development of a bot. During all these years I have added several features to the bot, such as wayfinding services,nysse-locator services, a minesweeper game, information about the school's menus, weather forecasts and so on and so forth."
+      "shortDescription": "A multipurpose Python bot.",
+      "description": "Logos was my first software project. After learning Python for the very first time I figured that I had to do something to not forget how to use it. I started the development of a bot. During all these years I have added several features to the bot, such as wayfinding services,nysse-locator services, a minesweeper game, information about the school's menus, weather forecasts and so on and so forth."
     },
     {
       "name": "@CourseRobot on Telegram",
@@ -28,8 +28,8 @@
       "external": "http://t.me/courserobot",
       "github": "https://github.com/Juhannuspukki/project-daydream-telegram",
       "techStack": ["Python", "Docker"],
-      "description":
-      "CourseRobot is Python-made Telegram bot that brings the functionality of Course-O-Meter directly to Telegram. It is also my first project using Docker. The app is an inline bot, so it can be accessed from any chat."
+      "shortDescription": "A single-purpose Python bot.",
+      "description": "CourseRobot is Python-made Telegram bot that brings the functionality of Course-O-Meter directly to Telegram. It is also my first project using Docker. The app is an inline bot, so it can be accessed from any chat."
     }
   ]
 }

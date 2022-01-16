@@ -16,6 +16,7 @@
       "external": "https://jere.pro",
       "techStack": ["Affinity", "Sketch"],
       "github": "https://github.com/Juhannuspukki/jere.pro",
+      "shortDescription": "An innovative website design.",
       "description": "Before starting my own website project, I used Affinity Designer to draw UI sketches. It turned out to be a good decision, since arranging components on a website is a lot easier in Affinity than HTML."
     },
     {
@@ -24,6 +25,7 @@
       "external": "https://bubble-fighters.now.sh",
       "github": "https://github.com/Juhannuspukki/bubble-fighters",
       "techStack": ["Unity", "C#"],
+      "shortDescription": "A complete game design.",
       "description": "I was quarantined and had nothing better to do so I decided to ace the Kasetsart University game development course. I decided to re-create one of those Flash-based games. The process involved drawing all the sprites and a suitably themed UI for the game."
     },
     {
@@ -32,6 +34,7 @@
       "external": "http://urn.fi/URN:NBN:fi:tty-201903081280",
       "github": null,
       "techStack": ["Affinity"],
+      "shortDescription": "A comprehensive UX design project.",
       "description": "During my time at Neuro Event Labs Oy I had the opportunity to design their fleet management system. The design process is documented on my Bachelor's thesis. I was able to produce a clean and aesthetically pleasing UI using the existing design language."
     },
     {
@@ -40,6 +43,7 @@
       "external": "https://sto-calc.now.sh",
       "github": null,
       "techStack": ["Sketch"],
+      "shortDescription": "An innovative calculator design.",
       "description": "I was hired by construction material company STO Finexter to create a web calculator that demonstrates the thermal isolation capabilites of their new product. First the customer expressed interest in a table for displaying the results, but after my recommendation we settled on a bar chart. You can see the end result above."
     },
     {
@@ -48,6 +52,7 @@
       "external": "https://avaruuskerho.fi",
       "github": "https://github.com/castortut/castor-web",
       "techStack": ["Affinity"],
+      "shortDescription": "A website design.",
       "description": "Before writing the actual code on avaruuskerho.fi I drew mockups, experimented with different designs and ran them through the board. I was able to come up with a rather spacey design, don't you think?"
     },
     {
@@ -56,6 +61,7 @@
       "external": "https://staticcharge.fi",
       "github": "https://github.com/Juhannuspukki/staticcharge.fi",
       "techStack": ["Sketch"],
+      "shortDescription": "A website design.",
       "description": "StaticCharge is my company website. It is designed by me and it is also the first of my websites to feature a logo design of my own making."
     },
     {
@@ -64,6 +70,7 @@
       "external": null,
       "github": null,
       "techStack": ["Affinity", "Sketch"],
+      "shortDescription": "A web app prototype & design.",
       "description": "During my time in Collateral Solutions team I made designs and interactive prototypes for the Collateral Solutions website, Evoir website and the Evoir product itself. The prototypes were used in validating the product idea and demonstrating the service to stakeholders."
     }
   ]
