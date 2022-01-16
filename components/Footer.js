@@ -7,7 +7,7 @@ import Telegram from "../svg/about/tg.svg";
 import Mail from "../svg/about/mail.svg";
 
 const Footer = (props) => (
-  <div className={"footer"}>
+  <footer className={"footer"}>
     <div className={"container footerContainer"}>
       <div className={"row no-gutters"}>
         <div className={"col-3 footerLinkContainer"}>
@@ -43,9 +43,7 @@ const Footer = (props) => (
             className={"footerLink"}
             aria-label={"Call me"}
           >
-            <Phone
-              className={"footerLinkVector chameleon highLightOnHover"}
-            />
+            <Phone className={"footerLinkVector chameleon highLightOnHover"} />
           </a>
         </div>
         <div className={"col-3 footerLinkContainer"}>
@@ -54,14 +52,12 @@ const Footer = (props) => (
             className={"footerLink"}
             aria-label={"Send an email"}
           >
-            <Mail
-              className={"footerLinkVector chameleon highLightOnHover"}
-            />
+            <Mail className={"footerLinkVector chameleon highLightOnHover"} />
           </a>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

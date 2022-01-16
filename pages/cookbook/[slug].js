@@ -32,13 +32,13 @@ const Post = ({ post }) => {
         />
       </Head>
       <NavBar url={"/cookbook"} />
-      <div className={"blogPost"}>
+      <main className={"blogPost"}>
         <article className={"container animated"}>
           {
             <Image
-                className={"hero cookBookHero"}
-                src={require(`../../public/img/cookbook/${image}.jpg`)}
-                priority
+              className={"hero cookBookHero"}
+              src={require(`../../public/img/cookbook/${image}.jpg`)}
+              priority
             />
           }
           <h1>{title}</h1>
@@ -62,7 +62,7 @@ const Post = ({ post }) => {
             <StepList slug={slug} steps={instructions} />
           </ol>
         </article>
-      </div>
+      </main>
       <Footer url={"/cookbook"} />
     </div>
   );

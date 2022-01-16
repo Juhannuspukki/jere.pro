@@ -49,7 +49,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={"indexContainer"}>
+    <main className={"indexContainer"}>
       <Head>
         <title>jere.pro</title>
         <meta property="og:title" content="jere.pro" />
@@ -87,6 +87,6 @@ export default function Home() {
           <Footer url={""} />
         </>
       )}
-    </div>
+    </main>
   );
 }

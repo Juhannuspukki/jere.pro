@@ -40,7 +40,7 @@ const Index = () => (
       />
     </Head>
     <NavBar url={"/"} />
-    <div className={"about animated"}>
+    <main className={"about animated"}>
       <div className={"container"}>
         <Image
           className={"parsta"}
@@ -141,7 +141,7 @@ const Index = () => (
           ))}
         </div>
       </div>
-    </div>
+    </main>
     <Footer url={"/"} />
   </div>
 );

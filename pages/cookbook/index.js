@@ -7,7 +7,7 @@ import { getAllPosts } from "../../lib/api";
 
 const CookBook = ({ allPosts }) => {
   return (
-    <div className={"test"}>
+    <main className={"test"}>
       <Head>
         <title>jere.pro - CookBook</title>
         <meta property="og:title" content="jere.pro - CookBook" />
@@ -35,7 +35,7 @@ const CookBook = ({ allPosts }) => {
         ))}
       </div>
       <Footer url={"/"} />
-    </div>
+    </main>
   );
 };
 
