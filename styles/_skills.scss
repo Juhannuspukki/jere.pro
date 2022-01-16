@@ -47,11 +47,6 @@
           &.passive {
             opacity: 0.4;
           }
-          .thumbnailImage {
-            display: block;
-            filter: grayscale(100%);
-            border-radius: $border-radius-size;
-          }
           p, h3 {
             text-align: center;
             width: 100%;

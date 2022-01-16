@@ -27,13 +27,13 @@
       "description": "In early 2019 Sysart contacted me. They wanted to increase their salary transparency and I designed and implemented a React application that lets anyone to see what they would earn at Sysart. This calculator was later featured in Ilta-Sanomat and was nominated as the recruitment deed of the year. Try it!"
     },
     {
-      "name": "neuroeventlabs.com",
-      "link": "nel",
-      "external": "https://web.archive.org/web/20190822141320/https://neuroeventlabs.com/",
-      "github": null,
-      "techStack": ["Hugo", "Sass", "CSS3", "HTML5"],
-      "shortDescription": "A static site built with Hugo.",
-      "description": "Neuro Event Labs is a Finnish company developing a video monitoring system for epilepsy patients. During my time with them, one of my main duties was taking care of the company's public website. I have now made three different versions of the website. The latest revision was also one of my first projects using Sass instead of plain CSS."
+      "name": "Full Stack Open",
+      "link": "full-stack-open",
+      "external": null,
+      "github": "https://github.com/Juhannuspukki/full-stack-open-2020",
+      "techStack": ["React.js", "Node.js", "Cypress", "Jest", "MongoDB", "CSS3", "HTML5", "Vercel"],
+      "shortDescription": "A comprehensive web dev course.",
+      "description": "Full Stack Open is an extensive full stack development course by University of Helsinki."
     },
     {
       "name": "STO Finexter calculator",
@@ -52,6 +52,24 @@
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
       "shortDescription": "A static site built with Hugo.",
       "description": "I was part of the debate society for three years. Eventually, there were talks about making a new website. The debate society had previously had at least three, all of which had been abandoned. First, there was talk about WordPress but I managed to convince them to trust my static site solution instead. Due to the lack of UI designers, I also designed the site myself. All of us were very pleased with the result. As a bonus, I installed Netlify CMS to allow non-coders to update the site as well."
+    },
+    {
+      "name": "FTL Industries website",
+      "link": "ftl-industries",
+      "external": "https://ftl-industries.vercel.app/",
+      "github": "https://github.com/Juhannuspukki/ftl",
+      "techStack": ["Hugo", "React.js", "Sass", "CSS3", "HTML5", "Netlify"],
+      "shortDescription": "A static site built with Hugo.",
+      "description": "FTL Industries is a player community (\"corporation\") in Eve: Echoes. This website existed as way to promote the corporation. It also included a React-based calculator."
+    },
+    {
+      "name": "muistola.fi",
+      "link": "muistola",
+      "external": "https://muistola.fi",
+      "github": "https://github.com/Juhannuspukki/muistola-web",
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
+      "shortDescription": "A static site built with Hugo.",
+      "description": "Muistola is a small company in Teisko, Tampere focusing on new (or old?) ways of caring for the elderly. I had the opportunity to work with them in 2018. I coded their website entirely by myself according to the UI plans I received. I also became a .fi domain dealer in the process."
     },
     {
       "name": "course-o-meter.com",
@@ -74,6 +92,33 @@
       "description": "I served on the board of Tampereen teekkarien avaruusteknillinen kerho Castor ry in 2019. During that time, it was my duty to create a new website for the club. It is a static site based on the Netlify victor-hugo project and also featured the Netlify CMS to allow easy content editing."
     },
     {
+      "name": "Master's thesis",
+      "link": "msc",
+      "external": "https://www.icloud.com/iclouddrive/0yXcBJollw83SWiO9oFrcPYiw#MSc_FiNAL",
+      "github": null,
+      "techStack": ["Hugo", "JavaScript", "Sass", "CSS3", "HTML5"],
+      "shortDescription": "A dark pattern research project.",
+      "description": "My master's thesis involved a deep dive into dark patterns both theoretically and empirically. For the empirical part I created two websites and a backend with Lambda functions."
+    },
+    {
+      "name": "FTL Tools",
+      "link": "ftl-tools",
+      "external": "https://ftl-tools.vercel.app/",
+      "github": "https://github.com/Juhannuspukki/engineer",
+      "techStack": ["React.js", "Next.js", "TypeScript", "Node.js", "Sass", "CSS3", "HTML5", "Vercel"],
+      "shortDescription": "A web app built with TS & Next.js.",
+      "description": "A web app for calculating various things for a game called Eve: Echoes. The app's backend refreshes every 24 hours to retrieve new pricing data from a CSV API. It also generates a new access token and sends it to FTL Industries' (a game guild) Discord server. This solution prevents unauthorized access while it still remains possible to share the service with corporation (guild) members who do not have a Discord account."
+    },
+    {
+      "name": "neuroeventlabs.com",
+      "link": "nel",
+      "external": "https://web.archive.org/web/20190822141320/https://neuroeventlabs.com/",
+      "github": null,
+      "techStack": ["Hugo", "Sass", "CSS3", "HTML5"],
+      "shortDescription": "A static site built with Hugo.",
+      "description": "Neuro Event Labs is a Finnish company developing a video monitoring system for epilepsy patients. During my time with them, one of my main duties was taking care of the company's public website. I have now made three different versions of the website. The latest revision was also one of my first projects using Sass instead of plain CSS."
+    },
+    {
       "name": "staticcharge.fi",
       "link": "staticcharge",
       "github": "https://github.com/Juhannuspukki/staticcharge.fi",
@@ -81,15 +126,6 @@
       "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Vercel"],
       "shortDescription": "A static site built with Hugo.",
       "description": "This website lists the services I offer. It also has a blog (in Finnish) for explaining how websites work."
-    },
-    {
-      "name": "muistola.fi",
-      "link": "muistola",
-      "external": "https://muistola.fi",
-      "github": "https://github.com/Juhannuspukki/muistola-web",
-      "techStack": ["Hugo", "Sass", "CSS3", "HTML5", "Netlify"],
-      "shortDescription": "A static site built with Hugo.",
-      "description": "Muistola is a small company in Teisko, Tampere focusing on new (or old?) ways of caring for the elderly. I had the opportunity to work with them in 2018. I coded their website entirely by myself according to the UI plans I received. I also became a .fi domain dealer in the process."
     },
     {
       "name": "Evoir",
