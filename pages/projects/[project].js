@@ -9,7 +9,7 @@ const Project = (props) => {
   const { name, external, github, link, description, techStack, url } = props;
 
   return (
-    <div>
+    <>
       <Head>
         <title>jere.pro - Projects - {name}</title>
         <meta property="og:title" content={"jere.pro - Projects - " + name} />
@@ -28,7 +28,7 @@ const Project = (props) => {
         <meta name="robots" content="noindex" />
       </Head>
       <NavBar url={`/skills/${url}`} />
-      <div className={"post"}>
+      <main className={"post"}>
         <div className={"container animated"}>
           <video
             loop={true}
@@ -83,9 +83,9 @@ const Project = (props) => {
             )}
           </div>
         </div>
-      </div>
+      </main>
       <Footer url={`/skills/${url}`} />
-    </div>
+    </>
   );
 };
 

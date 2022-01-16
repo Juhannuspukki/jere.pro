@@ -28,7 +28,7 @@ const Index = () => {
         />
       </Head>
       <NavBar url={"/"} />
-      <div className={"timeLineContainer animated"}>
+      <main className={"timeLineContainer animated"}>
         <h1>Experience</h1>
         <ParentSize>
           {(parent) => (
@@ -44,7 +44,7 @@ const Index = () => {
             />
           )}
         </ParentSize>
-      </div>
+      </main>
       <Footer url={"/"} />
     </div>
   );

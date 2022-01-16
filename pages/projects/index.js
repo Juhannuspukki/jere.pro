@@ -59,7 +59,7 @@ const Index = () => (
       />
     </Head>
     <NavBar url={"/"} />
-    <div className={"container menuContainer animated"}>
+    <main className={"container menuContainer animated"}>
       <h1>Projects</h1>
       <div className={"row no-gutters"}>
         {menu.map((button) => (
@@ -73,7 +73,7 @@ const Index = () => (
           </BigLinkButton>
         ))}
       </div>
-    </div>
+    </main>
     <Footer url={"/"} />
   </div>
 );

@@ -45,7 +45,7 @@ const Skills = ({ content }) => {
         />
       </Head>
       <NavBar url={"/projects"} />
-      <div className={`${link} skills animated`}>
+      <main className={`${link} skills animated`}>
         <div className={"container"}>
           {/* START OF GRAPH*/}
           <h1>{title}</h1>
@@ -145,7 +145,7 @@ const Skills = ({ content }) => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
       <Footer url={"/projects"} />
     </>
   );
