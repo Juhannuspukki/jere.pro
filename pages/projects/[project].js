@@ -49,15 +49,15 @@ const Project = (props) => {
           <div className="techStack container">
             <div className="row">
               {techStack.map((tech) => {
-                const Icon = (require(`../../svg/graphsymbols/${tech.toLowerCase().replace(/\./g, "")}.svg`)).default
+                const Icon = require(`../../svg/graphsymbols/${tech
+                  .toLowerCase()
+                  .replace(/\./g, "")}.svg`).default;
                 return (
                   <div key={tech + "-icon"} className="col">
-                    <Icon
-                        className={"chameleon"}
-                    />
+                    <Icon className={"chameleon"} />
                     <span>{tech}</span>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -118,8 +118,6 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   // Store paths here
   const paths = [];
-
-  console.log(context);
 
   // Read all files in directory
   const postDirectory = path.join(process.cwd(), "content/skills");

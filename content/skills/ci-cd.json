@@ -28,6 +28,24 @@
       "description": "29th of October, 2018. After taking a course which had mandatory lectures that lasted for 20 minutes instead of the scheduled two hours, a lecturer who barely spoke English and very poor communication from the course personnel I started going through the course feedback in the university's systems. On the scale of zero to five students had given this course a 3. As a matter of fact about 94% of courses seemed to have a grade between 3 and 4.5. I reinvented the scale. Frontend coded with react, data scraping done with Selenium."
     },
     {
+      "name": "FTL Tools",
+      "link": "ftl-tools",
+      "external": "https://ftl-tools.vercel.app/",
+      "github": "https://github.com/Juhannuspukki/engineer",
+      "techStack": ["React.js", "Next.js", "TypeScript", "Node.js", "Sass", "CSS3", "HTML5", "Vercel"],
+      "shortDescription": "A web app built with TS & Next.js.",
+      "description": "A web app for calculating various things for a game called Eve: Echoes. The app's backend refreshes every 24 hours to retrieve new pricing data from a CSV API. It also generates a new access token and sends it to FTL Industries' (a game guild) Discord server. This solution prevents unauthorized access while it still remains possible to share the service with corporation (guild) members who do not have a Discord account."
+    },
+    {
+      "name": "Full Stack Open",
+      "link": "full-stack-open",
+      "external": null,
+      "github": "https://github.com/Juhannuspukki/full-stack-open-2020",
+      "techStack": ["React.js", "Node.js", "Cypress", "Jest", "MongoDB", "CSS3", "HTML5", "Vercel"],
+      "shortDescription": "A comprehensive web dev course.",
+      "description": "Full Stack Open is an extensive full stack development course by University of Helsinki."
+    },
+    {
       "name": "Evoir",
       "link": "evoir",
       "external": "https://evoir.fi",
