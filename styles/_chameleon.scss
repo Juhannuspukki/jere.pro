@@ -1,86 +1,90 @@
 // For black background
-.black, .dotProContainer {
-  background-color: $colorBlack;
-  color: $colorWhite;
-
-  .navBar, .footer {
-    background-color: $colorTransparentBlack;
-  }
-
-  a, p {
+@media (prefers-color-scheme: dark) {
+  .chameleonContainer, .dotProContainer {
+    background-color: $colorBlack;
     color: $colorWhite;
-  }
 
-  .chameleon {
-    color: $colorWhite;
-    fill: $colorWhite;
-    border-color: $colorWhite;
-  }
-
-  .chameleonStroke {
-    stroke: $colorWhite;
-  }
-
-  .vx-axis use,
-  .experienceGraph use{
-    fill: $colorWhite;
-  }
-
-  .highLightOnHover:hover {
-    color: $colorTeal;
-    fill: $colorTeal;
-    p, span {
-      color: $colorTeal;
+    .navBar, .footer {
+      background-color: $colorTransparentBlack;
     }
-    svg {
+
+    a, p {
+      color: $colorWhite;
+    }
+
+    .chameleon {
+      color: $colorWhite;
+      fill: $colorWhite;
+      border-color: $colorWhite;
+    }
+
+    .chameleonStroke {
+      stroke: $colorWhite;
+    }
+
+    .vx-axis use,
+    .experienceGraph use{
+      fill: $colorWhite;
+    }
+
+    .highLightOnHover:hover {
+      color: $colorTeal;
       fill: $colorTeal;
+      p, span {
+        color: $colorTeal;
+      }
+      svg {
+        fill: $colorTeal;
+      }
     }
   }
 }
 
 // For white background
-.white, .dotProContainer {
-  background-color: $colorWhite;
-  color: $colorBlack;
-
-  .navBar, .footer {
-    background-color: $colorTransparentWhite;
-  }
-
-  a, p {
+@media (prefers-color-scheme: light) {
+  .chameleonContainer, .dotProContainer {
+    background-color: $colorWhite;
     color: $colorBlack;
-  }
 
-  .chameleon {
-    color: $colorBlack;
-    fill: $colorBlack;
-    border-color: $colorBlack;
-  }
+    .navBar, .footer {
+      background-color: $colorTransparentWhite;
+    }
 
-  .chameleonStroke {
-    stroke: $colorBlack;
-  }
+    a, p {
+      color: $colorBlack;
+    }
 
-  .highLightOnHover:hover {
-    color: $colorPurple;
-    fill: $colorPurple;
-    p, span {
+    .chameleon {
+      color: $colorBlack;
+      fill: $colorBlack;
+      border-color: $colorBlack;
+    }
+
+    .chameleonStroke {
+      stroke: $colorBlack;
+    }
+
+    .highLightOnHover:hover {
       color: $colorPurple;
-    }
-    svg {
       fill: $colorPurple;
+      p, span {
+        color: $colorPurple;
+      }
+      svg {
+        fill: $colorPurple;
+      }
     }
-  }
 
-  // Graph styling
-  .graphGrid > line,
-  .experienceGraph path,
-  .experienceGraph .outerCircle {
-    stroke: $colorBlack;
-  }
+    // Graph styling
+    .graphGrid > line,
+    .experienceGraph path,
+    .experienceGraph .outerCircle {
+      stroke: $colorBlack;
+    }
 
-  .experienceGraph .innerCircle {
-    fill: $colorWhite;
+    .experienceGraph .innerCircle {
+      fill: $colorWhite;
+    }
   }
 }
 
