@@ -86,7 +86,7 @@ export default class MyDocument extends Document {
             sizes="128x128"
           />
         </Head>
-        <body className={Date.now() % 2 === 0 ? "white" : "black"}>
+        <body className={"chameleonContainer"}>
           <Main />
           <NextScript />
         </body>
