@@ -1,13 +1,12 @@
 {
   "title": "CI/CD",
-  "link": "ci-cd",
+  "link": "cloud-and-testing",
   "skills": [
     {"interest": 55, "confidence": 45, "icon": "Docker"},
     {"interest": 48, "confidence": 30, "icon": "AWS"},
     {"interest": 48, "confidence": 10, "icon": "GCP"},
     {"interest": 95, "confidence": 95, "icon": "Vercel"},
     {"interest": 70, "confidence": 95, "icon": "Netlify"},
-    {"interest": 50, "confidence": 85, "icon": "GitLab"},
     {"interest": 65, "confidence": 0, "icon": "Sentry"},
     {"interest": 30, "confidence": 10, "icon": "Kubernetes"},
     {"interest": 60, "confidence": 65, "icon": "Jest"},

@@ -2,13 +2,11 @@ import React from "react";
 import { Group } from "@visx/group";
 import { scaleLinear } from "@visx/scale";
 import { AxisLeft, AxisBottom } from "@visx/axis";
-import {
-  useTooltip,
-  useTooltipInPortal,
-  TooltipWithBounds,
-} from "@visx/tooltip";
+import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
 import { Grid } from "@visx/grid";
+
+import slugify from "../lib/slugify";
 
 const chooseInterestResponse = (interest, confidence) => {
   if (confidence < 31) {
@@ -126,9 +124,9 @@ const Chart = (props) => {
           const cx = xScale(point.confidence);
           const cy = yScale(point.interest);
 
-          const Icon = require(`../svg/graphsymbols/${point.icon
-            .toLowerCase()
-            .replace(/\./g, "")}.svg`).default;
+          const Icon = require(`../svg/graphsymbols/${slugify(
+            point.icon
+          )}.svg`).default;
 
           return (
             <Group
@@ -140,7 +138,12 @@ const Chart = (props) => {
             >
               <Icon
                 key={`point-${point.x}-${i}`}
-                className={"graphIcon chameleon highLightOnHover"}
+                className={
+                  props.activeTechs.includes(point.icon) ||
+                  props.activeTechs.length === 0
+                    ? "graphIcon chameleon highLightOnHover"
+                    : "graphIcon chameleon highLightOnHover passive"
+                }
                 x={cx + 35}
                 y={cy - 15}
                 width={width < 500 ? 40 : 50}
@@ -251,7 +254,9 @@ const Chart = (props) => {
           </div>
           <small className={`${props.link} tooltipText`}>
             <br />
-            (Click to use as a filter)
+            {props.activeTechs.includes(tooltipData.title)
+              ? "(Click to deselect filter)"
+              : "(Click to use as a filter)"}
           </small>
         </TooltipInPortal>
       )}
