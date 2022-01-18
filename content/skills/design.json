@@ -2,11 +2,14 @@
   "title": "UI/UX design",
   "link": "design",
   "skills": [
-    {"interest": 80, "confidence": 65, "icon": "Affinity"},
-    {"interest": 90, "confidence": 90, "icon": "Sketch"},
-    {"interest": 50, "confidence": 45, "icon": "AutoCad"},
-    {"interest": 20, "confidence": 10, "icon": "SolidWorks"},
-    {"interest": 100, "confidence": 80, "icon": "Hotjar"}
+    {"interest": 80, "confidence": 65, "icon": "Usability Lab Studies"},
+    {"interest": 90, "confidence": 90, "icon": "Interviews"},
+    {"interest": 90, "confidence": 50, "icon": "Remote UX Studies"},
+    {"interest": 100, "confidence": 80, "icon": "Clickstream Analysis"},
+    {"interest": 90, "confidence": 50, "icon": "A/B Testing"},
+    {"interest": 100, "confidence": 80, "icon": "Prototype Creation"},
+    {"interest": 100, "confidence": 80, "icon": "Dark Patterns"},
+    {"interest": 100, "confidence": 80, "icon": "Accessibility Testing"}
   ],
   "description": "User interface (UI) design is the art of designing computer systems that do not cause excessive frustration to the user. User experience (UX) research is the skill of figuring out which UI elements cause frustration and how. It generally involves interviews, questionnaires and observation of users in their natural habitat. I currently study human-technology interaction in Tampere University of Technology.",
   "projectList": [

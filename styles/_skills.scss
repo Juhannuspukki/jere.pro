@@ -6,6 +6,9 @@
       min-height: 404px;
       .graphIcon {
         cursor: pointer;
+        &.passive {
+          fill-opacity: 0.4;
+        }
       }
     }
     h1 {
@@ -14,27 +17,6 @@
     }
     h2 {
       margin-bottom: $size-sm;
-    }
-    .selectedTechnologies {
-      display: flex;
-      justify-content: center;
-      .selectedTechnologyContainer {
-        margin-bottom: $size-ml;
-        .techButton {
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          margin: 0 $size-xs;
-          svg {
-            display: block;
-            margin: 0 auto $size-xs;
-            height: $size-m;
-          }
-          span {
-            font-size: $size-s;
-          }
-        }
-      }
     }
     .projectPreviewContainer {
       .projectPreviewCard {
@@ -66,6 +48,32 @@
               }
             }
           }
+        }
+      }
+    }
+    .uxSkills {
+      h2 {
+        margin-bottom: $size-m;
+      }
+      .uxSkillContainer {
+        margin-bottom: $size-m;
+        .centering {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: $size-s;
+          min-height: $size-xl;
+          svg {
+            display: block;
+            max-height: $size-l;
+            max-width: $size-l;
+          }
+        }
+        p {
+          text-align: center;
+          margin: 0 auto $size-m;
+          font-weight: 700;
+          font-size: 0.95rem;
         }
       }
     }

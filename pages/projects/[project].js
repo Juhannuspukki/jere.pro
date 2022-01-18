@@ -5,6 +5,8 @@ import path from "path";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 
+import slugify from "../../lib/slugify";
+
 const Project = (props) => {
   const { name, external, github, link, description, techStack, url } = props;
 
@@ -49,9 +51,9 @@ const Project = (props) => {
           <div className="techStack container">
             <div className="row">
               {techStack.map((tech) => {
-                const Icon = require(`../../svg/graphsymbols/${tech
-                  .toLowerCase()
-                  .replace(/\./g, "")}.svg`).default;
+                const Icon = require(`../../svg/graphsymbols/${slugify(
+                  tech
+                )}.svg`).default;
                 return (
                   <div key={tech + "-icon"} className="col">
                     <Icon className={"chameleon"} />
