@@ -22,6 +22,15 @@
       stroke: $colorWhite;
     }
 
+    .downloadButton:hover {
+      path {
+        stroke: $colorTeal;
+      }
+      text {
+        fill: $colorTeal;
+      }
+    }
+
     .vx-axis use,
     .experienceGraph use{
       fill: $colorWhite;
@@ -62,6 +71,15 @@
 
     .chameleonStroke {
       stroke: $colorBlack;
+    }
+
+    .downloadButton:hover {
+      path {
+        stroke: $colorPurple;
+      }
+      text {
+        fill: $colorPurple;
+      }
     }
 
     .highLightOnHover:hover {
