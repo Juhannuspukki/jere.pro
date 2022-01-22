@@ -1,5 +1,8 @@
 .timeLineContainer {
-  padding-top: $size-l
+  padding-top: $size-l;
+  .downloadButton {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 575px) {
