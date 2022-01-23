@@ -2,11 +2,34 @@
   padding-top: $size-l;
   .downloadButton {
     cursor: pointer;
+    &:hover {
+      svg {
+        #download_svg__a {
+          transform: translate(0, 0);
+        }
+        .download_svg__arrow {
+          animation-name: location;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          animation-duration: 1.5s;
+          animation-delay: -0.75s;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 575px) {
   .timeLineContainer {
     padding-top: $size-ml;
+  }
+}
+
+@keyframes location {
+  0% {
+    transform: translate(0, -36%);
+  }
+  100% {
+    transform: translate(0, 25%);
   }
 }
