@@ -23,8 +23,11 @@
     }
 
     .downloadButton:hover {
-      path {
+      > path {
         stroke: $colorTeal;
+      }
+      svg {
+        fill: $colorTeal;
       }
       text {
         fill: $colorTeal;
@@ -74,8 +77,11 @@
     }
 
     .downloadButton:hover {
-      path {
+      > path {
         stroke: $colorPurple;
+      }
+      svg {
+        fill: $colorPurple;
       }
       text {
         fill: $colorPurple;
