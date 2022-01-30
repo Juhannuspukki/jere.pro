@@ -8,7 +8,7 @@
       background-color: $colorTransparentBlack;
     }
 
-    a, p {
+    a {
       color: $colorWhite;
     }
 
@@ -26,10 +26,7 @@
       > path {
         stroke: $colorTeal;
       }
-      svg {
-        fill: $colorTeal;
-      }
-      text {
+      .downloadButtonIcon, .downloadButtonText {
         fill: $colorTeal;
       }
     }
@@ -40,15 +37,10 @@
     }
 
     .content a:hover,
-    .highLightOnHover:hover {
+    .highLightOnHover:hover,
+    .highLightOnHover:hover .chameleon {
       color: $colorTeal;
       fill: $colorTeal;
-      p, span {
-        color: $colorTeal;
-      }
-      svg {
-        fill: $colorTeal;
-      }
     }
   }
 }
@@ -63,7 +55,7 @@
       background-color: $colorTransparentWhite;
     }
 
-    a, p {
+    a {
       color: $colorBlack;
     }
 
@@ -81,23 +73,16 @@
       > path {
         stroke: $colorPurple;
       }
-      svg {
-        fill: $colorPurple;
-      }
-      text {
+      .downloadButtonIcon, .downloadButtonText {
         fill: $colorPurple;
       }
     }
+
     .content a:hover,
-    .highLightOnHover:hover {
+    .highLightOnHover:hover,
+    .highLightOnHover:hover .chameleon {
       color: $colorPurple;
       fill: $colorPurple;
-      p, span {
-        color: $colorPurple;
-      }
-      svg {
-        fill: $colorPurple;
-      }
     }
 
     // Graph styling

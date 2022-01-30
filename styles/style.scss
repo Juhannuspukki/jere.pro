@@ -54,11 +54,6 @@ ul {
   animation: fadeInOpacity 0.5s linear;
 }
 
-.animatedWithDelay {
-  opacity: 1;
-  animation: fadeInOpacity 0.5s linear 2.8s;
-}
-
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
@@ -70,4 +65,8 @@ ul {
 
 .hidden {
   display: none;
+}
+
+.highLightOnHover, .highLightOnHover .chameleon, .content a {
+  transition: color 150ms ease-in-out, fill 150ms ease-in-out;
 }
