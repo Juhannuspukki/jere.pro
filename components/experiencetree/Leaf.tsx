@@ -72,7 +72,7 @@ const Leaf: React.FC<LeafProps> = ({
   const r = 5; // border radius
 
   return (
-    <g>
+    <g className={"leaf"}>
       <GlyphDot
         cx={dotPosition}
         cy={yPosition}
@@ -138,7 +138,7 @@ const Leaf: React.FC<LeafProps> = ({
       </Text>
       <Text
         innerRef={ref}
-        className={"resizingContent chameleon"}
+        className={"chameleon"}
         x={textPosition}
         y={yPosition + 50}
         width={textWidth()}
@@ -180,17 +180,17 @@ const Leaf: React.FC<LeafProps> = ({
             strokeWidth={1}
             fill={"transparent"}
             stroke={"white"}
-            className={"downloadButtonOutline highlightStrokeOnHover"}
+            className={"downloadButtonOutline"}
           />
           <Icon
             width={24}
             height={24}
             x={side === "left" ? textPosition - 28 : textPosition + 3}
             y={59}
-            className={"chameleon"}
+            className={"downloadButtonIcon"}
           />
           <Text
-            className={"resizingContent chameleon"}
+            className={"downloadButtonText"}
             x={side === "left" ? textPosition - 32 : textPosition + 32}
             y={65}
             width={textWidth()}
