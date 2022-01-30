@@ -1,5 +1,6 @@
 @import 'node_modules/bootstrap/scss/bootstrap-grid';
 @import 'constants';
+@import 'dotprologo';
 @import 'index';
 @import 'navbar';
 @import 'projects';
@@ -50,10 +51,12 @@ ul {
 
 .animated {
   opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-duration: 0.5s;
+  animation: fadeInOpacity 0.5s linear;
+}
+
+.animatedWithDelay {
+  opacity: 1;
+  animation: fadeInOpacity 0.5s linear 2.8s;
 }
 
 @keyframes fadeInOpacity {

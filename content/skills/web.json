@@ -94,7 +94,7 @@
     {
       "name": "Master's thesis",
       "link": "msc",
-      "external": "https://www.icloud.com/iclouddrive/0yXcBJollw83SWiO9oFrcPYiw#MSc_FiNAL",
+      "external": "https://trepo.tuni.fi/handle/10024/135598",
       "github": null,
       "techStack": ["Hugo", "JavaScript", "Sass", "CSS3", "HTML5"],
       "shortDescription": "A dark pattern research project.",
@@ -141,7 +141,7 @@
       "link": "dotpro",
       "external": "https://jere.pro",
       "github": "https://github.com/Juhannuspukki/jere.pro",
-      "techStack": ["Next.js", "React.js", "JavaScript", "Sass", "CSS3", "HTML5", "Vercel", "D3.js"],
+      "techStack": ["Next.js", "React.js", "TypeScript", "Sass", "CSS3", "HTML5", "Vercel", "D3.js"],
       "shortDescription": "A static site built with Next.js.",
       "description": "I decided that I need a website of my own. It took way too long to decide what technologies to use but I finally decided to try Next.js which seemed an interesting choice at the time. The result is the very fast hybrid application you see before you. Behold! On the downside, due to breaking changes in Next.js it requires a rewrite every 6 months."
     },
