@@ -1,0 +1,49 @@
+{
+  "branchID":"employment",
+  "branchSide":"right",
+  "leaves":[
+    {
+      "title":"Collateral Solutions Oy",
+      "subtitle":"Web Designer / Co-Founder",
+      "description":"Collateral Solutions Oy is a startup best known for Evoir, a product for real estate investors. My most important contributions included choosing many of the key technologies and tools used and designing the overall architecture of the product. I also designed most of the user interface, contributed to marketing decisions and wrote much of the front-end code of the product. My initiative also led to, for example, choosing the workplace healthcare provider and the logo designer.",
+      "timeFrame":"1.9.2019 - 30.4.2020"
+    },
+    {
+      "title":"Anders Innovations Oy",
+      "subtitle":"Junior UI/UX Designer",
+      "description":"During my time at Anders I familiarized myself with accessibility evaluation and UX/UI design tools such as Hotjar and Sketch. However, most of my time was spent developing React applications in various teams and projects.",
+      "timeFrame":"27.3.2019 - 9.9.2019",
+      "certificate":{
+        "title":"Certificate of Employment",
+        "downloadLink":"/papers/Laine_Jere_Certificate_of_Employment_Anders.pdf"
+      }
+    },
+    {
+      "title":"Neuro Event Labs Oy",
+      "subtitle":"Trainee / Junior Developer",
+      "description":"I worked as a part-time software developer during the winter and full-time during the summer. My responsibilities included taking care of the company website, a static site generated with Hugo. I also performed code review (Angular) and worked on my bachelor's thesis (UI design).",
+      "timeFrame":"29.11.2017 - 31.8.2018",
+      "certificate":{
+        "title":"Letter of Reference",
+        "downloadLink":"/papers/Laine_Jere_Letter_of_Reference_NEL.pdf"
+      }
+    },
+    {
+      "title":"Intopalo Oy",
+      "subtitle":"Software Developer Trainee",
+      "description":"I learned the basics of web development from scratch, built the original Neuro Event Labs website and participated in various meetings concerning marketing and leadership in a self-managing organization.",
+      "timeFrame":"22.5.2017 - 21.8.2017",
+      "certificate":{
+        "title":"Certificate of Employment",
+        "downloadLink":"/papers/Laine_Jere_Certificate_of_Employment_Intopalo.pdf"
+      }
+    },
+    {
+      "title":"Mepu Oy",
+      "subtitle":"Summer Worker",
+      "description":"My responsibilities included putting together dryer cells and inventorying the warehouse.",
+      "timeFrame":"1.7.2012 - 15.7.2012",
+      "certificate":null
+    }
+  ]
+}

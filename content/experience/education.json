@@ -1,0 +1,42 @@
+{
+  "branchID":"education",
+  "branchSide":"left",
+  "leaves":[
+    {
+      "title":"Tampere University",
+      "subtitle":"Master of Science (Tech.)",
+      "description":"My master's degree studies focused on human-technology interaction and industrial engineering. Still in positions of trust in various clubs and societies!",
+      "timeFrame":"2020 - 2021",
+      "certificate":{
+        "title":"Graduation Certificate",
+        "downloadLink":"/papers/Laine_Jere_Degree_Certificate_Master.pdf"
+      }
+    },
+    {
+      "title":"Kasetsart University",
+      "subtitle":"Exchange",
+      "description":"I spent spring 2020 as an exhange student in Kasetsart University, Thailand. I studied Thai language and familiarized myself with Asian culture. I also took a course in game development.",
+      "timeFrame":"Spring 2020"
+    },
+    {
+      "title":"Tampere University",
+      "subtitle":"Bachelor of Science (Tech.)",
+      "description":"I majored in biomedical engineering and minored in software systems. You can find my bachelor's thesis (UI design in medical context) under the projects page of this website. During my studies I have also held positions of trust in various clubs and societies.",
+      "timeFrame":"2015 - 2019",
+      "certificate":{
+        "title":"Graduation Certificate",
+        "downloadLink":"/papers/Laine_Jere_Degree_Certificate_Bachelor.pdf"
+      }
+    },
+    {
+      "title":"Säkylän Seudun Lukio",
+      "subtitle":"High School Education",
+      "description":"I attended Säkylän Seudun Lukio and took eight matriculation examinations. I received the best possible grade from two exams, with second best grades from four others.",
+      "timeFrame":"2012 - 2015",
+      "certificate":{
+        "title":"Graduation Certificate",
+        "downloadLink":"/papers/Laine_Jere_Degree_Certificate_High_School.pdf"
+      }
+    }
+  ]
+}
