@@ -20,9 +20,12 @@
       font-size: $size-sm;
       margin: $size-m 0 $size-sm 0;
     }
-    .techStackDescription {
+    .content {
       text-align: left;
       margin-top: $size-s;
+      a {
+        text-decoration: underline;
+      }
     }
   }
   .techStack {

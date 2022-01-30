@@ -21,11 +21,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        .footerLinkVector {
-          width: 100%;
-          cursor: pointer;
-          padding: $size-xs 6vw;
-        }
+      }
+      .footerLinkVector {
+        width: 100%;
+        cursor: pointer;
+        padding: $size-xs 6vw;
       }
     }
   }
