@@ -6,10 +6,10 @@
     {"interest": 65, "confidence": 25, "icon": "Electron"},
     {"interest": 70, "confidence": 60, "icon": "Unity"},
     {"interest": 60, "confidence": 0, "icon": "Unreal Engine"},
-    {"interest": 95, "confidence": 10, "icon": "Swift"},
+    {"interest": 95, "confidence": 40, "icon": "Swift"},
     {"interest": 5, "confidence": 38, "icon": "Qt"},
     {"interest": 10, "confidence": 22, "icon": "C++"},
-    {"interest": 80, "confidence": 35, "icon": "C#"}
+    {"interest": 75, "confidence": 40, "icon": "C#"}
   ],
   "description": "Native applications are here classified as any applications that are not web apps. Other definitions may apply.",
   "projectList": [
