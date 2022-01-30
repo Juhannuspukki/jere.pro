@@ -130,6 +130,10 @@ const Chart: React.FC<ChartProps> = (props) => {
                 handleMouseOver(e, point.icon, point.confidence, point.interest)
               }
               onMouseOut={hideTooltip}
+              className={"graphIconContainer"}
+              style={{
+                transformOrigin: `${cx + 60}px ${cy + 10}px`,
+              }}
             >
               <Icon
                 key={`point-${point.icon}`}
@@ -271,9 +275,9 @@ const chooseInterestResponse = (interest: number, confidence: number) => {
     }
   } else {
     if (interest < 16) {
-      return "Not interested.";
+      return "Never again.";
     } else if (interest < 36) {
-      return "I am interested in this technology.";
+      return "I try to avoid this technology.";
     } else if (interest < 61) {
       return "I like working with this technology.";
     } else if (interest < 100) {

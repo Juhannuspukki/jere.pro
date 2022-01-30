@@ -4,10 +4,16 @@
     max-width: 768px;
     .graphContainer {
       min-height: 404px;
-      .graphIcon {
-        cursor: pointer;
-        &.passive {
-          fill-opacity: 0.4;
+      .graphIconContainer {
+        transition: transform 0.1s ease-in-out;
+        .graphIcon {
+          cursor: pointer;
+          &.passive {
+            fill-opacity: 0.4;
+          }
+        }
+        &:hover {
+          transform: scale(1.1);
         }
       }
     }
