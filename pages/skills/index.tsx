@@ -10,10 +10,6 @@ import Frontend from "../../svg/projects/frontend.svg";
 import DesktopAndMobile from "../../svg/projects/desktopmobile.svg";
 import CICD from "../../svg/projects/ci-cd.svg";
 import Embedded from "../../svg/projects/embedded.svg";
-import About from "../../svg/about.svg";
-import Experience from "../../svg/experience.svg";
-import Project from "../../svg/projects.svg";
-import Skills from "../../svg/skills.svg";
 
 const Index = () => (
   <div className={"indexContainer"}>
