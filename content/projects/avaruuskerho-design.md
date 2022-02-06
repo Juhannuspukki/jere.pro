@@ -1,6 +1,6 @@
 ---
 name: avaruuskerho.fi
-link: avaruuskerho-design
+id: avaruuskerho-design
 categories:
     - UI/UX Design
 techStack:

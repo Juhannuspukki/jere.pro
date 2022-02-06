@@ -1,6 +1,6 @@
 ---
 name: Master's thesis
-link: msc
+id: msc
 categories:
     - Web
     - Backend

@@ -1,6 +1,6 @@
 ---
 name: '@CourseRobot on Telegram'
-link: courserobot
+id: courserobot
 categories:
     - Backend
     - CI/CD

@@ -1,6 +1,6 @@
 ---
 name: Electron Reader
-link: electron-reader
+id: electron-reader
 categories:
     - Native Apps
 techStack:

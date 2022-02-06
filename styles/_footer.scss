@@ -8,11 +8,14 @@
   z-index: 1130;
   padding-bottom: $size-s; /* iPhone home slider padding */
   .footerContainer {
-    max-width: 480px;
+    max-width: 400px;
+    height: $size-ml;
+    margin: auto;
     .footerLinkContainer {
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 100%;
       .disabled {
         pointer-events: none;
         opacity: 0.3;
@@ -21,11 +24,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
       }
       .footerLinkVector {
-        width: 100%;
+        height: 100%;
         cursor: pointer;
-        padding: $size-xs 6vw;
+        padding: $size-s;
       }
     }
   }

@@ -1,0 +1,34 @@
+.projectPreviewCard {
+  margin: 0 auto;
+  .projectPreviewCardInner {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border: 1px dashed;
+    border-radius: $border-radius-size;
+    display: block;
+    padding: $size-xs $size-xs;
+    &.passive {
+      opacity: 0.4;
+    }
+    p, h3 {
+      text-align: center;
+      width: 100%;
+      margin: $size-sm 0 ;
+    }
+    .techStack {
+      margin-bottom: $size-sm;
+      .col {
+        margin-bottom: 0; // $size-s;
+        svg {
+          display: block;
+          height: $size-sm;
+          margin: auto;
+          &.passive {
+            fill-opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 ---
 name: Bubble Fighters
-link: bubble-fighters-design
+id: bubble-fighters-design
 categories:
     - UI/UX Design
 techStack:

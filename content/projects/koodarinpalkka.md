@@ -1,6 +1,6 @@
 ---
 name: koodarinpalkka.fi
-link: koodarinpalkka
+id: koodarinpalkka
 categories:
     - Web
 techStack:

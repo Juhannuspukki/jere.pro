@@ -1,6 +1,6 @@
 ---
 name: FTL Tools
-link: ftl-tools
+id: ftl-tools
 categories:
     - Web
     - Backend

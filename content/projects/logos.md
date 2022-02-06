@@ -1,6 +1,6 @@
 ---
 name: '@LogosTheBot on Telegram'
-link: logos
+id: logos
 categories:
     - Backend
 techStack:

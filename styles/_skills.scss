@@ -1,4 +1,4 @@
-.skills {
+.skill {
   padding: $size-ml 0 $size-xl 0;
   .container {
     max-width: 768px;
@@ -26,35 +26,7 @@
     }
     .projectPreviewContainer {
       .projectPreviewCard {
-        margin: 0 auto $size-m;
-        .projectPreviewCardInner {
-          border: 1px dashed;
-          border-radius: $border-radius-size;
-          display: block;
-          padding: $size-s $size-sm;
-          &.passive {
-            opacity: 0.4;
-          }
-          p, h3 {
-            text-align: center;
-            width: 100%;
-            margin: $size-sm 0 ;
-          }
-          .techStack {
-            margin-bottom: $size-sm;
-            .col {
-              margin-bottom: 0; // $size-s;
-              svg {
-                display: block;
-                height: $size-sm;
-                margin: auto;
-                &.passive {
-                  fill-opacity: 0.4;
-                }
-              }
-            }
-          }
-        }
+        margin: 1rem auto
       }
     }
     .uxSkills {
@@ -91,9 +63,33 @@
   font-size: 0.95rem;
 }
 
+.skills {
+  @include grid;
+  .menuGrid {
+    grid-template-rows: auto fit-content(200px) auto auto;
+    grid-template-columns: auto auto auto;
+    h1 {
+      grid-area: 2 / 2 / 2 / 2;
+    }
+    .innerMenuGrid {
+      grid-area: 3 / 3 / 3 / 2;
+      grid-template-rows: 220px 220px;
+      grid-template-columns: repeat(6, minmax(90px, 125px));
+    }
+  }
+}
+
 @media (max-width: 575px) {
-  .skills {
+  .skill {
     padding-top: $size-s;
     padding-bottom: $size-xl;
+  }
+  .skills {
+    .menuGrid {
+      .innerMenuGrid {
+        grid-template-rows: 220px 220px 220px 220px 220px 220px;
+        grid-template-columns: repeat(2, minmax(90px, 125px));
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 ---
 name: staticcharge.fi
-link: staticcharge
+id: staticcharge
 categories:
     - Web
 techStack:

@@ -1,6 +1,6 @@
 ---
 name: Evoir
-link: evoir-design
+id: evoir-design
 categories:
     - UI/UX Design
 techStack:

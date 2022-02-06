@@ -1,6 +1,6 @@
 ---
 name: Bachelor's thesis
-link: bsc
+id: bsc
 categories:
     - UI/UX Design
 techStack:

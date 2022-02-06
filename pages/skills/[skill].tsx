@@ -5,18 +5,18 @@ import { ParentSize } from "@visx/responsive";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Graph from "../../components/SkillGraph";
-import ProjectCard from "../../components/ProjectCard";
+import ProjectCard from "../../components/projects/ProjectCard";
 
 import { ProjectData } from "../projects";
+import { getAllPosts } from "../../lib/api";
 
 export interface SkillsProps {
   content: {
     title: string;
     link: string;
     skills: Skill[];
-    projectList: ProjectData[];
-    primary: string;
   };
+  projects: ProjectData[];
 }
 
 export interface Skill {
@@ -27,7 +27,8 @@ export interface Skill {
 
 const Skills: React.FC<SkillsProps> = (props) => {
   const {
-    content: { title, skills, projectList, link },
+    content: { title, skills, link },
+    projects,
   } = props;
 
   const [activeTechs, setActiveTechs] = useState<string[]>([]);
@@ -38,7 +39,7 @@ const Skills: React.FC<SkillsProps> = (props) => {
       : setActiveTechs([...activeTechs, tech]);
   };
 
-  const sortedProjectList = projectList.sort((a, b) => {
+  const sortedProjectList = projects.sort((a, b) => {
     let occurencesInA = 0;
     let occurencesInB = 0;
     activeTechs.forEach((element) =>
@@ -64,8 +65,8 @@ const Skills: React.FC<SkillsProps> = (props) => {
           content={`My name is Jere, and I design stuff. Read about my ${title} skills on this page.`}
         />
       </Head>
-      <NavBar url={"/projects"} />
-      <main className={`${link} skills animated`}>
+      <NavBar url={"/skills"} />
+      <main className={`${link} skill animated`}>
         <div className={"container"}>
           {/* START OF GRAPH*/}
           <h1>{title}</h1>
@@ -90,23 +91,30 @@ const Skills: React.FC<SkillsProps> = (props) => {
             <h2>Projects</h2>
             <div className={"row projectPreviewContainer"}>
               {sortedProjectList.map((project) => (
-                <ProjectCard
-                  key={project.link}
-                  link={project.link}
-                  activeTechs={activeTechs}
-                  techStack={project.techStack}
-                  name={project.name}
-                  shortDescription={project.shortDescription}
-                />
+                <div key={project.id} className={"col-md-6"}>
+                  <ProjectCard
+                    project={project}
+                    activeTechs={activeTechs}
+                    referrer={`/skills/${link}`}
+                  />
+                </div>
               ))}
             </div>
           </div>
         </div>
       </main>
-      <Footer url={"/projects"} />
+      <Footer url={"/skills"} />
     </>
   );
 };
+
+const categories = [
+  { id: "web", name: "Web" },
+  { id: "native", name: "Native Apps" },
+  { id: "backend", name: "Backend" },
+  { id: "ci-cd", name: "CI/CD" },
+  { id: "embedded", name: "Embedded" },
+];
 
 export async function getStaticPaths() {
   return {
@@ -122,12 +130,29 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: { params: { skill: string } }) {
+  const fields: string[] = [
+    "name",
+    "id",
+    "categories",
+    "techStack",
+    "shortDescription",
+    "external",
+    "github",
+    "content",
+  ];
+
+  const allProjects = getAllPosts(
+    fields,
+    "projects",
+    categories.find((c) => c.id === context.params.skill)!.name
+  );
+
   const content = await import(
     `../../content/skills/${context.params.skill}.json`
   );
 
   return {
-    props: { content: content.default },
+    props: { content: content.default, projects: allProjects },
   };
 }
 

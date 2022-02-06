@@ -5,6 +5,8 @@ import BigLinkButton from "../components/BigLinkButton";
 import Project from "../svg/projects.svg";
 import Experience from "../svg/experience.svg";
 import About from "../svg/about.svg";
+import Skills from "../svg/skills.svg";
+import Projects from "./projects";
 
 const Home = () => (
   <>
@@ -21,43 +23,27 @@ const Home = () => (
       />
       <meta property="og:url" content="https://jere.pro" />
     </Head>
-    <main className={"indexContainer"}>
-      <div className={"container menuContainer"}>
+    <main className={"index"}>
+      <div className={"menuGrid"}>
         <h1>Menu</h1>
-        <div className={"row no-gutters"}>
-          {menu.map((button) => (
-            <BigLinkButton
-              key={button.title}
-              title={button.title}
-              link={button.link}
-              collapseOnMedium={false}
-            >
-              {button.icon}
-            </BigLinkButton>
-          ))}
+        <div className={"innerMenuGrid"}>
+          <BigLinkButton title={"About"} link={"/about"}>
+            <About />
+          </BigLinkButton>
+          <BigLinkButton title={"Experience"} link={"/experience"}>
+            <Experience />
+          </BigLinkButton>
+          <BigLinkButton title={"Projects"} link={"/projects"}>
+            <Project />
+          </BigLinkButton>
+          <BigLinkButton title={"Skills"} link={"/skills"}>
+            <Skills />
+          </BigLinkButton>
         </div>
       </div>
     </main>
     <Footer url={""} />
   </>
 );
-
-const menu: { title: string; link: string; icon: JSX.Element }[] = [
-  {
-    title: "Projects",
-    link: "/projects",
-    icon: <Project />,
-  },
-  {
-    title: "About",
-    link: "/about",
-    icon: <About />,
-  },
-  {
-    title: "Experience",
-    link: "/experience",
-    icon: <Experience />,
-  },
-];
 
 export default Home;

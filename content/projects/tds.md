@@ -1,6 +1,6 @@
 ---
 name: tamperedebatesociety.fi
-link: tds
+id: tds
 categories:
     - Web
 techStack:

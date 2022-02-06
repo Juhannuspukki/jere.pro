@@ -1,6 +1,6 @@
 ---
 name: muistola.fi
-link: muistola
+id: muistola
 categories:
     - Web
 techStack:

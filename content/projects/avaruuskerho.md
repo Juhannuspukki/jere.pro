@@ -1,6 +1,6 @@
 ---
 name: avaruuskerho.fi
-link: avaruuskerho
+id: avaruuskerho
 categories:
     - Web
 techStack:

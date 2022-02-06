@@ -1,6 +1,6 @@
 ---
 name: 4D QR code
-link: qr
+id: qr
 categories:
     - Embedded
 techStack:

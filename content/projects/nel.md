@@ -1,6 +1,6 @@
 ---
 name: neuroeventlabs.com
-link: nel
+id: nel
 categories:
     - Web
 techStack:

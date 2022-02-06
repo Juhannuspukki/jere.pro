@@ -1,46 +1,148 @@
-.projectContainer {
-  padding: $size-l $size-s;
-  .stackLevel {
-    .projectTitle {
-      margin-bottom: 50px;
+.post {
+  padding: $size-l 0;
+  .container {
+    max-width: 768px;
+    text-align: center;
+    .hero-desktop, .hero-mobile {
+      width: 100%;
+      min-height: 100%;
+      border-radius: $border-radius-size;
     }
-    .projectList {
-      display: flex;
-      align-items: center;
+    .hero-mobile {
+      display: none;
+    }
+    .postExternalLink {
+      font-weight: bold;
+      display: block;
+      margin: $size-s 0;
+    }
+    h1 {
+      font-size: $size-sm;
+      margin: $size-m 0 $size-sm 0;
+    }
+    .content {
+      text-align: left;
+      margin-top: $size-s;
       a {
-        display: block;
-        font-size: $size-sm;
+        text-decoration: underline;
       }
     }
-    .projectLinkContainer {
-      .vectorLink {
+  }
+  .techStack {
+    .col {
+      margin-bottom: $size-s;
+      svg {
         display: block;
-        max-height: $size-l;
-        max-width: $size-l;
-        margin: $size-ml auto $size-sm auto;
+        margin: 0 auto $size-xs;
+        height: $size-m;
+      }
+      span {
       }
     }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  width: 30rem;
+  border-right: 1px dashed;
+  overflow: auto;
+  max-height: 100vh;
+  .category {
+    position: relative;
+    display: flex;
+    border-top: 1px dashed;
+    &:first-of-type {
+      border-top: none;
+    }
+    .skillSidebar {
+      top: 0;
+      width: 5rem;
+      border-right: 1px dashed;
+      text-align: center;
+      .stickyTitleContainer {
+        position: sticky;
+        top: 0;
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        .rotatedTitle {
+          writing-mode: vertical-rl;
+          transform: rotate(-180deg);
+          border-top: 1px dashed;
+          line-height: calc(5rem - 1px); /* -1px for the bloody border */
+          padding: 1rem 0;
+        }
+      }
+      .filterToggle {
+        cursor: pointer;
+        background-color: transparent;
+        margin: 0.5rem 0.5rem 2rem 0.5rem;
+        padding: 0.5rem;
+        border: none
+      }
+      .skillIconContainer {
+        padding: 0 0.5rem 2rem 0.5rem;
+        width: 100%;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        svg {
+          max-width: 2rem;
+          max-height: 2rem;
+        }
+        .skillTitle {
+          margin: 0;
+          font-size: 0.8rem;
+        }
+        &.passive {
+          opacity: 0.4;
+        }
+      }
+    }
+    .projectSidebar {
+      margin-top: 2rem;
+      width: calc(100% - 5rem);
+      height: 100%;
+      .projectPreviewCardContainer {
+        margin: 0 2rem 2rem;
+      }
+    }
+  }
+}
+
+.post {
+  margin-left: 30rem;
+  .navBar {
+    width: calc(100% - 30rem)
   }
 }
 
 @media (max-width: 767px) {
-  .projectContainer {
-    .stackLevel {
-      .projectList {
-        display: block;
-        margin-bottom: $size-ml;
-        a {
-          margin: auto;
-          text-align: center
-        }
-      }
+  .sidebar {
+    display: none;
+    height: calc(100vh - 4rem);
+    &.entryPage {
+      display: block;
+      width: 100%;
+    }
+  }
+  .post {
+    margin-left: 0;
+    .navBar {
+      display: none;
+    }
+    .footer {
+      display: block;
     }
   }
 }
 
+
 @media (max-width: 575px) {
-  .projectContainer {
-    padding-top: $size-ml;
+  .post {
+    padding-top: $size-s;
     padding-bottom: $size-xl;
   }
 }

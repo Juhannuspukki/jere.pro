@@ -1,6 +1,6 @@
 ---
 name: FFT controlled LED
-link: led
+id: led
 categories:
     - Embedded
 techStack:

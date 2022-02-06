@@ -1,6 +1,6 @@
 ---
 name: Bubble Fighters
-link: bubble-fighters
+id: bubble-fighters
 categories:
     - Native Apps
 techStack:
