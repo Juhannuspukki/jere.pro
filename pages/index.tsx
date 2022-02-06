@@ -33,11 +33,11 @@ const Home = () => (
           <BigLinkButton title={"Experience"} link={"/experience"}>
             <Experience />
           </BigLinkButton>
-          <BigLinkButton title={"Projects"} link={"/projects"}>
-            <Project />
-          </BigLinkButton>
           <BigLinkButton title={"Skills"} link={"/skills"}>
             <Skills />
+          </BigLinkButton>
+          <BigLinkButton title={"Projects"} link={"/projects"}>
+            <Project />
           </BigLinkButton>
         </div>
       </div>

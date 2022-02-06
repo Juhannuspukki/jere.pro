@@ -8,8 +8,8 @@
     }
     .innerMenuGrid {
       grid-area: 3 / 3 / 3 / 2;
-      grid-template-rows: 200px 200px;
-      grid-template-columns: repeat(4, minmax(90px, 125px));
+      grid-template-rows: repeat(1, 200px);
+      grid-template-columns: repeat(8, minmax(90px, 125px));
     }
   }
 }
@@ -34,3 +34,15 @@
     text-transform: capitalize;
   }
 }
+
+@media (max-width: 767px) {
+  .index {
+    .menuGrid {
+      .innerMenuGrid {
+        grid-template-rows: repeat(4, 200px);
+        grid-template-columns: repeat(2, minmax(90px, 125px));
+      }
+    }
+  }
+}
+
