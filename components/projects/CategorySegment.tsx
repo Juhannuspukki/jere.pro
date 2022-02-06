@@ -12,7 +12,6 @@ const CategorySegment: React.FC<CategorySegmentProps> = (props) => {
   const { name, projects, skills, referrer } = props;
 
   const [activeTechs, setActiveTechs] = useState<string[]>([]);
-  const [filtersAreVisible, setFiltersAreVisible] = useState<boolean>(false);
 
   const setActiveTech = (tech: string) => {
     activeTechs.includes(tech)
@@ -31,19 +30,11 @@ const CategorySegment: React.FC<CategorySegmentProps> = (props) => {
           <h2 className={"rotatedTitle"}>{name}</h2>
         </div>
         {name !== "UI/UX Design" && (
-          <button
-            onClick={() => setFiltersAreVisible(!filtersAreVisible)}
-            className={"filterToggle chameleon highLightOnHover"}
-          >
-            {filtersAreVisible ? (
-              <strong>Hide filters</strong>
-            ) : (
-              <strong>Show filters</strong>
-            )}
-          </button>
+          <p>
+            <strong>Filters</strong>
+          </p>
         )}
         {name !== "UI/UX Design" &&
-          filtersAreVisible &&
           skills.map((skill) => {
             const Icon = require(`../../svg/graphsymbols/${slugify(
               skill.icon
