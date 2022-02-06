@@ -16,3 +16,32 @@ $size-m: 2rem;
 $size-ml: 4rem;
 $size-l: 6rem;
 $size-xl: 8rem;
+
+@mixin grid {
+  position: absolute;
+  display: grid;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-top: $size-ml 0;
+  .menuGrid {
+    display: grid;
+    place-self: center;
+    // grid-template-rows: auto fit-content(200px) auto auto;
+    // grid-template-columns: auto auto auto;
+    padding: $size-ml 0;
+    h1 {
+      // grid-area: 2 / 2 / 2 / 2;
+      margin-bottom: $size-ml;
+    }
+    .innerMenuGrid {
+      display: grid;
+      place-self: center;
+      // grid-area: 3 / 3 / 3 / 2;
+      // grid-template-rows: 220px 220px;
+      // grid-template-columns: repeat(6, minmax(90px, 125px));
+    }
+  }
+}

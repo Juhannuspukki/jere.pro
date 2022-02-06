@@ -1,9 +1,10 @@
 ---
 name: Full Stack Open
-link: full-stack-open
+id: full-stack-open
 categories:
     - Web
     - Backend
+    - CI/CD
 techStack:
     - React.js
     - Node.js

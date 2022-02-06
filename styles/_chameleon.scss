@@ -1,10 +1,10 @@
 // For black background
 @media (prefers-color-scheme: dark) {
-  .chameleonContainer, .dotProLogoContainer {
+  .chameleonContainer, .dotProLogoContainer, .sidebar {
     background-color: $colorBlack;
     color: $colorWhite;
 
-    .navBar, .footer {
+    .navBar, .footer, {
       background-color: $colorTransparentBlack;
     }
 
@@ -47,11 +47,11 @@
 
 // For white background
 @media (prefers-color-scheme: light) {
-  .chameleonContainer, .dotProLogoContainer {
+  .chameleonContainer, .dotProLogoContainer, .sidebar {
     background-color: $colorWhite;
     color: $colorBlack;
 
-    .navBar, .footer {
+    .navBar, .footer, .sidebar {
       background-color: $colorTransparentWhite;
     }
 

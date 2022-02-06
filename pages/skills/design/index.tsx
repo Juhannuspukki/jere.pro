@@ -3,13 +3,17 @@ import Head from "next/head";
 
 import NavBar from "../../../components/NavBar";
 import Footer from "../../../components/Footer";
-import ProjectCard from "../../../components/ProjectCard";
+import ProjectCard from "../../../components/projects/ProjectCard";
 
 import slugify from "../../../lib/slugify";
 import { SkillsProps } from "../[skill]";
+import { getAllPosts } from "../../../lib/api";
 
-const Skills: React.FC<SkillsProps> = ({ content }) => {
-  const { title, skills, projectList, link } = content;
+const Skills: React.FC<SkillsProps> = (props) => {
+  const {
+    content: { title, skills, link },
+    projects,
+  } = props;
 
   return (
     <>
@@ -26,7 +30,7 @@ const Skills: React.FC<SkillsProps> = ({ content }) => {
         />
       </Head>
       <NavBar url={"/projects"} />
-      <main className={`${link} skills animated`}>
+      <main className={`${link} skill animated`}>
         <div className={"container"}>
           {/* START OF UX*/}
           <h1>{title}</h1>
@@ -55,14 +59,14 @@ const Skills: React.FC<SkillsProps> = ({ content }) => {
           <div className={"projectList"}>
             <h2>Projects</h2>
             <div className={"row projectPreviewContainer"}>
-              {projectList.map((project) => (
-                <ProjectCard
-                  key={project.link}
-                  link={project.link}
-                  activeTechs={[]}
-                  name={project.name}
-                  shortDescription={project.shortDescription}
-                />
+              {projects.map((project) => (
+                <div key={project.id} className={"col-md-6"}>
+                  <ProjectCard
+                    project={project}
+                    activeTechs={[]}
+                    referrer={`/skills/${link}`}
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -74,10 +78,23 @@ const Skills: React.FC<SkillsProps> = ({ content }) => {
 };
 
 export async function getStaticProps() {
+  const fields: string[] = [
+    "name",
+    "id",
+    "categories",
+    "techStack",
+    "shortDescription",
+    "external",
+    "github",
+    "content",
+  ];
+
+  const allProjects = getAllPosts(fields, "projects", "UI/UX Design");
+
   const content = await import(`../../../content/skills/design.json`);
 
   return {
-    props: { content: content.default },
+    props: { content: content.default, projects: allProjects },
   };
 }
 

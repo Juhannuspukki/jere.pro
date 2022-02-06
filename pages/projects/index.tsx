@@ -1,91 +1,79 @@
 import React from "react";
 import Head from "next/head";
-import NavBar from "../../components/NavBar";
-import Footer from "../../components/Footer";
-import BigLinkButton from "../../components/BigLinkButton";
+import Layout from "../../components/projects/Layout";
 
-import UiDesign from "../../svg/projects/uidesign.svg";
-import Backend from "../../svg/projects/backend.svg";
-import Frontend from "../../svg/projects/frontend.svg";
-import DesktopAndMobile from "../../svg/projects/desktopmobile.svg";
-import CICD from "../../svg/projects/ci-cd.svg";
-import Embedded from "../../svg/projects/embedded.svg";
+import { getAllPosts } from "../../lib/api";
+import { Skill } from "../skills/[skill]";
+
+interface ProjectIndexProps {
+  allProjects: ProjectData[];
+  skills: { name: string; skills: Skill[] }[];
+}
 
 export interface ProjectData {
   name: string;
-  link: string;
-  external: string | null;
-  github: string | null;
+  id: string;
+  categories: string[];
   techStack: string[];
   shortDescription: string;
+  external?: string;
+  github?: string;
   content: string;
 }
 
-const Index = () => (
-  <div className={"indexContainer"}>
-    <Head>
-      <title>jere.pro - Projects</title>
-      <meta property="og:title" content="jere.pro - Projects" />
-      <meta
-        property="og:description"
-        content="Yo, my name is Jere, and I design stuff. Read about my more or less awesome projects here!"
-      />
-      <meta
-        name="description"
-        content="Yo, my name is Jere, and I design stuff. Read about my more or less awesome projects here!"
-      />
-    </Head>
-    <NavBar url={"/"} />
-    <main className={"container menuContainer animated"}>
-      <h1>Projects</h1>
-      <div className={"row no-gutters"}>
-        {menu.map((button) => (
-          <BigLinkButton
-            key={button.title}
-            title={button.title}
-            link={button.link}
-            collapseOnMedium={true}
-          >
-            {button.icon}
-          </BigLinkButton>
-        ))}
-      </div>
-    </main>
-    <Footer url={"/"} />
-  </div>
-);
+const ProjectIndex: React.FC<ProjectIndexProps> = ({ allProjects, skills }) => {
+  return (
+    <>
+      <Head>
+        <title>jere.pro - Projects</title>
+        <meta property="og:title" content="jere.pro - Projects" />
+        <meta
+          property="og:description"
+          content="Yo, my name is Jere, and I design stuff. This page contains a listing of some of my projects."
+        />
+        <meta
+          name="description"
+          content="Yo, my name is Jere, and I design stuff. This page contains a listing of some of my projects."
+        />
+      </Head>
+      <Layout allProjects={allProjects} skills={skills} />
+    </>
+  );
+};
 
-const menu = [
-  {
-    title: "UI/UX design",
-    link: "/skills/design",
-    icon: <UiDesign />,
-  },
-  {
-    title: "Web",
-    link: "/skills/web",
-    icon: <Frontend />,
-  },
-  {
-    title: "Native Apps",
-    link: "/skills/native",
-    icon: <DesktopAndMobile />,
-  },
-  {
-    title: "CI/CD",
-    link: "/skills/ci-cd",
-    icon: <CICD />,
-  },
-  {
-    title: "Backend",
-    link: "/skills/backend",
-    icon: <Backend />,
-  },
-  {
-    title: "Embedded",
-    link: "/skills/embedded",
-    icon: <Embedded />,
-  },
-];
+export async function getStaticProps() {
+  const fields: string[] = [
+    "name",
+    "id",
+    "categories",
+    "techStack",
+    "shortDescription",
+    "external",
+    "github",
+    "content",
+  ];
 
-export default Index;
+  const allProjects = getAllPosts(fields, "projects");
+
+  const designSkills = await import(`../../content/skills/design.json`);
+  const webSkills = await import(`../../content/skills/web.json`);
+  const backendSkills = await import(`../../content/skills/backend.json`);
+  const nativeSkills = await import(`../../content/skills/native.json`);
+  const cicdSkills = await import(`../../content/skills/ci-cd.json`);
+  const embeddedSkills = await import(`../../content/skills/embedded.json`);
+
+  const skills = [
+    { name: "UI/UX Design", skills: designSkills.default.skills },
+    { name: "Web", skills: webSkills.default.skills },
+    { name: "Backend", skills: backendSkills.default.skills },
+    { name: "Native", skills: nativeSkills.default.skills },
+    { name: "CI/CD", skills: cicdSkills.default.skills },
+    { name: "Embedded", skills: embeddedSkills.default.skills },
+  ];
+
+  return {
+    props: { allProjects, skills },
+  };
+}
+
+export default ProjectIndex;

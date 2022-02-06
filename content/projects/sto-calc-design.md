@@ -1,6 +1,6 @@
 ---
 name: STO Finexter calculator
-link: sto-calc-design
+id: sto-calc-design
 categories:
     - UI/UX Design
 techStack:

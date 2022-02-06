@@ -1,6 +1,6 @@
 ---
 name: staticcharge.fi
-link: staticcharge-design
+id: staticcharge-design
 categories:
     - UI/UX Design
 techStack:

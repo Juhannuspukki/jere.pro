@@ -1,6 +1,6 @@
 ---
 name: jere.pro
-link: dotpro
+id: dotpro
 categories:
     - Web
     - Backend

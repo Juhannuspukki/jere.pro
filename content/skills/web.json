@@ -13,7 +13,7 @@
     {"interest": 15, "confidence": 25, "icon": "Webpack"},
     {"interest": 20, "confidence": 10, "icon": "Angular"},
     {"interest": 55, "confidence": 0, "icon": "Vue.js"},
-    {"interest": 94, "confidence": 0, "icon": "WebAssembly"},
+    {"interest": 94, "confidence": 0, "icon": "WASM"},
     {"interest": 55, "confidence": 75, "icon": "Hugo"},
     {"interest": 50, "confidence": 40, "icon": "D3.js"}
   ],

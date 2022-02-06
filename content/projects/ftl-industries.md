@@ -1,6 +1,6 @@
 ---
 name: FTL Industries website
-link: ftl-industries
+id: ftl-industries
 categories:
     - Web
 techStack:

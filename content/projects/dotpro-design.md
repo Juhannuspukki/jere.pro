@@ -1,6 +1,6 @@
 ---
 name: jere.pro
-link: dotpro-design
+id: dotpro-design
 categories:
     - UI/UX Design
 techStack:

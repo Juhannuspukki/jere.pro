@@ -41,7 +41,16 @@ export function getPostBySlug(
   return items;
 }
 
-export function getAllPosts(fields: string[] = [], path: string) {
+export function getAllPosts(
+  fields: string[] = [],
+  path: string,
+  category?: string
+) {
   const slugs = getPostSlugs(path);
-  return slugs.map((slug) => getPostBySlug(slug, fields, path));
+  const posts = slugs.map((slug) => getPostBySlug(slug, fields, path));
+
+  // if a category parameter was passed, filter posts by that category
+  return category
+    ? posts.filter((post) => post.categories.includes(category))
+    : posts;
 }

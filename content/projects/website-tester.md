@@ -1,6 +1,6 @@
 ---
 name: Website Tester
-link: website-tester
+id: website-tester
 categories:
     - Native Apps
 techStack:

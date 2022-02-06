@@ -1,6 +1,6 @@
 ---
 name: STO Finexter calculator
-link: sto-calc
+id: sto-calc
 categories:
     - Web
 techStack:

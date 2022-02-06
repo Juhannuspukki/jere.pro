@@ -1,6 +1,6 @@
 ---
 name: pollex.club
-link: pollex
+id: pollex
 categories:
     - Web
 techStack:

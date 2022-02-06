@@ -1,6 +1,6 @@
 ---
 name: course-o-meter.com
-link: course-o-meter
+id: course-o-meter
 categories:
     - Web
     - CI/CD
