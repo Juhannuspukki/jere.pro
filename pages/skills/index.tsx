@@ -12,7 +12,7 @@ import CICD from "../../svg/projects/ci-cd.svg";
 import Embedded from "../../svg/projects/embedded.svg";
 
 const Index = () => (
-  <div className={"indexContainer"}>
+  <div className={"indexContainer animated"}>
     <Head>
       <title>jere.pro - Projects</title>
       <meta property="og:title" content="jere.pro - Projects" />
