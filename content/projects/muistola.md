@@ -1,6 +1,7 @@
 ---
 name: muistola.fi
 id: muistola
+frame: Macbook
 categories:
     - Web
 techStack:

@@ -1,6 +1,7 @@
 ---
 name: neuroeventlabs.com
 id: nel
+frame: Macbook
 categories:
     - Web
 techStack:

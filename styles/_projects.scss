@@ -3,13 +3,41 @@
   .container {
     max-width: 768px;
     text-align: center;
-    .hero-desktop, .hero-mobile {
+    .hero {
+      position: relative;
+      max-width: 768px;
       width: 100%;
-      min-height: 100%;
-      border-radius: $border-radius-size;
-    }
-    .hero-mobile {
-      display: none;
+      .macbookFrame {
+        max-width: 768px;
+        width: 100%;
+      }
+      .iPhoneFrame {
+        max-height: 424px;
+        width: 100%;
+      }
+      .macbookHeroImage {
+        position: absolute;
+        left: 50%;
+        top: 7%;
+        transform: translateX(-50%);
+        z-index: -1;
+        width: 75%;
+        height: 81%;
+        object-fit: cover;
+      }
+      .iPhoneHeroImage {
+        position: absolute;
+        left: calc(50% - 1px);
+        top: 2.5%;
+        transform: translateX(-50%);
+        z-index: -1;
+        height: 93.5%;
+        object-fit: cover;
+      }
+      .heroImage {
+        width: 100%;
+        border-radius: $border-radius-size;
+      }
     }
     .postExternalLink {
       font-weight: bold;
@@ -142,7 +170,7 @@
 
 @media (max-width: 575px) {
   .post {
-    padding-top: $size-s;
+    padding-top: $size-m;
     padding-bottom: $size-xl;
   }
 }

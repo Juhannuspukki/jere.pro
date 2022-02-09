@@ -3,10 +3,14 @@ import React from "react";
 import slugify from "../../lib/slugify";
 import ReactMarkdown from "react-markdown";
 
+import MacbookFrame from "../../svg/macbookframe.svg";
+import PhoneFrame from "../../svg/iphoneframe.svg";
+
 interface PostProps {
   project: {
     name: string;
     id: string;
+    frame?: string;
     content: string;
     techStack?: string[];
     external?: string;
@@ -16,24 +20,36 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = (props) => {
   const {
-    project: { name, id, techStack, content, external, github },
+    project: { name, id, frame, techStack, content, external, github },
   } = props;
+
+  const heroClass = () => {
+    switch (frame) {
+      case "Macbook":
+        return "macbookHeroImage";
+      case "iPhone":
+        return "iPhoneHeroImage";
+      default:
+        return "heroImage";
+    }
+  };
 
   return (
     <main>
       <div className={"container"}>
-        <video
-          loop={true}
-          autoPlay={true}
-          muted={true}
-          playsInline={true}
-          controls={false}
-          className={"hero-desktop"}
-          aria-hidden={"true"}
-          poster={`/img/projects/${id}/desktop.jpg`}
-        >
-          <source src={`/img/projects/${id}/desktop.mp4`} type="video/mp4" />
-        </video>
+        <div className={"hero"}>
+          {frame === "Macbook" && <MacbookFrame className={"macbookFrame"} />}
+          {frame === "iPhone" && <PhoneFrame className={"iPhoneFrame"} />}
+          <video
+            loop
+            muted
+            autoPlay
+            playsInline
+            src={`/img/projects/${id}/desktop.mp4`}
+            poster={`/img/projects/${id}/desktop.jpg`}
+            className={heroClass()}
+          />
+        </div>
         <h1>{name}</h1>
         <div className="techStack container">
           <div className="row">
@@ -63,7 +79,7 @@ const Post: React.FC<PostProps> = (props) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                See in action →
+                Go to project →
               </a>
             </div>
           )}

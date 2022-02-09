@@ -1,6 +1,7 @@
 ---
 name: Bubble Fighters
 id: bubble-fighters-design
+frame: Macbook
 categories:
     - UI/UX Design
 techStack:

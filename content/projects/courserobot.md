@@ -1,6 +1,7 @@
 ---
 name: '@CourseRobot on Telegram'
 id: courserobot
+frame: iPhone
 categories:
     - Backend
     - CI/CD

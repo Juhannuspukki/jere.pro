@@ -7,7 +7,6 @@ import Post from "./Post";
 import CategorySegment from "./CategorySegment";
 import NavBar from "../NavBar";
 import Footer from "../Footer";
-import { array } from "prop-types";
 
 interface ProjectProps {
   allProjects: ProjectData[];
@@ -23,6 +22,7 @@ export interface ProjectCategory {
 interface InitialProject {
   name: string;
   id: string;
+  frame: string;
   techStack: string[];
   content: string;
 }
@@ -30,6 +30,7 @@ interface InitialProject {
 const initialProject: InitialProject = {
   name: "Projects",
   id: "Index",
+  frame: "Macbook",
   techStack: [],
   content:
     "On this page you can find a (non-comprehensive) list of some of my projects. Feel free to look around! You can filter\n" +

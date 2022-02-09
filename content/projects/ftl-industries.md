@@ -1,6 +1,7 @@
 ---
 name: FTL Industries website
 id: ftl-industries
+frame: Macbook
 categories:
     - Web
 techStack:

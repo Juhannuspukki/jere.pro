@@ -1,6 +1,7 @@
 ---
 name: pollex.club
 id: pollex
+frame: Macbook
 categories:
     - Web
 techStack:

@@ -1,6 +1,7 @@
 ---
 name: Master's thesis
 id: msc
+frame: Macbook
 categories:
     - Web
     - Backend

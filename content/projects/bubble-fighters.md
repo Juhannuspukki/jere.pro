@@ -1,6 +1,7 @@
 ---
 name: Bubble Fighters
 id: bubble-fighters
+frame: Macbook
 categories:
     - Native Apps
 techStack:

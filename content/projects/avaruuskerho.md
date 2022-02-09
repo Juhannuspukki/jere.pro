@@ -1,6 +1,7 @@
 ---
 name: avaruuskerho.fi
 id: avaruuskerho
+frame: Macbook
 categories:
     - Web
 techStack:

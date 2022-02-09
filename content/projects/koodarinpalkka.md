@@ -1,6 +1,7 @@
 ---
 name: koodarinpalkka.fi
-id: koodarinpalkka
+id: koodarinpalkka 
+frame: Macbook
 categories:
     - Web
 techStack:

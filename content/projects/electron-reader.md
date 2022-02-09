@@ -1,6 +1,7 @@
 ---
 name: Electron Reader
 id: electron-reader
+frame: Macbook
 categories:
     - Native Apps
 techStack:

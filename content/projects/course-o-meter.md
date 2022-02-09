@@ -1,6 +1,7 @@
 ---
 name: course-o-meter.com
 id: course-o-meter
+frame: Macbook
 categories:
     - Web
     - CI/CD

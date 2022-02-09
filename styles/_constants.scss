@@ -29,19 +29,13 @@ $size-xl: 8rem;
   .menuGrid {
     display: grid;
     place-self: center;
-    // grid-template-rows: auto fit-content(200px) auto auto;
-    // grid-template-columns: auto auto auto;
     padding: $size-ml 0;
     h1 {
-      // grid-area: 2 / 2 / 2 / 2;
       margin-bottom: $size-ml;
     }
     .innerMenuGrid {
       display: grid;
       place-self: center;
-      // grid-area: 3 / 3 / 3 / 2;
-      // grid-template-rows: 220px 220px;
-      // grid-template-columns: repeat(6, minmax(90px, 125px));
     }
   }
 }

@@ -13,6 +13,7 @@ interface ProjectIndexProps {
 export interface ProjectData {
   name: string;
   id: string;
+  frame?: string;
   categories: string[];
   techStack: string[];
   shortDescription: string;
@@ -45,6 +46,7 @@ export async function getStaticProps() {
   const fields: string[] = [
     "name",
     "id",
+    "frame",
     "categories",
     "techStack",
     "shortDescription",

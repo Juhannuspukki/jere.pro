@@ -1,6 +1,7 @@
 ---
 name: staticcharge.fi
 id: staticcharge
+frame: Macbook
 categories:
     - Web
 techStack:

@@ -1,6 +1,7 @@
 ---
 name: Evoir
 id: evoir-design
+frame: Macbook
 categories:
     - UI/UX Design
 techStack:

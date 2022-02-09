@@ -1,6 +1,7 @@
 ---
 name: jere.pro
 id: dotpro
+frame: Macbook
 categories:
     - Web
     - Backend

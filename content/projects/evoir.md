@@ -1,6 +1,7 @@
 ---
 name: Evoir
 id: evoir
+frame: Macbook
 categories:
     - Web
     - Backend

@@ -1,6 +1,7 @@
 ---
 name: tamperedebatesociety.fi
 id: tds
+frame: Macbook
 categories:
     - Web
 techStack:

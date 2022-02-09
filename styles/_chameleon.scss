@@ -65,6 +65,13 @@
       border-color: $colorBlack;
     }
 
+    .macbookFrame {
+      path {
+        fill: $colorWhite;
+        stroke: $colorBlack;
+      }
+    }
+
     .chameleonStroke {
       stroke: $colorBlack;
     }

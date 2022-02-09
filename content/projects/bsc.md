@@ -1,6 +1,7 @@
 ---
 name: Bachelor's thesis
 id: bsc
+frame: Macbook
 categories:
     - UI/UX Design
 techStack:

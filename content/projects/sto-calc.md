@@ -1,6 +1,7 @@
 ---
 name: STO Finexter calculator
 id: sto-calc
+frame: iPhone
 categories:
     - Web
 techStack:
