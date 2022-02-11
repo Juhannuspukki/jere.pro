@@ -57,8 +57,25 @@
     }
   }
   .techStack {
-    .col {
+    display: grid;
+    .techIcon {
+      grid-row: 1;
       margin-bottom: $size-s;
+
+      @media (max-width: 575px) {
+        // set an arbitrary value for max number of techstack icons here
+        $n:12;
+
+        // divide items equally to two rows
+        // start index determines how many items there must be before items are divided on two rows
+        @for $i from 3 through $n {
+          &:nth-child(#{$i}):nth-last-child(#{$i + 1}) ~ *,
+          &:nth-child(#{$i + 1}):nth-last-child(#{$i + 1}) ~ * {
+            grid-row:2
+          }
+        }
+      }
+
       svg {
         display: block;
         margin: 0 auto $size-xs;
@@ -147,7 +164,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .sidebar {
     display: none;
     height: calc(100vh - 4rem);

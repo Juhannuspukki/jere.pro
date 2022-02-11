@@ -51,21 +51,19 @@ const Post: React.FC<PostProps> = (props) => {
           />
         </div>
         <h1>{name}</h1>
-        <div className="techStack container">
-          <div className="row">
-            {techStack &&
-              techStack.map((tech) => {
-                const Icon = require(`../../svg/graphsymbols/${slugify(
-                  tech
-                )}.svg`).default;
-                return (
-                  <div key={tech + "-icon"} className="col">
-                    <Icon className={"chameleon"} />
-                    <span>{tech}</span>
-                  </div>
-                );
-              })}
-          </div>
+        <div className="techStack">
+          {techStack &&
+            techStack.map((tech) => {
+              const Icon = require(`../../svg/graphsymbols/${slugify(
+                tech
+              )}.svg`).default;
+              return (
+                <div key={tech + "-icon"} className="techIcon">
+                  <Icon className={"chameleon"} />
+                  <span>{tech}</span>
+                </div>
+              );
+            })}
         </div>
         <ReactMarkdown className="content" linkTarget="_blank">
           {content}
