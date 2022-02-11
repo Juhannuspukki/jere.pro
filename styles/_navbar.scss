@@ -1,16 +1,18 @@
 .navBar {
   position: fixed;
-  width: 100%;
   z-index: 1130;
   top: 0;
+  width: 100%;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .arrow {
-    width: 2rem;
-    margin: $size-s 0;
+  .navBarLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .arrow {
+      width: 2rem;
+      margin: $size-s 0;
+    }
   }
 }
 

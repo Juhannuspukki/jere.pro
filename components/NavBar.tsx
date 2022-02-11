@@ -8,15 +8,13 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ url }) => {
   return (
-    <header>
+    <header className={"navBar"}>
       <Link href={url}>
-        <a className={"navBar"}>
-          <div>
-            <Arrow
-              className={"arrow chameleon highLightOnHover"}
-              aria-label={"Previous page"}
-            />
-          </div>
+        <a className={"navBarLink"}>
+          <Arrow
+            className={"arrow chameleon highLightOnHover"}
+            aria-label={"Previous page"}
+          />
         </a>
       </Link>
     </header>

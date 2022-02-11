@@ -112,14 +112,14 @@ const PostPreview: React.FC<ProjectProps> = ({ allProjects, skills }) => {
   };
 
   return (
-    <div className={"animated"}>
-      <aside
-        className={
-          router.query.project
-            ? "sidebar chameleon"
-            : "sidebar chameleon entryPage"
-        }
-      >
+    <div
+      className={
+        router.query.project
+          ? "animated layoutGrid"
+          : "animated layoutGrid entryPage"
+      }
+    >
+      <aside className={"sidebar chameleon"}>
         <nav>
           {projectsByCategory.map((category) => (
             <CategorySegment
@@ -135,8 +135,8 @@ const PostPreview: React.FC<ProjectProps> = ({ allProjects, skills }) => {
       <div className={"post"}>
         <NavBar url={referrer ? referrer : "/"} />
         <Post project={activeProject} />
-        <Footer url={footerLink()} />
       </div>
+      <Footer url={footerLink()} />
     </div>
   );
 };

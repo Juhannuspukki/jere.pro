@@ -1,180 +1,110 @@
-.post {
-  padding: $size-l 0;
-  .container {
-    max-width: 768px;
-    text-align: center;
-    .hero {
+.layoutGrid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 28rem auto;
+  .sidebar {
+    z-index: 500;
+    border-right: 1px dashed;
+    overflow: auto;
+    max-height: 100vh;
+    width: 100%;
+    grid-column: 1;
+    .category {
       position: relative;
-      max-width: 768px;
-      width: 100%;
-      .macbookFrame {
-        max-width: 768px;
-        width: 100%;
+      display: flex;
+      border-top: 1px dashed;
+      &:first-of-type {
+        border-top: none;
       }
-      .iPhoneFrame {
-        max-height: 424px;
-        width: 100%;
+      &:last-of-type {
+        .projectSidebar {
+          padding-bottom: $size-l;
+        }
       }
-      .macbookHeroImage {
-        position: absolute;
-        left: 50%;
-        top: 7%;
-        transform: translateX(-50%);
-        z-index: -1;
-        width: 75%;
-        height: 81%;
-        object-fit: cover;
-      }
-      .iPhoneHeroImage {
-        position: absolute;
-        left: calc(50% - 1px);
-        top: 2.5%;
-        transform: translateX(-50%);
-        z-index: -1;
-        height: 93.5%;
-        object-fit: cover;
-      }
-      .heroImage {
-        width: 100%;
-        border-radius: $border-radius-size;
-      }
-    }
-    .postExternalLink {
-      font-weight: bold;
-      display: block;
-      margin: $size-s 0;
-    }
-    h1 {
-      font-size: $size-sm;
-      margin: $size-m 0 $size-sm 0;
-    }
-    .content {
-      text-align: left;
-      margin-top: $size-s;
-      a {
-        text-decoration: underline;
-      }
-    }
-  }
-  .techStack {
-    display: grid;
-    .techIcon {
-      grid-row: 1;
-      margin-bottom: $size-s;
-
-      @media (max-width: 575px) {
-        // set an arbitrary value for max number of techstack icons here
-        $n:12;
-
-        // divide items equally to two rows
-        // start index determines how many items there must be before items are divided on two rows
-        @for $i from 3 through $n {
-          &:nth-child(#{$i}):nth-last-child(#{$i + 1}) ~ *,
-          &:nth-child(#{$i + 1}):nth-last-child(#{$i + 1}) ~ * {
-            grid-row:2
+      .skillSidebar {
+        top: 0;
+        width: 5rem;
+        border-right: 1px dashed;
+        text-align: center;
+        .stickyTitleContainer {
+          position: sticky;
+          top: 0;
+          -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
+          .rotatedTitle {
+            writing-mode: vertical-rl;
+            transform: rotate(-180deg);
+            border-top: 1px dashed;
+            line-height: calc(5rem - 1px); /* -1px for the bloody border */
+            padding: 1rem 0;
+          }
+        }
+        .filterToggle {
+          cursor: pointer;
+          background-color: transparent;
+          margin: 0.5rem 0.5rem 2rem 0.5rem;
+          padding: 0.5rem;
+          border: none
+        }
+        .skillIconContainer {
+          padding: 0 0.5rem 2rem 0.5rem;
+          width: 100%;
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          svg {
+            max-width: 2rem;
+            max-height: 2rem;
+          }
+          .skillTitle {
+            margin: 0;
+            font-size: 0.8rem;
+          }
+          &.passive {
+            opacity: 0.4;
           }
         }
       }
-
-      svg {
-        display: block;
-        margin: 0 auto $size-xs;
-        height: $size-m;
-      }
-      span {
-      }
-    }
-  }
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  z-index: 500;
-  width: 30rem;
-  border-right: 1px dashed;
-  overflow: auto;
-  max-height: 100vh;
-  .category {
-    position: relative;
-    display: flex;
-    border-top: 1px dashed;
-    &:first-of-type {
-      border-top: none;
-    }
-    .skillSidebar {
-      top: 0;
-      width: 5rem;
-      border-right: 1px dashed;
-      text-align: center;
-      .stickyTitleContainer {
-        position: sticky;
-        top: 0;
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        backdrop-filter: saturate(180%) blur(20px);
-        .rotatedTitle {
-          writing-mode: vertical-rl;
-          transform: rotate(-180deg);
-          border-top: 1px dashed;
-          line-height: calc(5rem - 1px); /* -1px for the bloody border */
-          padding: 1rem 0;
-        }
-      }
-      .filterToggle {
-        cursor: pointer;
-        background-color: transparent;
-        margin: 0.5rem 0.5rem 2rem 0.5rem;
-        padding: 0.5rem;
-        border: none
-      }
-      .skillIconContainer {
-        padding: 0 0.5rem 2rem 0.5rem;
-        width: 100%;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        svg {
-          max-width: 2rem;
-          max-height: 2rem;
-        }
-        .skillTitle {
-          margin: 0;
-          font-size: 0.8rem;
-        }
-        &.passive {
-          opacity: 0.4;
+      .projectSidebar {
+        margin-top: 2rem;
+        width: calc(100% - 5rem);
+        height: 100%;
+        .projectPreviewCardContainer {
+          margin: 0 2rem 2rem;
         }
       }
     }
-    .projectSidebar {
-      margin-top: 2rem;
-      width: calc(100% - 5rem);
-      height: 100%;
-      .projectPreviewCardContainer {
-        margin: 0 2rem 2rem;
-      }
-    }
-  }
-}
-
-.post {
-  margin-left: 30rem;
-  .navBar {
-    width: calc(100% - 30rem)
   }
 }
 
 @media (max-width: 991px) {
-  .sidebar {
-    display: none;
-    height: calc(100vh - 4rem);
-    &.entryPage {
-      display: block;
-      width: 100%;
+  .layoutGrid {
+    grid-template-columns: 25rem auto;
+    .sidebar {
+      .category {
+        .projectSidebar {
+          margin-top: 1rem;
+          .projectPreviewCardContainer {
+            margin: 0 1rem 1rem;
+          }
+        }
+      }
     }
   }
-  .post {
-    margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  .layoutGrid {
+    grid-template-columns: 0 auto;
+    .sidebar {
+      display: none;
+    }
+    &.entryPage {
+      grid-template-columns: auto 0;
+      .sidebar {
+        display: block;
+      }
+    }
     .navBar {
       display: none;
     }
@@ -185,9 +115,3 @@
 }
 
 
-@media (max-width: 575px) {
-  .post {
-    padding-top: $size-m;
-    padding-bottom: $size-xl;
-  }
-}

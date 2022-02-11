@@ -1,0 +1,104 @@
+.post {
+  margin-bottom: $size-l;
+  width: 100%;
+  grid-column: 2;
+  overflow: auto;
+  height: 100vh;
+  .navBar {
+    position: sticky;
+  }
+  .container {
+    margin: $size-ml auto;
+    max-width: 768px;
+    text-align: center;
+    .hero {
+      position: relative;
+      max-width: 768px;
+      width: 100%;
+      .macbookFrame {
+        max-width: 768px;
+        width: 100%;
+      }
+      .iPhoneFrame {
+        max-height: 424px;
+        width: 100%;
+      }
+      .macbookHeroImage {
+        position: absolute;
+        left: 50%;
+        top: 7%;
+        transform: translateX(-50%);
+        z-index: -1;
+        width: 75%;
+        height: 81%;
+        object-fit: cover;
+      }
+      .iPhoneHeroImage {
+        position: absolute;
+        left: calc(50% - 1px);
+        top: 2.5%;
+        transform: translateX(-50%);
+        z-index: -1;
+        height: 93.5%;
+        object-fit: cover;
+      }
+      .heroImage {
+        width: 100%;
+        border-radius: $border-radius-size;
+      }
+    }
+    .postExternalLink {
+      font-weight: bold;
+      display: block;
+      margin: $size-s 0;
+    }
+    h1 {
+      font-size: $size-sm;
+      margin: $size-m 0 $size-sm 0;
+    }
+    .content {
+      text-align: left;
+      margin-top: $size-s;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+  .techStack {
+    display: grid;
+    .techIcon {
+      grid-row: 1;
+      margin-bottom: $size-s;
+
+      @media (min-width: 768px) and (max-width: 991px), (max-width: 575px) {
+        // set an arbitrary value for max number of techstack icons here
+        $n:12;
+
+        // divide items equally to two rows
+        // start index determines how many items there must be before items are divided on two rows
+        @for $i from 3 through $n {
+          &:nth-child(#{$i}):nth-last-child(#{$i + 1}) ~ *,
+          &:nth-child(#{$i + 1}):nth-last-child(#{$i + 1}) ~ * {
+            grid-row:2
+          }
+        }
+      }
+
+      svg {
+        display: block;
+        margin: 0 auto $size-xs;
+        height: $size-m;
+      }
+      span {
+      }
+    }
+  }
+}
+
+
+@media (max-width: 575px) {
+  .post {
+    padding-top: $size-m;
+    padding-bottom: $size-xl;
+  }
+}
