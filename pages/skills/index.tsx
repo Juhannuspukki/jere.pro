@@ -14,15 +14,15 @@ import Embedded from "../../svg/projects/embedded.svg";
 const Index = () => (
   <div className={"indexContainer animated"}>
     <Head>
-      <title>jere.pro - Projects</title>
-      <meta property="og:title" content="jere.pro - Projects" />
+      <title>jere.pro - Skills</title>
+      <meta property="og:title" content="jere.pro - Skills" />
       <meta
         property="og:description"
-        content="Yo, my name is Jere, and I design stuff."
+        content="My name is Jere, and I design stuff. Here are some things I have experience with."
       />
       <meta
         name="description"
-        content="Yo, my name is Jere, and I design stuff."
+        content="My name is Jere, and I design stuff. Here are some things I have experience with."
       />
     </Head>
     <NavBar url={"/"} />
