@@ -27,7 +27,7 @@ const DotPro = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <div className={fadeIn ? "animated" : undefined}>
+      <div className={fadeIn ? "animated" : "hidden"}>
         <Component {...pageProps} />
       </div>
       {showLogo && (
