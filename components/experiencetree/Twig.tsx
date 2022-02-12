@@ -39,7 +39,6 @@ const Twig: React.FC<TwigProps> = (props) => {
       y={(value) => value.yPosition}
       stroke={primary}
       strokeWidth={5}
-      strokeDasharray="1500"
       curve={curveMonotoneY}
     />
   );
