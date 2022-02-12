@@ -90,6 +90,14 @@ const Index = () => (
           An apache helicopter is armed with machine guns and missiles; it’s an
           absolute death machine!
         </p>
+        <h2>Services</h2>
+        <p>
+          I am able to offer various services related to software development
+          and user experience design through my own company, StaticCharge (VAT
+          number 2869619-3). Should the skills and experience I have suit your
+          needs, do not hesitate to contact me through any of the channels
+          listed on this page.
+        </p>
         <div className="row">
           <div className="col-md-6">
             <h3>Awards and Accolades</h3>
