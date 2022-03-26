@@ -1,6 +1,6 @@
 ---
 title: Pancakes
-image: date-cake
+image: pancakes
 source: A Laine family recipe
 ingredients:
     - 3 eggs

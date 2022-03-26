@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23c36455-4a24-4c65-8e7d-bac1c025fd2b" name="Default Changelist" comment="Add tortillas">
-      <change afterPath="$PROJECT_DIR$/content/cookbook/potatoes.md" afterDir="false" />
+    <list default="true" id="23c36455-4a24-4c65-8e7d-bac1c025fd2b" name="Default Changelist" comment="Add potatoes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,14 +148,7 @@
       <workItem from="1646654874833" duration="1890000" />
       <workItem from="1646927576860" duration="4254000" />
       <workItem from="1647533982208" duration="12364000" />
-      <workItem from="1647964221199" duration="2219000" />
-    </task>
-    <task id="LOCAL-00012" summary="Install simpleanalytics">
-      <created>1610196978224</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1610196978224</updated>
+      <workItem from="1647964221199" duration="2935000" />
     </task>
     <task id="LOCAL-00013" summary="Downgrade next.js">
       <created>1610200044671</created>
@@ -493,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647964246874</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Add potatoes">
+      <created>1647972490287</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1647972490287</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Animate certificate download button" />
     <MESSAGE value="Animate download button" />
     <MESSAGE value="Rewrite the lot in TypeScript&#10;&#10;Hail the blue orb!" />
     <MESSAGE value="Add scaling animation to skill graph" />
@@ -536,7 +535,8 @@
     <MESSAGE value="Add pasta carbonara" />
     <MESSAGE value="Add new image for minced meat pie" />
     <MESSAGE value="Add tortillas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tortillas" />
+    <MESSAGE value="Add potatoes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add potatoes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
