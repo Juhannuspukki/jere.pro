@@ -1,6 +1,6 @@
 ---
 title: Tortilla filling
-image: chicken-sauce
+image: tortilla-filling
 source: From Juho's Fusion Kitchen
 ingredients:
     - 700g minced meat

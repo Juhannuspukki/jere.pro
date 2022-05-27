@@ -1,5 +1,5 @@
 ---
-title: Pancakes
+title: Crêpes
 image: pancakes
 source: A Laine family recipe
 ingredients:
@@ -25,5 +25,5 @@ instructions:
     - Add flour to the mix until it feels about right.
     - Stop whisking. Leave in the fridge for 30 minutes.
     - Fry on a hot pan (with butter).
-    - Eat with strawberry jam
+    - Eat with strawberry jam.
 ---
